@@ -1,0 +1,192 @@
+/*
+ * ==================================================================================
+ * text
+ * ==================================================================================
+ */
+
+p,
+.text {
+    color: $black;
+    font-size: 1rem;
+
+    @media (max-width: $sm + px) {
+        font-size: 1rem;
+    }
+
+    &--size_small {
+        font-size: 0.875rem;
+
+        @media (max-width: $sm + px) {
+            font-size: 0.875rem;
+        }
+    }
+
+    &--size_big {
+        font-size: 1.125rem;
+
+        @media (max-width: $sm + px) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &--weight_bold {
+        font-weight: $bold;
+    }
+}
+
+/*
+ * ==================================================================================
+ * link
+ * ==================================================================================
+ */
+
+a,
+.link {
+    color: $black;
+    font-size: 1rem;
+    text-decoration: underline;
+
+    @media (max-width: $sm + px) {
+        font-size: 1rem;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &--decoration_underline {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * buttons
+ * ==================================================================================
+ */
+
+.btn {
+    text-decoration: none;
+    font-weight: $bold;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    color: $white;
+    background: $black;
+    border: 1px solid $black;
+    border-radius: 3px;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+
+    @media (max-width: $sm + px) {
+        font-size: 1rem;
+    }
+
+    &:hover,
+    &--active {
+        border-color: $grey;
+        background: $grey;
+    }
+
+    &--active {
+        cursor: default;
+    }
+
+    &--size_small {
+        padding: 0.2em 0.5em;
+    }
+
+    &--size_primary {
+        padding: 0.5em 1em;
+    }
+
+    &--size_big {
+        padding: 1.2em 1.875em;
+    }
+}
+
+/*
+ * ==================================================================================
+ * visually-hidden
+ * ==================================================================================
+ */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+/*
+ * ==================================================================================
+ * title
+ * ==================================================================================
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: serif;
+    font-weight: $bold;
+}
+
+h1 {
+    font-size: 3rem;
+
+    @media (max-width: $sm + px) {
+        font-size: 2.5rem;
+    }
+}
+
+h2 {
+    font-size: 2.125rem;
+
+    @media (max-width: $sm + px) {
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+
+    @media (max-width: $sm + px) {
+        font-size: 1.875rem;
+    }
+}
+
+h4 {
+    font-size: 1.875rem;
+
+    @media (max-width: $sm + px) {
+        font-size: 1.625rem;
+    }
+}
+
+h5 {
+    font-size: 1.625rem;
+
+    @media (max-width: $sm + px) {
+        font-size: 1.5rem;
+    }
+}
+
+h6 {
+    font-size: 1.5rem;
+
+    @media (max-width: $sm + px) {
+        font-size: 1.325rem;
+    }
+}

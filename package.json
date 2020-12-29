@@ -1,0 +1,41 @@
+{
+  "name": "gulp-blank",
+  "type": "module",
+  "version": "1.1.1",
+  "description": "gulp blank for new project by Pavel",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.12",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-fonter": "^0.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^3.0.0",
+    "gulp-watch": "^5.0.1",
+    "imagemin-pngquant": "^9.0.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.27.0",
+    "smart-grid": "^2.1.2"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cache": "^1.1.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug-linter": "^1.4.0",
+    "gulp-pugbem": "^2.2.4",
+    "gulp-uglify-es": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pavel",
+  "license": "ISC"
+}
