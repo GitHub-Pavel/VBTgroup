@@ -21,8 +21,15 @@ $black: 900 !default;
  */
 
 $black: #000 !default;
-$grey: #555 !default;
+$dark: #232323 !default;
+$grey: #c4c4c4 !default;
+$grey-light: #e5e5e5 !default;
 $white: #fff !default;
+
+$yellow: #f2c200 !default;
+$orange: #ff5100 !default;
+$blue: #171ebc !default;
+$green: #3bb54a !default;
 
 /* 
  * ==================================================================================
@@ -45,7 +52,7 @@ $xxl: 1800 !default; // window size < 1800px
  * ==================================================================================
  */
 
-$widthContainer: 1170 !default; // size is in "px"
+$widthContainer: 1200 !default; // size is in "px"
 $maxWidth: 1920 !default; // size is in "px"
 
 $columnGap: 30 !default; // size is in "px"

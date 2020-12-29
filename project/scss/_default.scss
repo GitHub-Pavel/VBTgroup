@@ -9,24 +9,8 @@ p,
     color: $black;
     font-size: 1rem;
 
-    @media (max-width: $sm + px) {
-        font-size: 1rem;
-    }
-
-    &--size_small {
-        font-size: 0.875rem;
-
-        @media (max-width: $sm + px) {
-            font-size: 0.875rem;
-        }
-    }
-
     &--size_big {
         font-size: 1.125rem;
-
-        @media (max-width: $sm + px) {
-            font-size: 1.125rem;
-        }
     }
 
     &--weight_bold {
@@ -46,10 +30,6 @@ a,
     font-size: 1rem;
     text-decoration: underline;
 
-    @media (max-width: $sm + px) {
-        font-size: 1rem;
-    }
-
     &:hover {
         text-decoration: none;
     }
@@ -61,6 +41,10 @@ a,
             text-decoration: underline;
         }
     }
+
+    &--color_orange {
+        color: $orange;
+    }
 }
 
 /*
@@ -71,13 +55,14 @@ a,
 
 .btn {
     text-decoration: none;
+    text-transform: uppercase;
     font-weight: $bold;
     font-size: 1rem;
     outline: none;
     cursor: pointer;
     color: $white;
-    background: $black;
-    border: 1px solid $black;
+    background: $orange;
+    border: 1px solid $orange;
     border-radius: 3px;
     transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border-color 0.3s ease-in-out,
         box-shadow 0.3s ease-in-out;
@@ -86,26 +71,70 @@ a,
         font-size: 1rem;
     }
 
-    &:hover,
-    &--active {
-        border-color: $grey;
-        background: $grey;
+    &:hover {
+        color: $orange;
+        background: transparent;
     }
 
     &--active {
+        background: $grey;
+        border-color: $grey;
         cursor: default;
     }
 
+    &--type_empty {
+        color: $orange;
+        background: transparent;
+
+        &:hover {
+            color: $white;
+            background: $orange;
+        }
+    }
+
     &--size_small {
-        padding: 0.2em 0.5em;
+        padding: 0.5em;
     }
 
     &--size_primary {
-        padding: 0.5em 1em;
+        padding: 0.625em 1.25em;
     }
 
     &--size_big {
-        padding: 1.2em 1.875em;
+        padding: 1.25em 2em;
+    }
+
+    &--color_blue {
+        color: $white;
+        background: $blue;
+        border-color: $blue;
+
+        &:hover {
+            color: $blue;
+            background: transparent;
+        }
+    }
+
+    &--color_yellow {
+        color: $white;
+        background: $yellow;
+        border-color: $yellow;
+
+        &:hover {
+            color: $yellow;
+            background: transparent;
+        }
+    }
+
+    &--color_green {
+        color: $white;
+        background: $green;
+        border-color: $green;
+
+        &:hover {
+            color: $green;
+            background: transparent;
+        }
     }
 }
 
@@ -139,7 +168,6 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: serif;
     font-weight: $bold;
 }
 
@@ -147,46 +175,34 @@ h1 {
     font-size: 3rem;
 
     @media (max-width: $sm + px) {
-        font-size: 2.5rem;
-    }
-}
-
-h2 {
-    font-size: 2.125rem;
-
-    @media (max-width: $sm + px) {
-        font-size: 2rem;
-    }
-}
-
-h3 {
-    font-size: 2rem;
-
-    @media (max-width: $sm + px) {
         font-size: 1.875rem;
     }
 }
 
-h4 {
-    font-size: 1.875rem;
-
-    @media (max-width: $sm + px) {
-        font-size: 1.625rem;
-    }
-}
-
-h5 {
-    font-size: 1.625rem;
+h2 {
+    font-size: 2.25rem;
 
     @media (max-width: $sm + px) {
         font-size: 1.5rem;
     }
 }
 
-h6 {
+h3 {
+    font-size: 1.875rem;
+
+    @media (max-width: $sm + px) {
+        font-size: 1.125rem;
+    }
+}
+
+h4 {
     font-size: 1.5rem;
 
     @media (max-width: $sm + px) {
-        font-size: 1.325rem;
+        font-size: 1.125rem;
     }
+}
+
+h5 {
+    font-size: 1.125rem;
 }
