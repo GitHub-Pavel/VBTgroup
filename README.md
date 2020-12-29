@@ -1,2 +1,1 @@
-# gulp-blank
-gulp preparation for projects
+# VBT Group
