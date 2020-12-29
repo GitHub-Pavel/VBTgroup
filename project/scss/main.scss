@@ -3,8 +3,59 @@
  * includes
  * ==================================================================================
  */
+@import "_mixins";
 @import "_variables";
+
+@import "jquery.fancybox";
 
 @import "_fonts";
 @import "_settings";
 @import "_default";
+
+/*
+ * ==================================================================================
+ * header
+ * ==================================================================================
+ */
+
+.header {
+    &__top {
+    }
+}
+.container {
+}
+.row {
+}
+.col {
+}
+.col-3 {
+}
+.logo {
+    &__image {
+    }
+}
+.b-lazy {
+}
+.col-6 {
+}
+.search-form {
+    &__input {
+    }
+
+    &__btn {
+    }
+
+    &__btn--size {
+        &_primary {
+        }
+    }
+}
+.menu-top {
+    &__link {
+    }
+
+    &__quantity {
+    }
+}
+.link-bucket {
+}
