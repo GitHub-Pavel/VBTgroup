@@ -741,6 +741,56 @@
     }
 }
 
+.catalog-loadmore {
+    margin-top: 60px;
+    position: relative;
+    background: inherit;
+    display: flex;
+    justify-content: center;
+
+    &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 0;
+        background: $grey;
+        z-index: 1;
+    }
+}
+
+.btn-loadmore {
+    background: inherit;
+    padding: 0 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+
+    &__text {
+        margin: 0 4px;
+        font-size: 1.125rem;
+        line-height: 25px;
+        font-weight: $bold;
+        text-decoration: none;
+    }
+
+    &__icon {
+        margin: 0 4px;
+        width: 25px;
+        height: 25px;
+    }
+
+    &:hover {
+        .btn-loadmore__text {
+            text-decoration: underline;
+        }
+    }
+}
+
 /*
  * ==================================================================================
  * home-offer
