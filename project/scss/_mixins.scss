@@ -22,8 +22,8 @@
  */
 
 @mixin _row($margin) {
-    margin-left: -$margin;
-    margin-right: -$margin;
+    margin-left: -$margin + px;
+    margin-right: -$margin + px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -35,8 +35,8 @@
  */
 
 @mixin _col($margin) {
-    margin-left: $margin;
-    margin-right: $margin;
+    padding-left: $margin + px;
+    padding-right: $margin + px;
 }
 
 /*

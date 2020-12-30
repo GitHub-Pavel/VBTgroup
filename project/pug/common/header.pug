@@ -2,27 +2,280 @@
 header.header#header
     ._top
         .container
-            .row
-                .col.col-3
-                    a.logo(href="/")
+            .row.align-items-center
+                .col.col-6.col-xl-3
+                    a(href="/").logo.logo--top
                         img(data-src="./img/logo-black.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="logotype").logo__image.b-lazy
-                .col.col-6 
-                    .search-form
+                .col.col-6.d-none.d-xl-flex.justify-content-center
+                    form.search-form
                         input(type="text" name="search-input" placeholder="Найти..." required)._input
-                        button(type="submit")._btn.btn.-size_primary
-                            | Поиск
-                            include ../../../docs/img/icons/search.svg
-                .col.col-3
+                        .search-resault
+                            a(href="#")._link
+                                span._text Балкон надверный для холодильников Bosch (Бош) 100 х 473 x 127 мм
+                                span._text.-price 1759 руб. 
+                            a(href="#")._link
+                                span._text Балкон надверный для холодильников Bosch (Бош) 100 х 473 x 127 мм
+                                span._text.-price 1759 руб. 
+                            a(href="#")._link
+                                span._text Балкон надверный для холодильников Bosch (Бош) 100 х 473 x 127 мм
+                                span._text.-price 1759 руб. 
+                            a(href="#")._link
+                                span._text Балкон надверный для холодильников Bosch (Бош) 100 х 473 x 127 мм
+                                span._text.-price 1759 руб. 
+                            a(href="#")._link
+                                span._text Балкон надверный для холодильников Bosch (Бош) 100 х 473 x 127 мм
+                                span._text.-price 1759 руб. 
+                        button(type="submit")._btn.btn.btn--effect_darkness
+                            span.btn__text Поиск
+                            span.btn__icon.search-form__icon
+                                include ../../../docs/img/icons/search.svg
+                .col.col-3.d-none.d-xl-block
                     ul.menu-top
                         li
                             a(href="#")._link
-                                include ../../../docs/img/icons/chat.svg
+                                span._icon
+                                    include ../../../docs/img/icons/chat.svg
                                 | Чат
+                        li
                             a(href="#")._link
-                                include ../../../docs/img/icons/shop.svg
+                                span._icon
+                                    include ../../../docs/img/icons/shop.svg
                                 | Заказы
-                            a(href="#")._link.link-bucket
-                                ._quantity 1
-                                include ../../../docs/img/icons/bucket.svg
-                                | Корзина 
-// header   
+                        li
+                            a(href="#")._link
+                                span._icon.link-bucket
+                                    .link-bucket__quantity 1
+                                    include ../../../docs/img/icons/bucket.svg
+                                | Корзина
+                .col.col-6.d-xl-none.d-block
+section.menu-sticky 
+    .container
+        .menu-sticky__full-right.full-right
+            .menu-sticky__catalog
+                button.btn-catalog
+                    svg.btn-catalog__icon
+                        use(href="img/icons.svg#book")
+                    span.btn-catalog__text КАТАЛОГ
+                    svg.btn-catalog__icon.btn-catalog__icon--triangle
+                        use(href="img/icons.svg#triangle-down")
+                .catalog-menu
+                    ._container
+                        .row
+                            .col.catalog-menu__column.catalog-menu__column--one
+                                .catalog-menu__categories
+                                    a(href="#one").menu-category.-button.-active
+                                        ._icon
+                                            include ../../../docs/img/icons/catalog/0.svg
+                                        ._text По производителю
+                                    a(href="#two").menu-category.-button
+                                        ._icon
+                                            include ../../../docs/img/icons/catalog/1.svg
+                                        ._text Для холодильников
+                                    a(href="#three").menu-category.-button
+                                        ._icon
+                                            include ../../../docs/img/icons/catalog/2.svg
+                                        ._text Для стиральных машин
+                                    a(href="#one").menu-category.-button
+                                        ._icon
+                                            include ../../../docs/img/icons/catalog/3.svg
+                                        ._text Для кофемашин
+                                    a(href="#two").menu-category.-button
+                                        ._icon
+                                            include ../../../docs/img/icons/catalog/4.svg
+                                        ._text Для посудомоек
+                                    a(href="#three").menu-category.-button
+                                        ._icon
+                                            include ../../../docs/img/icons/catalog/5.svg
+                                        ._text Для сушилок
+                                    a(href="#one").menu-category.-button
+                                        ._icon
+                                            include ../../../docs/img/icons/catalog/6.svg
+                                        ._text Для духовок
+                                    a(href="#two").menu-category.-button
+                                        ._icon
+                                            include ../../../docs/img/icons/catalog/7.svg
+                                        ._text Для газовых плит
+                                    a(href="#three").menu-category.-button
+                                        ._icon
+                                            include ../../../docs/img/icons/catalog/8.svg
+                                        ._text Для электроплит
+                                    a(href="#one").menu-category.-button
+                                        ._icon
+                                            include ../../../docs/img/icons/catalog/9.svg
+                                        ._text Для микроволновок
+                                    a(href="#two").menu-category.-button
+                                        ._icon
+                                            include ../../../docs/img/icons/catalog/10.svg
+                                        ._text Для остального
+                            .col.catalog-menu__column.catalog-menu__column--two
+                                .catalog-content
+                                    ._top
+                                        form.search-form
+                                            input(type="text" name="search-input" placeholder="Найти..." required)._input
+                                            .search-resault
+                                                a(href="#")._link
+                                                    span._text Балкон надверный для холодильников Bosch (Бош) 100 х 473 x 127 мм
+                                                    span._text.-price 1759 руб. 
+                                                a(href="#")._link
+                                                    span._text Балкон надверный для холодильников Bosch (Бош) 100 х 473 x 127 мм
+                                                    span._text.-price 1759 руб. 
+                                                a(href="#")._link
+                                                    span._text Балкон надверный для холодильников Bosch (Бош) 100 х 473 x 127 мм
+                                                    span._text.-price 1759 руб. 
+                                                a(href="#")._link
+                                                    span._text Балкон надверный для холодильников Bosch (Бош) 100 х 473 x 127 мм
+                                                    span._text.-price 1759 руб. 
+                                                a(href="#")._link
+                                                    span._text Балкон надверный для холодильников Bosch (Бош) 100 х 473 x 127 мм
+                                                    span._text.-price 1759 руб. 
+                                            button(type="submit")._btn.btn.btn--effect_darkness
+                                                span.btn__text Поиск
+                                                span.btn__icon.search-form__icon
+                                                    include ../../../docs/img/icons/search.svg
+                                        button.catalog-menu__close
+                                            include ../../../docs/img/icons/times.svg
+                                    ._bottom
+                                        ._rubrics.-active#one
+                                            .catalog-content__title
+                                                h4 Для холодильников
+                                            ._content-wrapper
+                                                ul.catalog-list
+                                                    li
+                                                        a(href="#") Все детали
+                                                    li
+                                                        a(href="#") Встройка
+                                                    li
+                                                        a(href="#") Обрамление полок
+                                                    li
+                                                        a(href="#") Полки
+                                                    li
+                                                        a(href="#") Ремкомплекты
+                                                    li
+                                                        a(href="#") Балконы надверные
+                                                    li
+                                                        a(href="#") Ледогенератор
+                                                ul.catalog-list
+                                                    li
+                                                        a(href="#") Петли и двери
+                                                    li
+                                                        a(href="#") Резины (уплотнители)
+                                                    li
+                                                        a(href="#") Средства по уходу
+                                                    li
+                                                        a(href="#") Щитки откидные
+                                                    li
+                                                        a(href="#") Ящики холод. камер
+                                                    li
+                                                        a(href="#") Ящики морозилок
+                                                    li
+                                                        a(href="#") Электроника
+                                                ul.catalog-list
+                                                    li
+                                                        a(href="#") Панели ящиков
+                                                    li
+                                                        a(href="#") Прочее
+                                                    li
+                                                        a(href="#") Ручки
+                                                    li
+                                                        a(href="#") Вентиляторы
+                                                    li
+                                                        a(href="#") Направляющие
+                                        ._rubrics#three
+                                            .catalog-content__title
+                                                h4 Для духовок
+                                            ._content-wrapper
+                                                ul.catalog-list
+                                                    li
+                                                        a(href="#") Все детали
+                                                    li
+                                                        a(href="#") Встройка
+                                                    li
+                                                        a(href="#") Обрамление полок
+                                                    li
+                                                        a(href="#") Полки
+                                                    li
+                                                        a(href="#") Ремкомплекты
+                                                    li
+                                                        a(href="#") Балконы надверные
+                                                    li
+                                                        a(href="#") Ледогенератор
+                                                ul.catalog-list
+                                                    li
+                                                        a(href="#") Петли и двери
+                                                    li
+                                                        a(href="#") Резины (уплотнители)
+                                                    li
+                                                        a(href="#") Средства по уходу
+                                                    li
+                                                        a(href="#") Щитки откидные
+                                                    li
+                                                        a(href="#") Ящики холод. камер
+                                                    li
+                                                        a(href="#") Ящики морозилок
+                                                    li
+                                                        a(href="#") Электроника
+                                        ._rubrics#two
+                                            .catalog-content__title
+                                                h4 Для сушилок
+                                            ._content-wrapper
+                                                ul.catalog-list
+                                                    li
+                                                        a(href="#") Все детали
+                                                    li
+                                                        a(href="#") Встройка
+                                                    li
+                                                        a(href="#") Обрамление полок
+                                                    li
+                                                        a(href="#") Полки
+                                                    li
+                                                        a(href="#") Ремкомплекты
+                                                    li
+                                                        a(href="#") Балконы надверные
+                                                    li
+                                                        a(href="#") Ледогенератор
+                                                ul.catalog-list
+                                                    li
+                                                        a(href="#") Петли и двери
+                                                    li
+                                                        a(href="#") Резины (уплотнители)
+                                                    li
+                                                        a(href="#") Средства по уходу
+                                                    li
+                                                        a(href="#") Щитки откидные
+                                                    li
+                                                        a(href="#") Ящики холод. камер
+                                                    li
+                                                        a(href="#") Ящики морозилок
+                                                    li
+                                                        a(href="#") Электроника
+                                                ul.catalog-list
+                                                    li
+                                                        a(href="#") Панели ящиков
+                                                    li
+                                                        a(href="#") Прочее
+                                                    li
+                                                        a(href="#") Ручки
+                                                    li
+                                                        a(href="#") Вентиляторы
+                                                    li
+                                                        a(href="#") Направляющие
+                                        .catalog-shares
+                                            .catalog-content__title
+                                                p.text.text--size_big Акции
+                                            .banner-menu
+                                                img(width="155px" height="37px" src="img/bosch.svg" alt="bosch")._logo
+                                                ._image
+                                                    img(src="img/header/4.jpg" alt="bosch")
+                                                h5._title 
+                                                    | Скидка 
+                                                    span 15%  
+                                                    | на технику BOSCH по промокоду
+                                                a(href="#")._btn.btn.btn--size_primary купить
+            ul.main-menu
+                li
+                    a(href="#") ГЛАВНАЯ
+                li
+                    a(href="#") ДОСТАВКА И ОПЛАТА
+                li
+                    a(href="#") КОНТАКТЫ
+// header 

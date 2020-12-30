@@ -18,6 +18,15 @@ p,
     }
 }
 
+p {
+    margin: 0;
+    margin-top: 30px;
+}
+
+.text {
+    margin: 0;
+}
+
 /*
  * ==================================================================================
  * link
@@ -28,6 +37,7 @@ a,
 .link {
     color: $black;
     font-size: 1rem;
+    line-height: 22px;
     text-decoration: underline;
 
     &:hover {
@@ -64,6 +74,9 @@ a,
     background: $orange;
     border: 1px solid $orange;
     border-radius: 3px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border-color 0.3s ease-in-out,
         box-shadow 0.3s ease-in-out;
 
@@ -71,9 +84,26 @@ a,
         font-size: 1rem;
     }
 
+    path {
+        transition: fill 0.3s ease-in-out;
+    }
+
+    &__text {
+        margin: 0 5px;
+    }
+
+    &__icon {
+        width: 20px;
+        margin: 0 5px;
+    }
+
     &:hover {
         color: $orange;
         background: transparent;
+
+        path {
+            fill: $orange;
+        }
     }
 
     &--active {
@@ -92,16 +122,28 @@ a,
         }
     }
 
+    &--effect_darkness {
+        &:hover {
+            color: $white;
+            background: #db4600;
+            border-color: #db4600;
+
+            path {
+                fill: $white;
+            }
+        }
+    }
+
     &--size_small {
-        padding: 0.5em;
+        padding: 0.5em calc(0.5em - 5px);
     }
 
     &--size_primary {
-        padding: 0.625em 1.25em;
+        padding: 0.625em calc(1.25em - 5px);
     }
 
     &--size_big {
-        padding: 1.25em 2em;
+        padding: 1.25em calc(2em - 5px);
     }
 
     &--color_blue {
@@ -181,6 +223,7 @@ h1 {
 
 h2 {
     font-size: 2.25rem;
+    line-height: 41px;
 
     @media (max-width: $sm + px) {
         font-size: 1.5rem;
@@ -205,4 +248,27 @@ h4 {
 
 h5 {
     font-size: 1.125rem;
+    line-height: 25px;
+}
+
+/*
+ * ==================================================================================
+ * list
+ * ==================================================================================
+ */
+
+ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+/*
+ * ==================================================================================
+ * article
+ * ==================================================================================
+ */
+
+article {
+    display: flex;
+    flex-direction: column;
 }

@@ -12,7 +12,7 @@ $medium: 500 !default;
 $semi-bold: 600 !default;
 $bold: 700 !default;
 $semi-black: 800 !default;
-$black: 900 !default;
+$black-weight: 900 !default;
 
 /* 
  * ==================================================================================
@@ -26,6 +26,9 @@ $grey: #c4c4c4 !default;
 $grey-light: #e5e5e5 !default;
 $white: #fff !default;
 
+$menu-hover: #313131;
+$section-grey: #f6f7f9;
+
 $yellow: #f2c200 !default;
 $orange: #ff5100 !default;
 $blue: #171ebc !default;
@@ -38,11 +41,11 @@ $green: #3bb54a !default;
  */
 
 $xx: 440 !default; // window size < 440px
-$xs: 560 !default; // window size < 560px
-$sm: 780 !default; // window size < 780px
-$md: 960 !default; // window size < 960px
-$lg: 1100 !default; // window size < 1100px
-$xlg: 1300 !default; // window size < 1300px
+$xs: 576 !default; // window size < 560px
+$sm: 768 !default; // window size < 780px
+$md: 992 !default; // window size < 960px
+$lg: 1200 !default; // window size < 1100px
+$xlg: 1400 !default; // window size < 1300px
 $xl: 1600 !default; // window size < 1600px
 $xxl: 1800 !default; // window size < 1800px
 
