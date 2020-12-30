@@ -8,6 +8,7 @@ p,
 .text {
     color: $black;
     font-size: 1rem;
+    line-height: 22px;
 
     &--size_big {
         font-size: 1.125rem;
@@ -15,6 +16,10 @@ p,
 
     &--weight_bold {
         font-weight: $bold;
+    }
+
+    &--style_italic {
+        font-style: italic;
     }
 }
 
@@ -68,6 +73,7 @@ a,
     text-transform: uppercase;
     font-weight: $bold;
     font-size: 1rem;
+    line-height: 22px;
     outline: none;
     cursor: pointer;
     color: $white;
@@ -215,6 +221,7 @@ h6 {
 
 h1 {
     font-size: 3rem;
+    line-height: 65px;
 
     @media (max-width: $sm + px) {
         font-size: 1.875rem;
@@ -232,6 +239,7 @@ h2 {
 
 h3 {
     font-size: 1.875rem;
+    line-height: 41px;
 
     @media (max-width: $sm + px) {
         font-size: 1.125rem;
@@ -240,6 +248,7 @@ h3 {
 
 h4 {
     font-size: 1.5rem;
+    line-height: 33px;
 
     @media (max-width: $sm + px) {
         font-size: 1.125rem;
@@ -271,4 +280,24 @@ ul {
 article {
     display: flex;
     flex-direction: column;
+}
+
+/*
+ * ==================================================================================
+ * input
+ * ==================================================================================
+ */
+
+.input {
+    padding: 8px 15px;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    background: $white;
+    font-size: 1rem;
+    line-height: 22px;  
+    color: $black;
+
+    ::placeholder {
+        color: $grey;
+    }
 }

@@ -1,0 +1,15 @@
+// modals 
+.modal.modal--big.notifications#notifications
+    .modal__header
+        h3.modal__tilte СТАТУС ЗАКАЗА
+        button.modal__close
+            include ../../../docs/img/icons/times.svg
+    .modal__body
+        h5 Заполните форму и мы сообщим вам о поступлении товара в магазин
+        form.notifications__form
+            input(type="text" name="email" placeholder="Ваш email" required).input.notifications__input
+            button(type="submit").notifications__btn.btn.btn--size_primary подписаться
+        p.text.text--style_italic 
+            | Я ознакомлен с условиями оферты и даю свое 
+            a(href="#").link.link--color_orange согласие на обработку персональных данных
+// modals 
