@@ -669,6 +669,8 @@
 
     &__content {
         padding-bottom: 60px;
+        display: flex;
+        flex-direction: column;
 
         &--grey {
             background: $section-grey;
