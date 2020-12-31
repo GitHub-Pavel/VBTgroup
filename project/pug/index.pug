@@ -3,82 +3,82 @@ extends common/layout
 block content
     // home-offer 
     section.site-section.home-offer
-        .container.home-offer__container
-            .home-offer__column.home-offer__colum--slider
-                .home-offer__navigation
-                    .home-offer__dots
-                        .home-offer__slider-counter
-                            p.text.text--size_big.home-offer__slider-now
-                            p.text.text--size_big.home-offer__slider-separator /
-                            p.text.text--size_big.home-offer__slider-all
-                .home-slider 
-                    - for(let i=0; i<5; i++)
-                        .home-slider__item.b-lazy(data-src="img/header/0.jpg")
-                            .home-slider__content 
-                                h2.home-slider__title Вcё для ремонта бытовой техники по лучшим ценам
-                                p.home-slider__description Покупая продукцию в нашем магазине, Вы приобретаете абсолютно новую продукцию с гарантией.
-                                a(href="#").home-slider__btn.btn.btn--type_empty.btn--size_primary Перейти в каталог
-            .home-offer__column
-                // home-banner 
-                .home-banner.b-lazy(data-src="img/header/1.jpg")
-                    h4.home-banner__title.home-banner__title--center.home-banner__text-yellow Программа лояльности
-                    .home-banner__wrapper
-                        img(width="147" src="img/pig.jpg", alt="pig").home-banner__image
+        .site-section__content
+            .container.home-offer__container
+                .home-offer__column.home-offer__column--slider 
+                    .home-offer__navigation
+                        .home-offer__dots
+                            .home-offer__slider-counter
+                                p.text.text--size_big.home-offer__slider-now
+                                p.text.text--size_big.home-offer__slider-separator /
+                                p.text.text--size_big.home-offer__slider-all
+                    .home-slider 
+                        - for(let i=0; i<5; i++)
+                            .home-slider__item.b-lazy(data-src="img/header/0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                                .home-slider__content 
+                                    h2.home-slider__title Вcё для ремонта бытовой техники по лучшим ценам
+                                    h4.home-slider__description Покупая продукцию в нашем магазине, Вы приобретаете абсолютно новую продукцию с гарантией.
+                                    a(href="#").home-slider__btn.btn.btn--type_empty.btn--size_primary Перейти в каталог
+                .home-offer__column
+                    // home-banner 
+                    .home-banner.b-lazy(data-src="img/header/1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                        h4.home-banner__title.home-banner__title--center.home-banner__text-yellow Программа лояльности
+                        .home-banner__wrapper
+                            img(width="147" data-src="img/pig.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="pig").home-banner__image.b-lazy
+                            .home-banner__content
+                                .home-banner__content-title 
+                                    h5 Скидки до
+                                    h3.home-banner__text-orange 15%*
+                                a(href="#").link.home-banner__link.home-banner__text-orange Узнать подробнее
+                                span.home-banner__text *при оформлении заказов на сумму  от 100тис 
+                    // home-banner 
+                .home-offer__column
+                    // home-banner 
+                    .home-banner.home-banner--content_center.b-lazy(data-src="img/header/2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
                         .home-banner__content
-                            .home-banner__content-title 
-                                h5 Скидки до
-                                h3.home-banner__text-orange 15%*
-                            a(href="#").link.home-banner__link.home-banner__text-orange Узнать подробнее
-                            span.home-banner__text *при оформлении заказов на сумму  от 100тис 
-                // home-banner 
-            .home-offer__column
-                // home-banner 
-                .home-banner.home-banner--content_center.b-lazy(data-src="img/header/2.jpg")
-                    .home-banner__content
-                        h4.home-banner__title Доставка по всей РФ и странам СНГ
-                        a(href="#").link.home-banner__link Подробнее о доставке
-                // home-banner 
-            .home-offer__column
-                // home-banner 
-                a(href="#" data-src="img/header/3.jpg").home-banner.home-banner--content_text.b-lazy
-                    .home-banner__content.home-banner__content--text_bottom
-                        h5.home-banner__title 
-                            | РЕМОНТ БЫТОВОЙ ТЕХНИКИ
-                            br
-                            | В 
-                            span.home-banner__text-yellow ВОЛЖСКОМ
-                            br
-                            | и Волгоградской области
-                // home-banner 
-            .home-offer__column
-                // home-banner 
-                .home-banner.home-banner--content_logo
-                    img(width="155" height="37" data-src="img/bosch.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="bosch").home-banner__logo.b-lazy
-                    .home-banner__image
-                        img(src="img/header/4.jpg" alt="bosch")
-                    .home-banner__content
-                        h5.home-banner__title 
-                            | Скидка 
-                            span.home-banner__text-orange 15%  
-                            | на технику BOSCH по промокоду
-                        a(href="#").home-banner__btn.btn.btn--size_primary купить
-                // home-banner 
-            .home-offer__column
-                // home-banner 
-                .home-banner.home-banner--content_left
-                    .home-banner__content
-                        h4.home-banner__title Средства по уходу за техникой
-                        a(href="#").home-banner__btn.btn.btn--size_primary.btn--type_empty Показать все
-                    img(src="img/header/5.jpg", alt="Средства по уходу за техникой").home-banner__image
-                // home-banner
+                            h4.home-banner__title Доставка по всей РФ и странам СНГ
+                            a(href="#").link.home-banner__link Подробнее о доставке
+                    // home-banner 
+                .home-offer__column
+                    // home-banner 
+                    a(href="#" data-src="img/header/3.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==").home-banner.home-banner--content_text.b-lazy
+                        .home-banner__content.home-banner__content--text_bottom
+                            h5.home-banner__title 
+                                | РЕМОНТ БЫТОВОЙ ТЕХНИКИ
+                                br
+                                | В 
+                                span.home-banner__text-yellow ВОЛЖСКОМ
+                                br
+                                | и Волгоградской области
+                    // home-banner 
+                .home-offer__column
+                    // home-banner 
+                    .home-banner.home-banner--content_logo
+                        img(width="155" height="37" data-src="img/bosch.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="bosch").home-banner__logo.b-lazy
+                        .home-banner__image
+                            img(data-src="img/header/4.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="bosch").b-lazy
+                        .home-banner__content
+                            h5.home-banner__title 
+                                | Скидка 
+                                span.home-banner__text-orange 15%  
+                                | на технику BOSCH по промокоду
+                            a(href="#").home-banner__btn.btn.btn--size_primary купить
+                    // home-banner 
+                .home-offer__column
+                    // home-banner 
+                    .home-banner.home-banner--content_left
+                        .home-banner__content
+                            h4.home-banner__title Средства по уходу за техникой
+                            a(href="#").home-banner__btn.btn.btn--size_primary.btn--type_empty Показать все
+                        img(data-src="img/header/5.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Средства по уходу за техникой").home-banner__image.b-lazy
+                    // home-banner
     // home-offer 
     // home-catalog 
     section.site-section.home-catalog
-        .container
-            h2.site-section__title.site-section__title--center КАТАЛОГ ТОВАРОВ
+        h2.text--center КАТАЛОГ ТОВАРОВ
         .site-section__content.site-section__content--grey
             .container
-                .row
+                .row.justify-content-center
                     -
                         var catalogTitle = [
                             "Запчасти для холодильников",
@@ -90,27 +90,41 @@ block content
                         ]
                     - for (let i=0; i<catalogTitle.length; i++)
                         // catalog-item
-                        .home-catalog__catalog-item
+                        .col.col-12.col-lg-6.home-catalog__catalog-item
                             .catalog-item
                                 img(width="120" data-src=`img/catalog/${i}.jpg` src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item").catalog-item__image.b-lazy
                                 .catalog-item__wrapper
                                     h4.catalog-item__title
                                         a(href="#")= catalogTitle[i]
-                                    .catalog-item__content
-                                        p.text.catalog-item__text Electolux
-                                        p.text.catalog-item__text Bosch
-                                        p.text.catalog-item__text Gorenje
-                                        p.text.catalog-item__text Indesit
-                                        p.text.catalog-item__text Candy
-                                        p.text.catalog-item__text Teka
-                                        p.text.catalog-item__text Asko
-                                        p.text.catalog-item__text Siemens
-                                        p.text.catalog-item__text Vestforst
-                                        p.text.catalog-item__text Krcher
-                                        p.text.catalog-item__text IKEA
-                                        p.text.catalog-item__text Saeco 
-                                        p.text.catalog-item__text Zanussi
-                                        p.text.catalog-item__text Whirlpool
+                                    ul.catalog-item__content
+                                        li
+                                            a(href="#") Electolux
+                                        li
+                                            a(href="#") Bosch
+                                        li
+                                            a(href="#") Gorenje
+                                        li
+                                            a(href="#") Indesit
+                                        li
+                                            a(href="#") Candy
+                                        li
+                                            a(href="#") Teka
+                                        li
+                                            a(href="#") Asko
+                                        li
+                                            a(href="#") Siemens
+                                        li
+                                            a(href="#") Vestforst
+                                        li
+                                            a(href="#") Krcher
+                                        li
+                                            a(href="#") IKEA
+                                        li
+                                            a(href="#") Saeco
+                                        li
+                                            a(href="#") Zanussi
+                                        li
+                                            a(href="#") Whirlpool
                         // catalog-item 
             .catalog-loadmore.home-catalog__catalog-loadmore
                 button.btn-loadmore

@@ -10,13 +10,16 @@ import pugLinter from 'gulp-pug-linter';
 // svg and img
 import imagemin from 'gulp-imagemin';
 import svgSprite from 'gulp-svg-sprite';
+import svgmin from 'gulp-svgmin';
+import cheerio from 'gulp-cheerio';
+import replace from 'gulp-replace';
 
 // css
 import plumber from 'gulp-plumber';
 import sass from 'gulp-sass';
 import prefixer from 'gulp-autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
-import cssmin from 'gulp-minify-css';
+import CleanCSS from 'gulp-clean-css';
 import gcmq from 'gulp-group-css-media-queries';
 
 // files
@@ -118,7 +121,7 @@ export const css = () => {
         .pipe(prefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(concat('main.min.css'))
         .pipe(gcmq())
-        .pipe(cssmin())
+        .pipe(CleanCSS({ level: { 1: { specialComments: 0 } } }))
         .pipe(sourcemaps.write(''))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({ stream: true }));
@@ -158,11 +161,28 @@ export const img = () => {
 // svgSprite
 export const sprite = () => {
     return gulp.src(path.src.svg)
+        .pipe(svgmin({
+            js2svg: {
+                pretty: true
+            }
+        }))
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: { xmlMode: true }
+        }))
+        .pipe(replace('&gt;', '>'))
         .pipe(svgSprite({
             mode: {
-                stack: {
+                symbol: {
                     sprite: "../icons.svg"
                 }
+            },
+            svg: {
+                namespaceClassnames: false
             }
         }))
         .pipe(gulp.dest(path.build.img))

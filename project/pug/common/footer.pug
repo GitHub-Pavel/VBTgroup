@@ -2,13 +2,13 @@
 footer.footer#footer
     .container
         .row
-            .col.footer__col.footer__col--logo   
-                a(href="/").logo.logo--bottom
+            .col.footer__logo
+                a(href="/").logo
                     img(data-src="./img/logo-yellow.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="logotype").logo__image.b-lazy
                 h5.footer__logo-decsription Магазин запчастей для ремонта бытовой техники
-            .col.col-lg-3.d-flex.justify-content-end
+            .col.col-12.col-lg-3.d-flex.justify-content-lg-end
                 .footer__col.footer__col--menu
-                    p.footer__title.text.text--size_big Информация
+                    h5.footer__title.text.text--size_big Информация
                     ul.menu-bottom
                         li
                             a(href="#") Инструкции
@@ -21,18 +21,17 @@ footer.footer#footer
                         li
                             a(href="#") История заказов
             .col.footer__col.footer__col--contacts   
-                a(data-fancybox data-src="#notifications" href="javascript:;").btn.-size_primary.footer__contact-btn Связаться с нами
+                a(data-fancybox href="#notifications").btn.-size_primary.footer__contact-btn Связаться с нами
                 a(href="#").list-icon.footer__list-icon
                     svg.list-icon__icon
                         use(href="img/icons.svg#wrench")
                     .list-icon__text Ремонт бытовой техники в Волжском и Волгоградской области
-            .col.col-12
-                .footer__col.footer__col--bottom
-                    .footer__copyright
-                        p.text.text--size_big © 2020 |
-                        h5 VBT Group
-                    .footer__btn-up
-                        button.btn.btn-up
-                            span.btn-up__icon
-                                include ../../../docs/img/icons/arrow-up.svg    
+        .footer__bottom
+            .footer__copyright
+                p.text.text--size_big © 2020 |
+                h5 VBT Group
+            .footer__btn-up
+                button.btn-up
+                    svg.btn-up__icon
+                        use(href="img/icons.svg#arrow-up")
 // footer 

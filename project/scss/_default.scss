@@ -21,6 +21,10 @@ p,
     &--style_italic {
         font-style: italic;
     }
+
+    &--center { 
+        text-align: center;
+    }
 }
 
 p {
@@ -90,26 +94,21 @@ a,
         font-size: 1rem;
     }
 
-    path {
-        transition: fill 0.3s ease-in-out;
-    }
-
     &__text {
         margin: 0 5px;
     }
 
     &__icon {
         width: 20px;
+        height: 20px;
         margin: 0 5px;
+        fill: $white;
+        transition: fill 0.3s ease-in-out;
     }
 
     &:hover {
         color: $orange;
         background: transparent;
-
-        path {
-            fill: $orange;
-        }
     }
 
     &--active {
@@ -225,24 +224,30 @@ h1 {
 
     @media (max-width: $sm + px) {
         font-size: 1.875rem;
+        line-height: 41px;
     }
 }
 
 h2 {
     font-size: 2.25rem;
     line-height: 41px;
+    margin-bottom: 30px;
 
     @media (max-width: $sm + px) {
         font-size: 1.5rem;
+        line-height: 33px;
     }
 }
 
 h3 {
     font-size: 1.875rem;
     line-height: 41px;
+    margin-bottom: 30px;
 
     @media (max-width: $sm + px) {
         font-size: 1.125rem;
+        line-height: 25px;
+        margin-bottom: 0px;
     }
 }
 
@@ -252,6 +257,7 @@ h4 {
 
     @media (max-width: $sm + px) {
         font-size: 1.125rem;
+        line-height: 25px;
     }
 }
 

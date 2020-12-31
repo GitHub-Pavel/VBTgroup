@@ -3,7 +3,8 @@
     .modal__header
         h3.modal__tilte СТАТУС ЗАКАЗА
         button.modal__close
-            include ../../../docs/img/icons/times.svg
+            svg
+                use(href="img/icons.svg#times")
     .modal__body
         h5 Заполните форму и мы сообщим вам о поступлении товара в магазин
         form.notifications__form

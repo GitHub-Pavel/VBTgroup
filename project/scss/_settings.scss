@@ -62,9 +62,10 @@ button {
  */
 
 .container {
-    max-width: $widthContainer + px !important;
-    padding-right: $columnGap / 2 + px;
-    padding-left: $columnGap / 2 + px;
+    max-width: $widthContainer + 30px !important;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
 }
 
 .row {

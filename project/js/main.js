@@ -22,6 +22,15 @@ $(function () {
 
     $('body').on('click', '.btn-catalog', function (e) {
         e.preventDefault();
+        $(document).mouseup(function (e) { // событие клика по веб-документу
+            var div = $('.menu-sticky '); // тут указываем ID элемента
+            if (!div.is(e.target) // если клик был не по нашему блоку
+                && div.has(e.target).length === 0) { // и не по его дочерним элементам
+
+                $('.btn-catalog').removeClass('btn-catalog--active');
+                $('.catalog-menu').slideUp("fast");
+            }
+        });
         $(this).toggleClass('btn-catalog--active');
         $('.catalog-menu').slideToggle("fast");
     });
@@ -32,12 +41,12 @@ $(function () {
         $('.catalog-menu').slideToggle("fast");
     });
 
-    $('body').on('click', '.menu-category--button', function (e) {
+    $('body').on('click', '.header-categories a', function (e) {
         e.preventDefault();
-        $('.menu-category--button').removeClass('menu-category--active');
+        $('.header-categories a').parent().removeClass('active');
         $('.catalog-content__rubrics').removeClass('catalog-content__rubrics--active');
         $($(this).attr('href')).addClass('catalog-content__rubrics--active');
-        $(this).addClass('menu-category--active');
+        $(this).parent().addClass('active');
     });
 
     $(window).scroll(function (e) {

@@ -3,10 +3,10 @@ header.header#header
     ._top
         .container 
             .row.align-items-center
-                .col.col-6.col-xl-3
+                .col.col-6.col-lg-3
                     a(href="/").logo.logo--top
                         img(data-src="./img/logo-black.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="logotype").logo__image.b-lazy
-                .col.col-6.d-none.d-xl-flex.justify-content-center
+                .col.col-6.col-xl-6.d-none.d-lg-flex.justify-content-center
                     form.search-form
                         input(type="text" name="search-input" placeholder="Найти..." required)._input
                         .search-resault
@@ -27,28 +27,29 @@ header.header#header
                                 span._text.-price 1759 руб. 
                         button(type="submit")._btn.btn.btn--effect_darkness
                             span.btn__text Поиск
-                            span.btn__icon.search-form__icon
-                                include ../../../docs/img/icons/search.svg
-                .col.col-3.d-none.d-xl-block
+                            svg.btn__icon.search-form__icon
+                                use(href="img/icons.svg#search")
+                .col.col-3.col-xl-3.d-none.d-lg-block
                     ul.menu-top
                         li
-                            a(href="#")._link
-                                span._icon
-                                    include ../../../docs/img/icons/chat.svg
+                            a(href="#").menu-top__link
+                                svg.menu-top__icon
+                                    use(href="img/icons.svg#chat")
                                 | Чат
                         li
-                            a(href="#")._link
-                                span._icon
-                                    include ../../../docs/img/icons/shop.svg
+                            a(href="#").menu-top__link
+                                svg.menu-top__icon
+                                    use(href="img/icons.svg#shop")
                                 | Заказы
                         li
-                            a(href="#")._link
-                                span._icon.link-bucket
+                            a(href="#").menu-top__link
+                                span.link-bucket
                                     span.link-bucket__quantity 1
-                                    include ../../../docs/img/icons/bucket.svg
+                                svg.menu-top__icon
+                                    use(href="img/icons.svg#bucket")
                                 | Корзина
                 .col.col-6.d-xl-none.d-block
-section.menu-sticky 
+nav.menu-sticky.d-none.d-lg-flex
     .container
         .menu-sticky__full-right.full-right
             .menu-sticky__catalog
@@ -62,51 +63,62 @@ section.menu-sticky
                     ._container
                         .row
                             .col.catalog-menu__column.catalog-menu__column--one
-                                .catalog-menu__categories
-                                    a(href="#one").menu-category.-button.-active
-                                        ._icon
-                                            include ../../../docs/img/icons/catalog/0.svg
-                                        ._text По производителю
-                                    a(href="#two").menu-category.-button
-                                        ._icon
-                                            include ../../../docs/img/icons/catalog/1.svg
-                                        ._text Для холодильников
-                                    a(href="#three").menu-category.-button
-                                        ._icon
-                                            include ../../../docs/img/icons/catalog/2.svg
-                                        ._text Для стиральных машин
-                                    a(href="#one").menu-category.-button
-                                        ._icon
-                                            include ../../../docs/img/icons/catalog/3.svg
-                                        ._text Для кофемашин
-                                    a(href="#two").menu-category.-button
-                                        ._icon
-                                            include ../../../docs/img/icons/catalog/4.svg
-                                        ._text Для посудомоек
-                                    a(href="#three").menu-category.-button
-                                        ._icon
-                                            include ../../../docs/img/icons/catalog/5.svg
-                                        ._text Для сушилок
-                                    a(href="#one").menu-category.-button
-                                        ._icon
-                                            include ../../../docs/img/icons/catalog/6.svg
-                                        ._text Для духовок
-                                    a(href="#two").menu-category.-button
-                                        ._icon
-                                            include ../../../docs/img/icons/catalog/7.svg
-                                        ._text Для газовых плит
-                                    a(href="#three").menu-category.-button
-                                        ._icon
-                                            include ../../../docs/img/icons/catalog/8.svg
-                                        ._text Для электроплит
-                                    a(href="#one").menu-category.-button
-                                        ._icon
-                                            include ../../../docs/img/icons/catalog/9.svg
-                                        ._text Для микроволновок
-                                    a(href="#two").menu-category.-button
-                                        ._icon
-                                            include ../../../docs/img/icons/catalog/10.svg
-                                        ._text Для остального
+                                ul.header-categories
+                                    li.active
+                                        a(href="#one")
+                                            svg
+                                                use(href="img/icons.svg#catalog--0")
+                                            | По производителю
+                                    li
+                                        a(href="#two")
+                                            svg
+                                                use(href="img/icons.svg#catalog--1")
+                                            | Для холодильников
+                                    li
+                                        a(href="#three")
+                                            svg
+                                                use(href="img/icons.svg#catalog--2")
+                                            | Для стиральных машин
+                                    li
+                                        a(href="#one")
+                                            svg
+                                                use(href="img/icons.svg#catalog--3")
+                                            | Для кофемашин
+                                    li
+                                        a(href="#two")
+                                            svg
+                                                use(href="img/icons.svg#catalog--4")
+                                            | Для посудомоек
+                                    li
+                                        a(href="#three")
+                                            svg
+                                                use(href="img/icons.svg#catalog--5")
+                                            | Для сушилок
+                                    li
+                                        a(href="#one")
+                                            svg
+                                                use(href="img/icons.svg#catalog--6")
+                                            | Для духовок
+                                    li
+                                        a(href="#two")
+                                            svg
+                                                use(href="img/icons.svg#catalog--7")
+                                            | Для газовых плит
+                                    li
+                                        a(href="#three")
+                                            svg
+                                                use(href="img/icons.svg#catalog--8")
+                                            | Для электроплит
+                                    li
+                                        a(href="#one")
+                                            svg
+                                                use(href="img/icons.svg#catalog--9")
+                                            | Для микроволновок
+                                    li
+                                        a(href="#two")
+                                            svg
+                                                use(href="img/icons.svg#catalog--10")
+                                            | Для остального
                             .col.catalog-menu__column.catalog-menu__column--two
                                 .catalog-content
                                     ._top
@@ -130,10 +142,11 @@ section.menu-sticky
                                                     span._text.-price 1759 руб. 
                                             button(type="submit")._btn.btn.btn--effect_darkness
                                                 span.btn__text Поиск
-                                                span.btn__icon.search-form__icon
-                                                    include ../../../docs/img/icons/search.svg
+                                                svg.btn__icon.search-form__icon
+                                                    use(href="img/icons.svg#search")
                                         button.catalog-menu__close
-                                            include ../../../docs/img/icons/times.svg
+                                            svg
+                                                use(href="img/icons.svg#times") 
                                     ._bottom
                                         ._rubrics.-active#one
                                             .catalog-content__title
@@ -154,7 +167,6 @@ section.menu-sticky
                                                         a(href="#") Балконы надверные
                                                     li
                                                         a(href="#") Ледогенератор
-                                                ul.catalog-list
                                                     li
                                                         a(href="#") Петли и двери
                                                     li
@@ -169,7 +181,6 @@ section.menu-sticky
                                                         a(href="#") Ящики морозилок
                                                     li
                                                         a(href="#") Электроника
-                                                ul.catalog-list
                                                     li
                                                         a(href="#") Панели ящиков
                                                     li
@@ -199,7 +210,6 @@ section.menu-sticky
                                                         a(href="#") Балконы надверные
                                                     li
                                                         a(href="#") Ледогенератор
-                                                ul.catalog-list
                                                     li
                                                         a(href="#") Петли и двери
                                                     li
@@ -233,7 +243,6 @@ section.menu-sticky
                                                         a(href="#") Балконы надверные
                                                     li
                                                         a(href="#") Ледогенератор
-                                                ul.catalog-list
                                                     li
                                                         a(href="#") Петли и двери
                                                     li
@@ -248,7 +257,6 @@ section.menu-sticky
                                                         a(href="#") Ящики морозилок
                                                     li
                                                         a(href="#") Электроника
-                                                ul.catalog-list
                                                     li
                                                         a(href="#") Панели ящиков
                                                     li
