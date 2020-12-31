@@ -6,7 +6,7 @@ header.header#header
                 .col.col-6.col-lg-3
                     a(href="/").logo.logo--top
                         img(data-src="./img/logo-black.svg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="logotype").logo__image.b-lazy
-                .col.col-6.col-xl-6.d-none.d-lg-flex.justify-content-center
+                .col.col-6.d-none.d-lg-flex.justify-content-center
                     form.search-form
                         input(type="text" name="search-input" placeholder="Найти..." required)._input
                         .search-resault
@@ -29,7 +29,7 @@ header.header#header
                             span.btn__text Поиск
                             svg.btn__icon.search-form__icon
                                 use(href="img/icons.svg#search")
-                .col.col-3.col-xl-3.d-none.d-lg-block
+                .col.col-3.d-none.d-lg-block
                     ul.menu-top
                         li
                             a(href="#").menu-top__link
@@ -48,11 +48,16 @@ header.header#header
                                 svg.menu-top__icon
                                     use(href="img/icons.svg#bucket")
                                 | Корзина
-                .col.col-6.d-xl-none.d-block
-nav.menu-sticky.d-none.d-lg-flex
+                .col.col-6.d-xl-none.d-flex.justify-content-end
+                    button.hamb
+                        span.hamb__line.hamb__line--one
+                        span.hamb__line.hamb__line--two
+                        span.hamb__line.hamb__line--three
+                        span.hamb__line.hamb__line--four
+nav.menu-sticky
     .container
         .menu-sticky__full-right.full-right
-            .menu-sticky__catalog
+            .menu-sticky__catalog.d-none.d-lg-flex
                 button.btn-catalog
                     svg.btn-catalog__icon
                         use(href="img/icons.svg#book")
@@ -280,10 +285,10 @@ nav.menu-sticky.d-none.d-lg-flex
                                                     | на технику BOSCH по промокоду
                                                 a(href="#")._btn.btn.btn--size_primary купить
             ul.main-menu
+                li.active
+                    a(href="#") Главная
                 li
-                    a(href="#") ГЛАВНАЯ
+                    a(href="#") Доставка и оплата
                 li
-                    a(href="#") ДОСТАВКА И ОПЛАТА
-                li
-                    a(href="#") КОНТАКТЫ
+                    a(href="#") Контакты
 // header 

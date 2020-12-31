@@ -2,15 +2,8 @@
 $(function () {
     let bLazy = new Blazy();
 
-    $('.full-right').css({
-        'marginRight': - ($('.wrapper').width() - $('.container').width()) / 2
-    });
-
-    $('.full-left').css({
-        'marginLeft': - ($('.wrapper').width() - $('.container').width()) / 2
-    });
-
-    $(window).resize(function () {
+    // md size
+    if ($(window).width() > 992) {
         $('.full-right').css({
             'marginRight': - ($('.wrapper').width() - $('.container').width()) / 2
         });
@@ -18,6 +11,19 @@ $(function () {
         $('.full-left').css({
             'marginLeft': - ($('.wrapper').width() - $('.container').width()) / 2
         });
+    }
+
+    $(window).resize(function () { 
+        // md size
+        if ($(window).width() > 992) {
+            $('.full-right').css({
+                'marginRight': - ($('.wrapper').width() - $('.container').width()) / 2
+            });
+
+            $('.full-left').css({
+                'marginLeft': - ($('.wrapper').width() - $('.container').width()) / 2
+            });
+        }
     });
 
     $('body').on('click', '.btn-catalog', function (e) {
@@ -60,6 +66,10 @@ $(function () {
     $('body').on('click', '.btn-up', function (e) {
         $("html, body").animate({ scrollTop: 0 }, 600);
         return false;
+    });
+
+    $('body').on('click', '.hamb', function (e) {
+        $('body').toggleClass('menu-active');
     });
 
     $('.home-slider').slick({

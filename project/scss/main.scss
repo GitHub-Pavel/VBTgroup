@@ -112,13 +112,27 @@
     &__full-right {
         display: flex;
         align-items: center;
-        background: $dark;
     }
 
     &__catalog {
         display: flex;
         align-items: center;
         position: relative;
+    }
+
+    @media (min-width: $md + px) {
+        background: $dark;
+    }
+
+    @media (max-width: $md + px) {
+        position: absolute; 
+        top: 118px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        background: rgba($dark, .9);
+        transition: height .4s ease-in-out;
     }
 }
 
@@ -231,7 +245,7 @@
         justify-content: center;
         margin-right: 2px;
         position: relative;
-        transition: background 0.3s;
+        transition: background 0.3s, color .3s;
 
         &:after {
             content: "";
@@ -267,11 +281,67 @@
         }
     }
 
-    li:last-child {
+    li {
+        &.active {
+            a {
+                background: $menu-hover;
+
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &:last-child {
+            a {
+                margin-right: 0;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $md + px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 30px 0;
+        overflow-y: auto;
+
         a {
+            padding: 11px 0px;
             margin-right: 0;
+            font-size: 1.5rem;
+            line-height: 33px;
+
             &:after {
                 display: none;
+            }
+
+            &:before {
+                background: $yellow;
+            }
+
+            &:hover {
+                background: transparent;
+                color: $yellow;
+            }
+        }
+
+        li {
+            &.active {
+                a {
+                    background: transparent;
+                    color: $yellow;
+
+                    &:before {
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
@@ -1377,5 +1447,98 @@
 
     &__input {
         flex: 1 1 240px;
+    }
+}
+
+/*
+ * ==================================================================================
+ * mobile
+ * ==================================================================================
+ */
+
+.hamb {
+    margin-right: -10px;
+    width: 70px;
+    height: 40px;
+    position: relative;
+
+    &__line {
+        height: 2px;
+        width: 50px;
+        background: $black;
+        border-radius: 3px;
+        display: block;
+        position: absolute;
+        transition: width .2s, top .2s .2s, left .2s, right .2s, transform .2s, background .2s, height .2s;
+
+        &--one {
+            top: 10px;
+            left: 10px;
+        }
+
+        &--two {
+            top: 16px;
+            right: 10px;
+        }
+
+        &--three {
+            top: 22px;
+            left: 10px;
+        }
+
+        &--four {
+            top: 28px;
+            right: 10px;
+        }
+    }
+}
+
+.menu-active {
+    overflow-y: hidden;
+
+    .hamb {
+
+        &__line {
+            height: 3px;
+            background: $orange;
+            width: 20px;
+            transition: width .2s .2s, top .2s, left .2s .2s, right .2s .2s, transform .2s .4s, background .2s .2s, height .2s .2s;
+
+            &--one {
+                top: 11px;
+                left: 26px;
+                transform: rotate(45deg);
+            }
+
+            &--two {
+                top: 11px;
+                right: 11px;
+                transform: rotate(-45deg);
+            }
+
+            &--three {
+                top: 24px;
+                left: 26px;
+                transform: rotate(-45deg);
+            }
+
+            &--four {
+                top: 24px;
+                right: 11px;
+                transform: rotate(45deg);
+            }
+        }
+
+        &:hover {
+            .hamb__line {
+                width: 20px;
+            }
+        }
+    }
+
+    .menu-sticky {
+        @media (max-width: $md + px) {
+            height: calc(100vh - 219px);
+        }
     }
 }
