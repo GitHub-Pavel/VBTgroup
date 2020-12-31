@@ -146,7 +146,8 @@ export const img = () => {
                 plugins: [
                     { removeViewBox: false },
                     { cleanupIDs: true },
-                    { removeDimensions: true }
+                    { removeDimensions: true },
+                    { removeElementsByAttr: true }
                 ]
             })
         ]))
