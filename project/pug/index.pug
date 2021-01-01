@@ -14,7 +14,8 @@ block content
                                 p.text.text--size_big.home-offer__slider-all
                     .home-slider 
                         - for(let i=0; i<5; i++)
-                            .home-slider__item.b-lazy(data-src="img/header/0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==")
+                            .home-slider__item
+                                img.home-slider__image(data-lazy="img/header/0.jpg")
                                 .home-slider__content 
                                     h2.home-slider__title Вcё для ремонта бытовой техники по лучшим ценам
                                     h4.home-slider__description Покупая продукцию в нашем магазине, Вы приобретаете абсолютно новую продукцию с гарантией.
