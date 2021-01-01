@@ -376,6 +376,17 @@
                 color: $orange;
             }
         }
+
+        &.active {
+            &::marker {
+                color: $orange;
+            }
+
+            a {
+                color: $orange;
+                cursor: default;
+            }
+        }
     }
 
     a {
@@ -443,6 +454,10 @@
 
         li {
             width: 33.33%;
+
+            @media (max-width: $lg + px) {
+                width: 50%;
+            }
         }
     }
 }
@@ -596,6 +611,10 @@
         flex-wrap: wrap;
         flex: 1 1 71%;
         @include _col(10);
+
+        @media (max-width: $lg + px) {
+            flex: 1 1 60%;
+        }
     }
 
     &__content-wrapper {
@@ -618,6 +637,10 @@
 .catalog-shares {
     @include _col(10);
     flex: 1 1 23%;
+
+    @media (max-width: $lg + px) {
+        flex: 1 1 25%;
+    }
 }
 
 .banner-menu {
