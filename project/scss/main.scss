@@ -53,7 +53,7 @@
         flex: 1 1;
 
         &:focus + .search-resault {
-            // display: flex;
+            display: flex;
         }
     }
 
@@ -1462,7 +1462,7 @@
         box-sizing: border-box;
 
         @media (max-width: $sm + px) {
-            padding: 40px;
+            padding: 20px 40px 75px 40px;
         }
     }
 
@@ -1605,53 +1605,160 @@
         }
     }
 }
+@media (max-width: $md + px) {
+    .menu-active {
+        overflow-y: hidden;
 
-.menu-active {
-    overflow-y: hidden;
+        .hamb {
 
-    .hamb {
-
-        &__line {
-            height: 3px;
-            background: $orange;
-            width: 20px;
-            transition: width .2s .2s, top .2s, left .2s .2s, right .2s .2s, transform .2s .4s, background .2s .2s, height .2s .2s;
-
-            &--one {
-                top: 11px;
-                left: 26px;
-                transform: rotate(45deg);
-            }
-
-            &--two {
-                top: 11px;
-                right: 11px;
-                transform: rotate(-45deg);
-            }
-
-            &--three {
-                top: 24px;
-                left: 26px;
-                transform: rotate(-45deg);
-            }
-
-            &--four {
-                top: 24px;
-                right: 11px;
-                transform: rotate(45deg);
-            }
-        }
-
-        &:hover {
-            .hamb__line {
+            &__line {
+                height: 3px;
+                background: $orange;
                 width: 20px;
+                transition: width .2s .2s, top .2s, left .2s .2s, right .2s .2s, transform .2s .4s, background .2s .2s, height .2s .2s;
+
+                &--one {
+                    top: 11px;
+                    left: 26px;
+                    transform: rotate(45deg);
+                }
+
+                &--two {
+                    top: 11px;
+                    right: 11px;
+                    transform: rotate(-45deg);
+                }
+
+                &--three {
+                    top: 24px;
+                    left: 26px;
+                    transform: rotate(-45deg);
+                }
+
+                &--four {
+                    top: 24px;
+                    right: 11px;
+                    transform: rotate(45deg);
+                }
+            }
+
+            &:hover {
+                .hamb__line {
+                    width: 20px;
+                }
             }
         }
-    }
 
-    .menu-sticky {
-        @media (max-width: $md + px) {
+        .menu-sticky {
             height: calc(100vh - 119px);
         }
+    }
+}
+
+/*
+ * ==================================================================================
+ * mobile-menu
+ * ==================================================================================
+ */
+
+.mobile-menu {
+    height: 85px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+
+    &__row {
+        @include _row(10);
+        height: 100%;
+    }
+
+    &__item {
+        height: 100%;
+    }
+
+    &__container {
+        height: 100%;
+        background: $yellow;
+    }
+
+    &__header-categories {
+        width: 100%;
+        height: 100vh;
+        max-height: calc(100vh - (119px + 87px));
+        max-width: 290px;
+        background: $white;
+        border: 1px solid $grey;
+        overflow-y: auto;
+    }
+
+    &__search-form {
+        max-width: none;
+        
+        .search-form__input {
+            border-radius: 0;
+        }
+
+        .search-resault {
+            top: auto;
+            bottom: 100%;
+            border-radius: 0;
+        }
+    }
+}
+
+.mobile-link {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    &__icons {
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        display: block;
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        fill: $black;
+        transition: fill .2s ease-in-out, transform .2s ease-in-out;
+    }
+
+    &__text {
+        margin-top: 5px;
+        line-height: 16px;
+        font-size: 0.75rem;
+
+        transition: color .2s ease-in-out;
+    }
+
+    &--active {
+        .mobile-link__icon {
+            transform: translateY(-35px);
+            fill: $orange;
+        }
+
+        .mobile-link__text {
+            color: $orange;
+        }
+    }
+}
+
+.mobile-block {
+    width: 100%;
+    position: absolute;
+    bottom: -100vh;
+    left: 0;
+    transition: bottom .3s ease-in-out;
+    z-index: -1;
+
+    &--active {
+        bottom: 100%;
     }
 }
