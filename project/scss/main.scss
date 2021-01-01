@@ -23,6 +23,8 @@
         background: $yellow;
         margin-bottom: -25px;
         padding: 1.875em 0 4.06em;
+        position: relative;
+        z-index: 10000;
 
         @media (max-width: $md + px) {
             padding: 0;
