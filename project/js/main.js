@@ -12,7 +12,7 @@ $(function () {
             'marginLeft': - ($('.wrapper').width() - $('.container').width()) / 2
         });
     }
-
+ 
     $(window).resize(function () { 
         // md size
         if ($(window).width() > 992) {

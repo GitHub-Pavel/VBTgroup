@@ -30,6 +30,10 @@ p,
 p {
     margin: 0;
     margin-top: 30px;
+
+    @media (max-width: $sm + px) {
+        margin-top: 20px;
+    }
 }
 
 .text {
@@ -247,7 +251,7 @@ h3 {
     @media (max-width: $sm + px) {
         font-size: 1.125rem;
         line-height: 25px;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
     }
 }
 
