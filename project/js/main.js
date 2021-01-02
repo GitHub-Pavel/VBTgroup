@@ -80,6 +80,10 @@ $(function () {
                 }
             });
         });
+
+        $('.link-bucket__quantity').each(function () {
+            $(this).height($(this).width());
+        });
     });
 
     $('body').on('click', '.btn-catalog', function (e) {

@@ -320,6 +320,8 @@
     }
 
     @media (max-width: $md + px) {
+        width: 100%;
+        
         ul {
             display: flex;
             flex-direction: column;
@@ -1987,6 +1989,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    position: relative;
 
     &__icons {
         width: 30px;
@@ -2019,6 +2022,11 @@
         .mobile-link__text {
             color: $orange;
         }
+    }
+
+    &__link-bucket { 
+        top: 28px;
+        right: 72px;
     }
 }
 
