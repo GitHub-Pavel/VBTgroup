@@ -41,6 +41,10 @@ svg {
 .wrapper {
     max-width: $maxWidth + px;
     margin: 0 auto;
+
+    &--grey {
+        background: $section-grey;
+    }
 }
 
 input,

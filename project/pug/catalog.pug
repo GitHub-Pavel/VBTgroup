@@ -1,0 +1,66 @@
+extends common/layout-grey
+
+block content
+    include includes/site-banner
+    include includes/breadcrumbs
+
+    // home-catalog 
+    section.site-section.home-catalog
+        h2.text--center КАТАЛОГ ТОВАРОВ
+        .container
+            .row.justify-content-center
+                -
+                    var catalogTitle = [
+                        "Запчасти для холодильников",
+                        "Запчасти для стиральных машин ",
+                        "Запчасти для кофемашин",
+                        "Запчасти для посудомоек",
+                        "Запчасти для сушилок",
+                        "Запчасти для духовок",
+                        "Запчасти для газовых плит",
+                        "Запчасти для электроплит",
+                        "Запчасти для микроволновок",
+                        "Запчасти для остального"
+                    ]
+                - for (let i=0; i<catalogTitle.length; i++)
+                    // catalog-item
+                    .col.col-12.col-lg-6.home-catalog__catalog-item
+                        .catalog-item
+                            .catalog-item__image
+                                img(width="120" data-src=`img/catalog/${i}.jpg` src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item").b-lazy
+                            h4.catalog-item__title
+                                a(href="#")= catalogTitle[i]
+                            ul.catalog-item__content
+                                li
+                                    a(href="#") Electolux
+                                li
+                                    a(href="#") Bosch
+                                li
+                                    a(href="#") Gorenje
+                                li
+                                    a(href="#") Indesit
+                                li
+                                    a(href="#") Candy Teka
+                                li
+                                    a(href="#") Asko
+                                li
+                                    a(href="#") Siemens
+                                li
+                                    a(href="#") Vestforst
+                                li
+                                    a(href="#") Krcher
+                                li
+                                    a(href="#") IKEA
+                                li
+                                    a(href="#") Saeco
+                                li
+                                    a(href="#") Zanussi
+                                li
+                                    a(href="#") AEG
+                                li
+                                    a(href="#") Whirlpool
+                    // catalog-item 
+            .catalog-loadmore.home-catalog__catalog-loadmore.d-none.d-md-block
+    // home-catalog 
+
+    include includes/footer-article

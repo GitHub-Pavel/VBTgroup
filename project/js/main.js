@@ -174,12 +174,6 @@ $(function () {
     $('.home-offer__slider-now').text($('.home-slider').slick('slickCurrentSlide') + 1);
     $('.home-slider').on('afterChange', function(e, slick) {
         $('.home-offer__slider-now').text($('.home-slider').slick('slickCurrentSlide') + 1);
-        if ( $('.home-offer .slick-current .home-slider__item').data('src') != undefined ) {
-            $('.home-offer .slick-current .home-slider__item').css({
-                'backgroundImage': 'url(' + $('.home-offer .slick-current .home-slider__item').data('src') + ')'
-            });
-            $('.home-offer .slick-current .home-slider__item').removeAttr('data-src');
-        }
     });
 
     $('body').on('click', '.modal__close', function(e) {

@@ -2011,3 +2011,150 @@
         bottom: 100%;
     }
 }
+
+/*
+ * ==================================================================================
+ * breadcrumbs
+ * ==================================================================================
+ */
+
+.breadcrumbs {
+
+    &__container {
+        background: $yellow;
+        padding: 20px 0;
+    }
+
+    &__list {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-left: -10px;
+    }
+
+    &__item {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        font-weight: $bold;
+        font-size: 1rem;
+        line-height: 22px;
+        color: $black;
+        text-decoration: none;
+        transition: color .2s;
+
+        svg {
+            width: 25px;
+            height: 25px;
+            fill: $white;
+            transition: fill .2s;
+        }
+
+        &:hover {
+            color: $orange;
+
+            svg {
+                fill: $orange;
+            }
+        }
+    }
+
+    &__separator {
+        margin-left: 10px;
+
+        svg {
+            width: 5px;
+            height: 11px;
+            fill: $black;
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * site-banner
+ * ==================================================================================
+ */
+
+.site-banner {
+    width: 100%;
+    min-height: 120px;
+    padding: 15px 45px;
+    display: grid;
+    grid-template-areas: "image title content-title link"
+                         "image title text link";
+    align-items: center;
+    background-color: $white;
+    background-size: cover; 
+    background-position: center right;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    box-sizing: border-box;
+
+    &__tilte {
+        grid-area: title;
+        margin: 0;
+    }
+
+    &__image {
+        grid-area: image;
+
+        img {
+            height: 92px;
+        }
+    }
+
+    &__link {
+        grid-area: link;
+        text-align: right;
+    }
+
+    &__content-title {
+        grid-area: content-title;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        * {
+            margin: 0;
+            white-space: nowrap;
+        }
+    }
+
+    &__text {
+        grid-area: text;
+        font-size: .75rem;
+        line-height: 16px;
+    }
+
+    @media (max-width: $lg + px) {
+        grid-template-areas: "title title"
+                             "image content-title"
+                             "image link"
+                             "image text";
+        grid-template-columns: 110px auto;
+
+        &__link {
+            text-align: left;
+        }
+
+        &__tilte {
+            text-align: center;
+        }
+
+        &__image {
+
+        }
+    }
+
+    @media (max-width: $md + px) {
+        padding: 7px 14px;
+        background-position: 94% 0%;
+        background-size: 300px 100%;
+        min-height: 180px;
+    }
+}
