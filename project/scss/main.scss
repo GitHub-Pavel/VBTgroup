@@ -2123,6 +2123,10 @@
             margin: 0;
             white-space: nowrap;
         }
+
+        *:nth-child(2) {
+            margin-left: 3px;
+        }
     }
 
     &__text {
@@ -2136,7 +2140,7 @@
                              "image content-title"
                              "image link"
                              "image text";
-        grid-template-columns: 110px auto;
+        grid-template-columns: 123px auto;
 
         &__link {
             text-align: left;
@@ -2147,7 +2151,9 @@
         }
 
         &__image {
-
+            img {
+                height: 105px;
+            }
         }
     }
 
@@ -2156,5 +2162,12 @@
         background-position: 94% 0%;
         background-size: 300px 100%;
         min-height: 180px;
+    }
+    
+    @media (max-width: $sm + px) {
+        &__tilte {
+            font-size: 1.5rem;
+            line-height: 33px;
+        }
     }
 }
