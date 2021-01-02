@@ -75,9 +75,19 @@ button {
 .row {
     margin-left: -($columnGap / 2) + px;
     margin-right: -($columnGap / 2) + px;
+
+    @media (max-width: $sm + px) {
+        margin-left: -($columnGap-sm / 2) + px;
+        margin-right: -($columnGap-sm / 2) + px;
+    }
 }
 
 .col {
     padding-right: ($columnGap / 2) + px;
     padding-left: ($columnGap / 2) + px;
+
+    @media (max-width: $sm + px) {
+        padding-right: ($columnGap-sm / 2) + px;
+        padding-left: ($columnGap-sm / 2) + px;
+    }
 }

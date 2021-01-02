@@ -1,6 +1,6 @@
 //breadcrumbs
 section.site-section.breadcrumbs
-    .breadcrumbs__container.d-none.d-md-block
+    .breadcrumbs__container
         .container
             ul.breadcrumbs__list
                 li.breadcrumbs__item
@@ -10,8 +10,11 @@ section.site-section.breadcrumbs
                     .breadcrumbs__separator
                         svg
                             use(href="img/icons.svg#triangle-right")
-                li.breadcrumbs__item
-                    a(href="catalog.html").breadcrumbs__link Каталог товаров
+                li.breadcrumbs__item.breadcrumbs__item--history
+                    a(href="catalog.html").breadcrumbs__link 
+                        svg.d-block.d-md-none
+                            use(href="img/icons.svg#arrow-left")
+                        | Каталог товаров
                     .breadcrumbs__separator
                         svg
                             use(href="img/icons.svg#triangle-right")

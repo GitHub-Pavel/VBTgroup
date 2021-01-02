@@ -243,7 +243,9 @@ h1 {
 h2 {
     font-size: 2.25rem;
     line-height: 41px;
+    margin: 0 auto;
     margin-bottom: 30px;
+    max-width: calc(100vw - 30px);
 
     @media (max-width: $sm + px) {
         font-size: 1.5rem;

@@ -11,7 +11,7 @@
     <!-- wrapper-->
     <main class="wrapper wrapper--grey">
       <!-- header-->
-      <nav class="mobile-menu d-block d-lg-none">
+      <div class="mobile-menu d-block d-lg-none">
         <div class="container mobile-menu__container">
           <div class="mobile-menu__row">
             <div class="col mobile-menu__item"><a class="mobile-link" href="#mobile-catalog"><span class="mobile-link__icons">
@@ -519,7 +519,7 @@
             </button>
           </form>
         </div>
-      </nav>
+      </div>
       <header class="header" id="header">
         <div class="header__top">
           <div class="container"> 
@@ -546,7 +546,7 @@
                       <svg class="menu-top__icon">
                         <use href="img/icons.svg#shop"></use>
                       </svg>Заказы</a></li>
-                  <li><a class="menu-top__link" href="#"><span class="link-bucket"><span class="link-bucket__quantity">1</span></span>
+                  <li><a class="menu-top__link" href="#"><span class="link-bucket"><span class="link-bucket__quantity"><span class="link-bucket__text">1</span></span></span>
                       <svg class="menu-top__icon">
                         <use href="img/icons.svg#bucket"></use>
                       </svg>Корзина</a></li>
@@ -559,7 +559,7 @@
           </div>
         </div>
       </header>
-      <nav class="menu-sticky">
+      <div class="menu-sticky">
         <div class="container">
           <div class="menu-sticky__full-right full-right">
             <div class="menu-sticky__catalog d-none d-lg-flex">
@@ -766,14 +766,16 @@
                 </div>
               </div>
             </div>
-            <ul class="main-menu">
-              <li class="active"><a href="#">Главная</a></li>
-              <li><a href="#">Доставка и оплата</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
+            <nav class="main-menu">
+              <ul>
+                <li class="active"><a href="#">Главная</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
-      </nav>
+      </div>
       <!-- header -->
       <!-- site-banner -->
       <section class="site-section">
@@ -787,12 +789,11 @@
             </div><span class="site-banner__text">*при оформлении заказов на сумму  от 100тис </span><a class="site-banner__link link text--orange" href="#">Узнать подробнее</a>
           </div>
         </div>
-        <div class="site-section__content d-block d-md-none"></div>
       </section>
       <!-- site-banner -->
       <!--breadcrumbs-->
-      <section class="site-section breadcrumbs d-none d-md-block">
-        <div class="breadcrumbs__container">
+      <section class="site-section breadcrumbs">
+        <div class="breadcrumbs__container d-none d-md-block">
           <div class="container">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">
@@ -805,14 +806,16 @@
                   </svg>
                 </div>
               </li>
-              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог товаров</a>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a>
                 <div class="breadcrumbs__separator">
                   <svg>
                     <use href="img/icons.svg#triangle-right"></use>
                   </svg>
                 </div>
               </li>
-              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Запчасти для холодильников</a></li>
+              <li class="breadcrumbs__item">
+                <p class="text breadcrumbs__text">Запчасти для холодильников</p>
+              </li>
             </ul>
           </div>
         </div>
@@ -822,27 +825,27 @@
       <section class="site-section home-catalog">
         <h2 class="text--center">КАТАЛОГ ТОВАРОВ</h2>
         <div class="container">
-          <div class="row justify-content-center">
+          <div class="row justify-content-center home-catalog__row">
             <!-- catalog-item-->
             <div class="col col-12 col-lg-6 home-catalog__catalog-item">
               <div class="catalog-item">
                 <div class="catalog-item__image"><img class="b-lazy" width="120" data-src="img/catalog/0.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item"></div>
-                <h4 class="catalog-item__title"><a href="#">Запчасти для холодильников</a></h4>
+                <h4 class="catalog-item__title"><a href="categories.html">Запчасти для холодильников</a></h4>
                 <ul class="catalog-item__content">
-                  <li><a href="#">Electolux</a></li>
-                  <li><a href="#">Bosch</a></li>
-                  <li><a href="#">Gorenje</a></li>
-                  <li><a href="#">Indesit</a></li>
-                  <li><a href="#">Candy Teka</a></li>
-                  <li><a href="#">Asko</a></li>
-                  <li><a href="#">Siemens</a></li>
-                  <li><a href="#">Vestforst</a></li>
-                  <li><a href="#">Krcher</a></li>
-                  <li><a href="#">IKEA</a></li>
-                  <li><a href="#">Saeco</a></li>
-                  <li><a href="#">Zanussi</a></li>
-                  <li><a href="#">AEG</a></li>
-                  <li><a href="#">Whirlpool</a></li>
+                  <li><a href="categories.html">Electolux</a></li>
+                  <li><a href="categories.html">Bosch</a></li>
+                  <li><a href="categories.html">Gorenje</a></li>
+                  <li><a href="categories.html">Indesit</a></li>
+                  <li><a href="categories.html">Candy Teka</a></li>
+                  <li><a href="categories.html">Asko</a></li>
+                  <li><a href="categories.html">Siemens</a></li>
+                  <li><a href="categories.html">Vestforst</a></li>
+                  <li><a href="categories.html">Krcher</a></li>
+                  <li><a href="categories.html">IKEA</a></li>
+                  <li><a href="categories.html">Saeco</a></li>
+                  <li><a href="categories.html">Zanussi</a></li>
+                  <li><a href="categories.html">AEG</a></li>
+                  <li><a href="categories.html">Whirlpool</a></li>
                 </ul>
               </div>
             </div>
@@ -851,22 +854,22 @@
             <div class="col col-12 col-lg-6 home-catalog__catalog-item">
               <div class="catalog-item">
                 <div class="catalog-item__image"><img class="b-lazy" width="120" data-src="img/catalog/1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item"></div>
-                <h4 class="catalog-item__title"><a href="#">Запчасти для стиральных машин </a></h4>
+                <h4 class="catalog-item__title"><a href="categories.html">Запчасти для стиральных машин </a></h4>
                 <ul class="catalog-item__content">
-                  <li><a href="#">Electolux</a></li>
-                  <li><a href="#">Bosch</a></li>
-                  <li><a href="#">Gorenje</a></li>
-                  <li><a href="#">Indesit</a></li>
-                  <li><a href="#">Candy Teka</a></li>
-                  <li><a href="#">Asko</a></li>
-                  <li><a href="#">Siemens</a></li>
-                  <li><a href="#">Vestforst</a></li>
-                  <li><a href="#">Krcher</a></li>
-                  <li><a href="#">IKEA</a></li>
-                  <li><a href="#">Saeco</a></li>
-                  <li><a href="#">Zanussi</a></li>
-                  <li><a href="#">AEG</a></li>
-                  <li><a href="#">Whirlpool</a></li>
+                  <li><a href="categories.html">Electolux</a></li>
+                  <li><a href="categories.html">Bosch</a></li>
+                  <li><a href="categories.html">Gorenje</a></li>
+                  <li><a href="categories.html">Indesit</a></li>
+                  <li><a href="categories.html">Candy Teka</a></li>
+                  <li><a href="categories.html">Asko</a></li>
+                  <li><a href="categories.html">Siemens</a></li>
+                  <li><a href="categories.html">Vestforst</a></li>
+                  <li><a href="categories.html">Krcher</a></li>
+                  <li><a href="categories.html">IKEA</a></li>
+                  <li><a href="categories.html">Saeco</a></li>
+                  <li><a href="categories.html">Zanussi</a></li>
+                  <li><a href="categories.html">AEG</a></li>
+                  <li><a href="categories.html">Whirlpool</a></li>
                 </ul>
               </div>
             </div>
@@ -875,22 +878,22 @@
             <div class="col col-12 col-lg-6 home-catalog__catalog-item">
               <div class="catalog-item">
                 <div class="catalog-item__image"><img class="b-lazy" width="120" data-src="img/catalog/2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item"></div>
-                <h4 class="catalog-item__title"><a href="#">Запчасти для кофемашин</a></h4>
+                <h4 class="catalog-item__title"><a href="categories.html">Запчасти для кофемашин</a></h4>
                 <ul class="catalog-item__content">
-                  <li><a href="#">Electolux</a></li>
-                  <li><a href="#">Bosch</a></li>
-                  <li><a href="#">Gorenje</a></li>
-                  <li><a href="#">Indesit</a></li>
-                  <li><a href="#">Candy Teka</a></li>
-                  <li><a href="#">Asko</a></li>
-                  <li><a href="#">Siemens</a></li>
-                  <li><a href="#">Vestforst</a></li>
-                  <li><a href="#">Krcher</a></li>
-                  <li><a href="#">IKEA</a></li>
-                  <li><a href="#">Saeco</a></li>
-                  <li><a href="#">Zanussi</a></li>
-                  <li><a href="#">AEG</a></li>
-                  <li><a href="#">Whirlpool</a></li>
+                  <li><a href="categories.html">Electolux</a></li>
+                  <li><a href="categories.html">Bosch</a></li>
+                  <li><a href="categories.html">Gorenje</a></li>
+                  <li><a href="categories.html">Indesit</a></li>
+                  <li><a href="categories.html">Candy Teka</a></li>
+                  <li><a href="categories.html">Asko</a></li>
+                  <li><a href="categories.html">Siemens</a></li>
+                  <li><a href="categories.html">Vestforst</a></li>
+                  <li><a href="categories.html">Krcher</a></li>
+                  <li><a href="categories.html">IKEA</a></li>
+                  <li><a href="categories.html">Saeco</a></li>
+                  <li><a href="categories.html">Zanussi</a></li>
+                  <li><a href="categories.html">AEG</a></li>
+                  <li><a href="categories.html">Whirlpool</a></li>
                 </ul>
               </div>
             </div>
@@ -899,22 +902,22 @@
             <div class="col col-12 col-lg-6 home-catalog__catalog-item">
               <div class="catalog-item">
                 <div class="catalog-item__image"><img class="b-lazy" width="120" data-src="img/catalog/3.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item"></div>
-                <h4 class="catalog-item__title"><a href="#">Запчасти для посудомоек</a></h4>
+                <h4 class="catalog-item__title"><a href="categories.html">Запчасти для посудомоек</a></h4>
                 <ul class="catalog-item__content">
-                  <li><a href="#">Electolux</a></li>
-                  <li><a href="#">Bosch</a></li>
-                  <li><a href="#">Gorenje</a></li>
-                  <li><a href="#">Indesit</a></li>
-                  <li><a href="#">Candy Teka</a></li>
-                  <li><a href="#">Asko</a></li>
-                  <li><a href="#">Siemens</a></li>
-                  <li><a href="#">Vestforst</a></li>
-                  <li><a href="#">Krcher</a></li>
-                  <li><a href="#">IKEA</a></li>
-                  <li><a href="#">Saeco</a></li>
-                  <li><a href="#">Zanussi</a></li>
-                  <li><a href="#">AEG</a></li>
-                  <li><a href="#">Whirlpool</a></li>
+                  <li><a href="categories.html">Electolux</a></li>
+                  <li><a href="categories.html">Bosch</a></li>
+                  <li><a href="categories.html">Gorenje</a></li>
+                  <li><a href="categories.html">Indesit</a></li>
+                  <li><a href="categories.html">Candy Teka</a></li>
+                  <li><a href="categories.html">Asko</a></li>
+                  <li><a href="categories.html">Siemens</a></li>
+                  <li><a href="categories.html">Vestforst</a></li>
+                  <li><a href="categories.html">Krcher</a></li>
+                  <li><a href="categories.html">IKEA</a></li>
+                  <li><a href="categories.html">Saeco</a></li>
+                  <li><a href="categories.html">Zanussi</a></li>
+                  <li><a href="categories.html">AEG</a></li>
+                  <li><a href="categories.html">Whirlpool</a></li>
                 </ul>
               </div>
             </div>
@@ -923,22 +926,22 @@
             <div class="col col-12 col-lg-6 home-catalog__catalog-item">
               <div class="catalog-item">
                 <div class="catalog-item__image"><img class="b-lazy" width="120" data-src="img/catalog/4.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item"></div>
-                <h4 class="catalog-item__title"><a href="#">Запчасти для сушилок</a></h4>
+                <h4 class="catalog-item__title"><a href="categories.html">Запчасти для сушилок</a></h4>
                 <ul class="catalog-item__content">
-                  <li><a href="#">Electolux</a></li>
-                  <li><a href="#">Bosch</a></li>
-                  <li><a href="#">Gorenje</a></li>
-                  <li><a href="#">Indesit</a></li>
-                  <li><a href="#">Candy Teka</a></li>
-                  <li><a href="#">Asko</a></li>
-                  <li><a href="#">Siemens</a></li>
-                  <li><a href="#">Vestforst</a></li>
-                  <li><a href="#">Krcher</a></li>
-                  <li><a href="#">IKEA</a></li>
-                  <li><a href="#">Saeco</a></li>
-                  <li><a href="#">Zanussi</a></li>
-                  <li><a href="#">AEG</a></li>
-                  <li><a href="#">Whirlpool</a></li>
+                  <li><a href="categories.html">Electolux</a></li>
+                  <li><a href="categories.html">Bosch</a></li>
+                  <li><a href="categories.html">Gorenje</a></li>
+                  <li><a href="categories.html">Indesit</a></li>
+                  <li><a href="categories.html">Candy Teka</a></li>
+                  <li><a href="categories.html">Asko</a></li>
+                  <li><a href="categories.html">Siemens</a></li>
+                  <li><a href="categories.html">Vestforst</a></li>
+                  <li><a href="categories.html">Krcher</a></li>
+                  <li><a href="categories.html">IKEA</a></li>
+                  <li><a href="categories.html">Saeco</a></li>
+                  <li><a href="categories.html">Zanussi</a></li>
+                  <li><a href="categories.html">AEG</a></li>
+                  <li><a href="categories.html">Whirlpool</a></li>
                 </ul>
               </div>
             </div>
@@ -947,22 +950,22 @@
             <div class="col col-12 col-lg-6 home-catalog__catalog-item">
               <div class="catalog-item">
                 <div class="catalog-item__image"><img class="b-lazy" width="120" data-src="img/catalog/5.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item"></div>
-                <h4 class="catalog-item__title"><a href="#">Запчасти для духовок</a></h4>
+                <h4 class="catalog-item__title"><a href="categories.html">Запчасти для духовок</a></h4>
                 <ul class="catalog-item__content">
-                  <li><a href="#">Electolux</a></li>
-                  <li><a href="#">Bosch</a></li>
-                  <li><a href="#">Gorenje</a></li>
-                  <li><a href="#">Indesit</a></li>
-                  <li><a href="#">Candy Teka</a></li>
-                  <li><a href="#">Asko</a></li>
-                  <li><a href="#">Siemens</a></li>
-                  <li><a href="#">Vestforst</a></li>
-                  <li><a href="#">Krcher</a></li>
-                  <li><a href="#">IKEA</a></li>
-                  <li><a href="#">Saeco</a></li>
-                  <li><a href="#">Zanussi</a></li>
-                  <li><a href="#">AEG</a></li>
-                  <li><a href="#">Whirlpool</a></li>
+                  <li><a href="categories.html">Electolux</a></li>
+                  <li><a href="categories.html">Bosch</a></li>
+                  <li><a href="categories.html">Gorenje</a></li>
+                  <li><a href="categories.html">Indesit</a></li>
+                  <li><a href="categories.html">Candy Teka</a></li>
+                  <li><a href="categories.html">Asko</a></li>
+                  <li><a href="categories.html">Siemens</a></li>
+                  <li><a href="categories.html">Vestforst</a></li>
+                  <li><a href="categories.html">Krcher</a></li>
+                  <li><a href="categories.html">IKEA</a></li>
+                  <li><a href="categories.html">Saeco</a></li>
+                  <li><a href="categories.html">Zanussi</a></li>
+                  <li><a href="categories.html">AEG</a></li>
+                  <li><a href="categories.html">Whirlpool</a></li>
                 </ul>
               </div>
             </div>
@@ -971,22 +974,22 @@
             <div class="col col-12 col-lg-6 home-catalog__catalog-item">
               <div class="catalog-item">
                 <div class="catalog-item__image"><img class="b-lazy" width="120" data-src="img/catalog/6.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item"></div>
-                <h4 class="catalog-item__title"><a href="#">Запчасти для газовых плит</a></h4>
+                <h4 class="catalog-item__title"><a href="categories.html">Запчасти для газовых плит</a></h4>
                 <ul class="catalog-item__content">
-                  <li><a href="#">Electolux</a></li>
-                  <li><a href="#">Bosch</a></li>
-                  <li><a href="#">Gorenje</a></li>
-                  <li><a href="#">Indesit</a></li>
-                  <li><a href="#">Candy Teka</a></li>
-                  <li><a href="#">Asko</a></li>
-                  <li><a href="#">Siemens</a></li>
-                  <li><a href="#">Vestforst</a></li>
-                  <li><a href="#">Krcher</a></li>
-                  <li><a href="#">IKEA</a></li>
-                  <li><a href="#">Saeco</a></li>
-                  <li><a href="#">Zanussi</a></li>
-                  <li><a href="#">AEG</a></li>
-                  <li><a href="#">Whirlpool</a></li>
+                  <li><a href="categories.html">Electolux</a></li>
+                  <li><a href="categories.html">Bosch</a></li>
+                  <li><a href="categories.html">Gorenje</a></li>
+                  <li><a href="categories.html">Indesit</a></li>
+                  <li><a href="categories.html">Candy Teka</a></li>
+                  <li><a href="categories.html">Asko</a></li>
+                  <li><a href="categories.html">Siemens</a></li>
+                  <li><a href="categories.html">Vestforst</a></li>
+                  <li><a href="categories.html">Krcher</a></li>
+                  <li><a href="categories.html">IKEA</a></li>
+                  <li><a href="categories.html">Saeco</a></li>
+                  <li><a href="categories.html">Zanussi</a></li>
+                  <li><a href="categories.html">AEG</a></li>
+                  <li><a href="categories.html">Whirlpool</a></li>
                 </ul>
               </div>
             </div>
@@ -995,22 +998,22 @@
             <div class="col col-12 col-lg-6 home-catalog__catalog-item">
               <div class="catalog-item">
                 <div class="catalog-item__image"><img class="b-lazy" width="120" data-src="img/catalog/7.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item"></div>
-                <h4 class="catalog-item__title"><a href="#">Запчасти для электроплит</a></h4>
+                <h4 class="catalog-item__title"><a href="categories.html">Запчасти для электроплит</a></h4>
                 <ul class="catalog-item__content">
-                  <li><a href="#">Electolux</a></li>
-                  <li><a href="#">Bosch</a></li>
-                  <li><a href="#">Gorenje</a></li>
-                  <li><a href="#">Indesit</a></li>
-                  <li><a href="#">Candy Teka</a></li>
-                  <li><a href="#">Asko</a></li>
-                  <li><a href="#">Siemens</a></li>
-                  <li><a href="#">Vestforst</a></li>
-                  <li><a href="#">Krcher</a></li>
-                  <li><a href="#">IKEA</a></li>
-                  <li><a href="#">Saeco</a></li>
-                  <li><a href="#">Zanussi</a></li>
-                  <li><a href="#">AEG</a></li>
-                  <li><a href="#">Whirlpool</a></li>
+                  <li><a href="categories.html">Electolux</a></li>
+                  <li><a href="categories.html">Bosch</a></li>
+                  <li><a href="categories.html">Gorenje</a></li>
+                  <li><a href="categories.html">Indesit</a></li>
+                  <li><a href="categories.html">Candy Teka</a></li>
+                  <li><a href="categories.html">Asko</a></li>
+                  <li><a href="categories.html">Siemens</a></li>
+                  <li><a href="categories.html">Vestforst</a></li>
+                  <li><a href="categories.html">Krcher</a></li>
+                  <li><a href="categories.html">IKEA</a></li>
+                  <li><a href="categories.html">Saeco</a></li>
+                  <li><a href="categories.html">Zanussi</a></li>
+                  <li><a href="categories.html">AEG</a></li>
+                  <li><a href="categories.html">Whirlpool</a></li>
                 </ul>
               </div>
             </div>
@@ -1019,22 +1022,22 @@
             <div class="col col-12 col-lg-6 home-catalog__catalog-item">
               <div class="catalog-item">
                 <div class="catalog-item__image"><img class="b-lazy" width="120" data-src="img/catalog/8.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item"></div>
-                <h4 class="catalog-item__title"><a href="#">Запчасти для микроволновок</a></h4>
+                <h4 class="catalog-item__title"><a href="categories.html">Запчасти для микроволновок</a></h4>
                 <ul class="catalog-item__content">
-                  <li><a href="#">Electolux</a></li>
-                  <li><a href="#">Bosch</a></li>
-                  <li><a href="#">Gorenje</a></li>
-                  <li><a href="#">Indesit</a></li>
-                  <li><a href="#">Candy Teka</a></li>
-                  <li><a href="#">Asko</a></li>
-                  <li><a href="#">Siemens</a></li>
-                  <li><a href="#">Vestforst</a></li>
-                  <li><a href="#">Krcher</a></li>
-                  <li><a href="#">IKEA</a></li>
-                  <li><a href="#">Saeco</a></li>
-                  <li><a href="#">Zanussi</a></li>
-                  <li><a href="#">AEG</a></li>
-                  <li><a href="#">Whirlpool</a></li>
+                  <li><a href="categories.html">Electolux</a></li>
+                  <li><a href="categories.html">Bosch</a></li>
+                  <li><a href="categories.html">Gorenje</a></li>
+                  <li><a href="categories.html">Indesit</a></li>
+                  <li><a href="categories.html">Candy Teka</a></li>
+                  <li><a href="categories.html">Asko</a></li>
+                  <li><a href="categories.html">Siemens</a></li>
+                  <li><a href="categories.html">Vestforst</a></li>
+                  <li><a href="categories.html">Krcher</a></li>
+                  <li><a href="categories.html">IKEA</a></li>
+                  <li><a href="categories.html">Saeco</a></li>
+                  <li><a href="categories.html">Zanussi</a></li>
+                  <li><a href="categories.html">AEG</a></li>
+                  <li><a href="categories.html">Whirlpool</a></li>
                 </ul>
               </div>
             </div>
@@ -1043,22 +1046,22 @@
             <div class="col col-12 col-lg-6 home-catalog__catalog-item">
               <div class="catalog-item">
                 <div class="catalog-item__image"><img class="b-lazy" width="120" data-src="img/catalog/9.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="catalog-item"></div>
-                <h4 class="catalog-item__title"><a href="#">Запчасти для остального</a></h4>
+                <h4 class="catalog-item__title"><a href="categories.html">Запчасти для остального</a></h4>
                 <ul class="catalog-item__content">
-                  <li><a href="#">Electolux</a></li>
-                  <li><a href="#">Bosch</a></li>
-                  <li><a href="#">Gorenje</a></li>
-                  <li><a href="#">Indesit</a></li>
-                  <li><a href="#">Candy Teka</a></li>
-                  <li><a href="#">Asko</a></li>
-                  <li><a href="#">Siemens</a></li>
-                  <li><a href="#">Vestforst</a></li>
-                  <li><a href="#">Krcher</a></li>
-                  <li><a href="#">IKEA</a></li>
-                  <li><a href="#">Saeco</a></li>
-                  <li><a href="#">Zanussi</a></li>
-                  <li><a href="#">AEG</a></li>
-                  <li><a href="#">Whirlpool</a></li>
+                  <li><a href="categories.html">Electolux</a></li>
+                  <li><a href="categories.html">Bosch</a></li>
+                  <li><a href="categories.html">Gorenje</a></li>
+                  <li><a href="categories.html">Indesit</a></li>
+                  <li><a href="categories.html">Candy Teka</a></li>
+                  <li><a href="categories.html">Asko</a></li>
+                  <li><a href="categories.html">Siemens</a></li>
+                  <li><a href="categories.html">Vestforst</a></li>
+                  <li><a href="categories.html">Krcher</a></li>
+                  <li><a href="categories.html">IKEA</a></li>
+                  <li><a href="categories.html">Saeco</a></li>
+                  <li><a href="categories.html">Zanussi</a></li>
+                  <li><a href="categories.html">AEG</a></li>
+                  <li><a href="categories.html">Whirlpool</a></li>
                 </ul>
               </div>
             </div>

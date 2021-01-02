@@ -176,12 +176,13 @@
 
 .link-bucket {
     position: absolute;
-    top: 4px;
-    right: 33px;
+    top: 12px;
+    right: 40px;
+    transform: translate(50%,-50%);
 
     &__quantity {
-        height: 16px;
-        width: 16px;
+        min-width: 16px;
+        padding: 2px;
         background: $orange;
         color: $white;
         border-radius: 50%;
@@ -190,6 +191,11 @@
         justify-content: center;
         font-weight: $bold;
         font-size: 0.875rem;
+        box-sizing: border-box;
+    }
+
+    &__text {
+        line-height: 14px;
     }
 }
 
@@ -235,12 +241,14 @@
 }
 
 .main-menu {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
 
     a {
         color: $white;
@@ -312,14 +320,16 @@
     }
 
     @media (max-width: $md + px) {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-start;
-        width: 100%;
-        height: 100%;
-        padding: 30px 0 85px;
-        overflow-y: auto;
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-start;
+            width: 100%;
+            height: 100%;
+            padding: 30px 0 85px;
+            overflow-y: auto;
+        }
 
         a {
             padding: 11px 0px;
@@ -887,6 +897,7 @@
 
 .site-section {
     padding-top: 60px;
+    background: inherit;
 
     &--grey {
         background: $section-grey;
@@ -966,9 +977,10 @@
             margin: 0 9px 25px;
             display: block;
             text-decoration: none;
+            transition: color .2s;
 
             &:hover {
-                text-decoration: underline;
+                color: $orange;
             }
         }
     }
@@ -1043,6 +1055,10 @@
 
     @media (max-width: $sm + px) {
         padding-top: 0;
+
+        &__row {
+            margin-top: -15px;
+        }
     }
 }
 
@@ -1085,17 +1101,24 @@
         line-height: 25px;
         font-weight: $bold;
         text-decoration: none;
+        transition: color .2s;
     }
 
     &__icon {
         margin: 0 4px;
         width: 25px;
         height: 25px;
+        fill: $black;
+        transition: fill .2s;
     }
 
     &:hover {
         .btn-loadmore__text {
-            text-decoration: underline;
+            color: $orange;
+        }
+
+        .btn-loadmore__icon {
+            fill: $orange;
         }
     }
 }
@@ -2046,6 +2069,8 @@
         color: $black;
         text-decoration: none;
         transition: color .2s;
+        display: flex;
+        align-items: center;
 
         svg {
             width: 25px;
@@ -2063,6 +2088,10 @@
         }
     }
 
+    &__text {
+        font-weight: $bold;
+    }
+
     &__separator {
         margin-left: 10px;
 
@@ -2070,6 +2099,40 @@
             width: 5px;
             height: 11px;
             fill: $black;
+        }
+    }
+
+    @media (max-width: $sm + px) {
+        padding-bottom: 30px;
+
+        &__container {
+            background: transparent;
+            padding: 0;
+        }
+
+        &__item { 
+            display: none;
+
+            &--history {
+                display: flex;
+
+                svg {
+                    width: 16px;
+                    height: 10px;
+                    fill: $dark-grey;
+                    transition: fill .2s;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        &__separator {
+            display: none;
+        }
+
+        &__link {
+            color: $dark-grey;
+            font-weight: $normal;
         }
     }
 }
@@ -2165,9 +2228,68 @@
     }
     
     @media (max-width: $sm + px) {
+        
+        
         &__tilte {
             font-size: 1.5rem;
             line-height: 33px;
         }
+    }
+}
+
+/*
+ * ==================================================================================
+ * category-item
+ * ==================================================================================
+ */
+
+.category-item {
+    display: grid;
+    grid-template-areas: "image"
+                         "title"
+                         "text";
+    padding: 20px;
+    background: $white;
+    border: 1px solid $grey;
+
+    &__image {
+        grid-area: image;
+        display: flex;
+        justify-content: center;
+        max-height: 235px;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        margin-top: 20px;
+
+        a {
+            font-size: inherit;
+            line-height: inherit;
+            color: inherit;
+            text-decoration: none;
+            transition: color .2s;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+
+        @media (max-width: $sm + px) {
+            margin-top: 10px;
+        }
+    }
+
+    &__text {
+        grid-area: text;
+        margin-top: 10px;
+    }
+
+    @media (max-width: $sm + px) {
+        padding: 10px;
     }
 }

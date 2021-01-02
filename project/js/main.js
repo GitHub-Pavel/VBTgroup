@@ -192,4 +192,13 @@ $(function () {
             $($(this).attr('href')).toggleClass('mobile-block--active');
         }
     });
+
+    $('body').on('DOMSubtreeModified', '.link-bucket__text', function () {
+        $(this).parent().height($(this).parent().width());
+    });
+
+    $('.link-bucket__quantity').each(function() {
+        $(this).height($(this).width());
+    });
+    
 })
