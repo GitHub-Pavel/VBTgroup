@@ -1,7 +1,7 @@
 // modals 
 .modal.modal--big.notifications#notifications
     .modal__header
-        h3.modal__title СТАТУС ЗАКАЗА
+        h3.modal__title УВЕДОМЛЕНИЕ О ПОСТУПЛЕНИИ
         button.modal__close
             svg
                 use(href="img/icons.svg#times")
@@ -13,4 +13,17 @@
         p.text.text--style_italic 
             | Я ознакомлен с условиями оферты и даю свое 
             a(href="#").link.link--color_orange согласие на обработку персональных данных
+.modal.status#status
+    .modal__header
+        h3.modal__title СТАТУС ЗАКАЗА
+        button.modal__close
+            svg
+                use(href="img/icons.svg#times")
+    .modal__body
+        form.status__form
+            input(type="text" name="email" placeholder="Ваш email" required).input.status__input
+            input(type="text" name="number" placeholder="Ваш номер заказа" required).input.status__input
+            button(type="submit").status__btn.btn.btn--size_primary.btn--color_green подписаться
+        .attention-block
+            p.text.text--size_big Укажите Email и номер заказ, если Вам не пришло письмо с заказом, то проверьте папку 'Спам' или свяжитесь с нами
 // modals 

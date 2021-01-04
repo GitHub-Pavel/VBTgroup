@@ -699,6 +699,8 @@
     border: 1px solid $grey;
     border-radius: 3px;
     padding: 20px;
+    cursor: pointer;
+    text-decoration: none;
 
     &__logo {
         margin-top: 20px;
@@ -1001,6 +1003,12 @@
                 color: $orange;
             }
         }
+
+        &--active {
+            a {
+                color: $orange;
+            }
+        }
     }
 
     &__content {
@@ -1119,6 +1127,10 @@
 
         &__catalog-loadmore {
             margin-top: 30px;
+        }
+
+        &__pagination {
+            margin-bottom: 30px;
         }
     }
 }
@@ -1403,6 +1415,7 @@
     flex-direction: column;
     text-decoration: none;
     box-sizing: border-box;
+    cursor: pointer;
 
     &__title {
         margin-bottom: 20px;
@@ -1570,6 +1583,10 @@
     &:hover {
         border: 1px solid #FF5100;
         box-shadow: -3px -3px 8px rgba(255, 81, 0, 0.1), 3px 3px 8px rgba(255, 81, 0, 0.1);
+
+        .home-banner__link {
+            text-decoration: none;
+        }
     }
 
     @media (max-width: $xs + px) {
@@ -1855,6 +1872,33 @@
         flex: 1 1 240px;
     }
 }
+
+.status {
+		&__form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+		&__input {
+            margin-bottom: 20px;
+		}
+
+		&__btn {
+            margin-bottom: 30px;
+            width: 100%;
+		}
+}
+
+.attention-block {
+    background: $grey-light;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    padding: 15px;
+}
+
 
 /*
  * ==================================================================================
@@ -2230,6 +2274,8 @@
     border: 1px solid $grey;
     border-radius: 3px;
     box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
 
     &__tilte {
         grid-area: title;
@@ -2269,6 +2315,12 @@
         grid-area: text;
         font-size: .75rem;
         line-height: 16px;
+    }
+
+    &:hover {
+        .site-banner__link {
+            text-decoration: none;
+        }
     }
 
     @media (max-width: $lg + px) {
@@ -2391,6 +2443,17 @@
         padding: 15px 10px;
     }
 
+    &__discount {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 3px 5px;
+        background: $orange;
+        color: $white;
+        border-radius: 3px;
+        z-index: 1;
+    }
+
     &__top {
         position: relative;
         grid-area: top;
@@ -2458,6 +2521,11 @@
         margin-top: 5px;
         color: $dark-grey;
         grid-area: description;
+        display: block;
+
+        &--long {
+            display: none;
+        }
 
         @media (max-width: $sm + px) {
             display: none;
@@ -2522,7 +2590,8 @@
         justify-content: flex-end;
     }
 
-    &__btn {
+    &__plus-minus {
+        display: none;
     }
 }
 
@@ -2537,6 +2606,71 @@
     &:hover {
         .product-view__icon {
             fill: $dark-grey;
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * products--list
+ * ==================================================================================
+ */
+
+.products--list {
+    @media (min-width: $sm + px) {
+        .home-catalog__product {
+            width: 100%;
+        }
+        
+        .product {
+            grid-template-areas: "top title bottom"
+                                "top vendor bottom"
+                                "top manufacturer bottom"
+                                "top description bottom";
+            grid-template-columns: 180px auto 160px;
+            gap: 0px;
+
+            &__top {
+                margin-right: 20px;
+                
+            }
+
+            &__view {
+                right: auto;
+                left: 0;
+            }
+
+            &__discount {
+                right: 0;
+                left: auto;
+            }
+
+            &__bottom {
+                grid-template-areas: "price-old"
+                                    "price"
+                                    "plus-minus"
+                                    "btn";
+                padding: 20px;
+                margin: -20px;
+                margin-left: 20px;
+                border-left: 1px solid $grey;
+            }
+
+            &__price {
+                justify-content: flex-end;
+            }
+
+            &__btn {
+                padding-top: 0.625em;
+                padding-bottom: 0.625em;
+                width: 100%;
+            }
+
+            &__plus-minus {
+                grid-area: plus-minus;
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 }
@@ -2580,7 +2714,7 @@
     display: flex;
     flex-direction: column;
 
-    @media (max-width: $md + px) {
+    @media (max-width: $lg + px) {
         display: none;
     }
 
@@ -2643,7 +2777,7 @@
         transition: opacity 0s;
         opacity: 1;
 
-        @media (max-width: $md + px) {
+        @media (max-width: $lg + px) {
             bottom: 85px;
             opacity: 0;
         }
@@ -2655,7 +2789,7 @@
 
     &--active {
         .filter__clean-wrapper {
-            @media (max-width: $md + px) {
+            @media (max-width: $lg + px) {
                 opacity: 1;
                 transition: opacity .2s .4s;
             }
@@ -2668,7 +2802,7 @@
     align-items: center;
     cursor: default;
 
-    @media (max-width: $md + px) {
+    @media (max-width: $lg + px) {
         cursor: pointer;
     }
 
@@ -2680,7 +2814,7 @@
         margin-right: 5px;
         display: none;
 
-        @media (max-width: $md + px) {
+        @media (max-width: $lg + px) {
             display: block;
         }
     }
@@ -2705,7 +2839,7 @@
 
     &--active {
         .filter-btn__text {
-            @media (max-width: $md + px) {
+            @media (max-width: $lg + px) {
                 color: $orange;
             }
         }
@@ -2750,4 +2884,182 @@
 
 .mb-15 {
     margin-bottom: 15px;
+}
+
+/*
+ * ==================================================================================
+ * sort
+ * ==================================================================================
+ */
+
+.sort {
+    display: flex;
+    align-items: center;
+
+    &__text {
+        margin-right: 20px;
+
+        @media (max-width: $md + px) {
+            display: none;
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * sort-quantity
+ * ==================================================================================
+ */
+
+.sort-quantity {
+    display: flex;
+    align-items: center;
+
+    &__radio {
+        margin-left: 5px;
+    }
+
+    &__text {
+        width: 22px;
+        display: flex;
+        justify-content: center;
+        color: $blue;
+        transition: color .2s, font-weight .2s;
+        cursor: pointer;
+    }
+
+    &__input:checked + .sort-quantity__text {
+        color: $black;
+        font-weight: $bold;
+        cursor: default;
+    }
+}
+
+/*
+ * ==================================================================================
+ * sort-view
+ * ==================================================================================
+ */
+
+.sort-view {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: $grey;
+        transition: fill .2s;
+    }
+
+    &__radio {
+        margin-right: 25px;
+        display: block;
+        height: 24px;
+
+        &:hover {
+            .sort-view__icon {
+                fill: $menu-hover;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__input:checked + .sort-view__icon {
+        fill: $menu-hover;
+        cursor: default;
+    }
+
+    @media (max-width: $md + px) {
+        margin-right: 5px;
+
+        &__radio {
+            margin-right: 10px;
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * pagination
+ * ==================================================================================
+ */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $md + px) {
+        flex-direction: column-reverse;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: $md + px) {
+            margin-top: 30px;
+        }
+    }
+
+    &__link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: background .2s ease-in-out, color .2s ease-in-out;
+
+        &:hover, 
+        &--active {
+            background: $orange;
+            color: $white;
+        }
+    }
+
+    &__right {
+        margin: 0 -5px;
+
+        @media (max-width: $md + px) {
+            margin: 0 5px 0 0;
+        }
+
+        span {
+            margin: 0px 5px;
+        }
+    }
+}
+
+.pagination-button {
+    display: flex;
+    align-items: center;
+    margin: 0 -2.5px;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        margin: 0 2.5px;
+
+        @media (max-width: $sm + px) {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__text {
+        margin: 0 2.5px;
+    }
+}
+
+.pagination-button--prev {
+    margin-right: 2.5px;
+}
+
+.pagination-button--next {
+    margin-left: 2.5px;
 }

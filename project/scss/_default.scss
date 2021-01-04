@@ -42,6 +42,7 @@ p,
 
     &--size_big {
         font-size: 1.125rem;
+        line-height: 25px;
     }
 
     &--weight_bold {
@@ -126,7 +127,8 @@ p {
         transition: fill 0.3s ease-in-out;
     }
 
-    &:hover {
+    &:hover,
+    &.btn--hover {
         color: $orange;
         background: transparent;
     }
@@ -141,7 +143,8 @@ p {
         color: $orange;
         background: transparent;
 
-        &:hover {
+        &:hover,
+        &.btn--hover {
             color: $white;
             background: $orange;
         }
@@ -186,7 +189,8 @@ p {
         background: $blue;
         border-color: $blue;
 
-        &:hover {
+        &:hover,
+        &.btn--hover {
             color: $blue;
             background: transparent;
         }
@@ -197,7 +201,8 @@ p {
         background: $yellow;
         border-color: $yellow;
 
-        &:hover {
+        &:hover,
+        &.btn--hover {
             color: $yellow;
             background: transparent;
         }
@@ -208,7 +213,8 @@ p {
         background: $green;
         border-color: $green;
 
-        &:hover {
+        &:hover,
+        &.btn--hover {
             color: $green;
             background: transparent;
         }
@@ -219,7 +225,8 @@ p {
         background: $white;
         border-color: $black;
 
-        &:hover {
+        &:hover,
+        &.btn--hover {
             color: $white;
             background: $black;
         }
@@ -415,3 +422,97 @@ article {
         }
     }
 }
+
+/*
+ * ==================================================================================
+ * select
+ * ==================================================================================
+ */
+
+.select {
+    position: relative;
+    display: block;
+
+    &__input {
+        padding: 8px 32px 8px 20px;
+        background: $white;
+        border: 1px solid $grey;
+        border-radius: 3px;
+        font-size: 1rem;
+        line-height: 22px;
+
+        @media (max-width: $sm + px) {
+            padding: 8px 32px 8px 10px;
+        }
+    }
+
+    &__icon {
+        width: 12px;
+        height: 7px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 2px;
+        height: 20px;
+        width: 18px;
+        background: $white;
+        pointer-events: none;
+    }
+}
+
+/*
+ * ==================================================================================
+ * plus-minus
+ * ==================================================================================
+ */
+
+.plus-minus {
+    background: $white;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1px solid $grey;
+
+    &__button {
+        background: transparent;
+        width: 35px;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    &__button--inactive {
+        background: $grey-light;
+        cursor: default;
+    }
+
+    &__field {
+        background: $grey-light;
+        padding: 4px;
+        height: 100%;
+        width: 100%;
+        max-width: 45px;
+        text-align: center;
+        border-right: 1px solid $grey;
+        border-left: 1px solid $grey;
+        box-sizing: border-box;
+    }
+
+    &__button--minus {
+    }
+
+    &__button--plus {
+    }
+}
+
