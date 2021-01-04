@@ -844,17 +844,100 @@
       <section class="site-section home-catalog">
         <div class="container">
           <h2>Дверные полки для холодильников</h2>
-          <div class="catalog-loadmore mb-30"> </div>
+          <div class="catalog-loadmore catalog-loadmore--sm_full mb-30"></div>
           <div class="row">
-            <div class="col col-12 col-xl-3"></div>
-            <div class="col col-12 col-xl-9 products products--list">
-              <div class="row">
-                <div class="col home-catalog__product">
-                  <!-- product -->
-                  <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
+            <div class="col col-4 col-xl-3">
+              <button class="filter-btn"><span class="filter-btn__icons">
+                  <svg class="filter-btn__icon filter-btn__icon--filter">
+                    <use href="img/icons.svg#filter"></use>
+                  </svg>
+                  <svg class="filter-btn__icon filter-btn__icon--times">
+                    <use href="img/icons.svg#times"></use>
+                  </svg></span>
+                <h4 class="filter-btn__text">Фильтр</h4>
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-12 col-xl-3 d-flex flex-direction-column">
+              <div class="catalog-loadmore mb-15 mt-30 d-none d-md-block"></div>
+              <form class="filter home-catalog__filter">
+                <button class="filter__btn-wrapper filter__btn-wrapper--active btn-open">
+                  <h5>Производитель</h5>
+                  <svg>
+                    <use href="img/icons.svg#triangle-down"></use>
+                  </svg>
+                </button>
+                <div class="wrapper-open filter__wrapper">
+                  <label class="check filter__input">
+                    <input class="visually-hidden check__input" type="checkbox" name="manufacturer" value="whirlpool" checked>
+                    <div class="check__box">
+                      <svg class="check__checked-icon">
+                        <use href="img/icons.svg#done"></use>
+                      </svg>
                     </div>
+                    <p class="check__text text"><span class="text">Whirlpool </span><span class="text text--grey_light">12</span></p>
+                  </label>
+                  <label class="check filter__input">
+                    <input class="visually-hidden check__input" type="checkbox" name="manufacturer" value="whirlpool">
+                    <div class="check__box">
+                      <svg class="check__checked-icon">
+                        <use href="img/icons.svg#done"></use>
+                      </svg>
+                    </div>
+                    <p class="check__text text"><span class="text">Whirlpool </span><span class="text text--grey_light">12</span></p>
+                  </label>
+                </div>
+                <button class="filter__btn-wrapper btn-open">
+                  <h5>Производитель</h5>
+                  <svg>
+                    <use href="img/icons.svg#triangle-down"></use>
+                  </svg>
+                </button>
+                <div class="wrapper-open">
+                  <div class="filter__wrapper">
+                    <label class="check filter__input">
+                      <input class="visually-hidden check__input" type="checkbox" name="manufacturer" value="whirlpool">
+                      <div class="check__box">
+                        <svg class="check__checked-icon">
+                          <use href="img/icons.svg#done"></use>
+                        </svg>
+                      </div>
+                      <p class="check__text text"><span class="text">Whirlpool </span><span class="text text--grey_light">12</span></p>
+                    </label>
+                    <label class="check filter__input">
+                      <input class="visually-hidden check__input" type="checkbox" name="manufacturer" value="whirlpool">
+                      <div class="check__box">
+                        <svg class="check__checked-icon">
+                          <use href="img/icons.svg#done"></use>
+                        </svg>
+                      </div>
+                      <p class="check__text text"><span class="text">Whirlpool </span><span class="text text--grey_light">12</span></p>
+                    </label>
+                  </div>
+                </div>
+                <div class="catalog-loadmore mb-15 mt-15"></div>
+                <label class="check filter__input mb-15">
+                  <input class="visually-hidden check__input" type="checkbox" name="nocategories" value="nocategories">
+                  <div class="check__box">
+                    <svg class="check__checked-icon">
+                      <use href="img/icons.svg#done"></use>
+                    </svg>
+                  </div>
+                  <p class="check__text text"><span class="text">Фильтр без категории </span><span class="text text--grey_light">12</span></p>
+                </label>
+                <div class="filter__clean-wrapper"><a class="filter__clean btn btn--size_small btn--color_white d-none d-lg-flex" href="#">Очистить</a><a class="filter__clean btn btn--size_small d-flex d-lg-none" href="#">Показать 123 товара</a></div>
+              </form>
+            </div>
+            <div class="col col-12 col-xl-9">
+              <div class="row products products--list">
+                <!-- product -->
+                <div class="col home-catalog__product">
+                  <div class="product">
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -874,14 +957,15 @@
                       <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
+                <!-- product -->
                 <div class="col home-catalog__product">
-                  <!-- product -->
                   <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
-                    </div>
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -901,14 +985,15 @@
                       <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
+                <!-- product -->
                 <div class="col home-catalog__product">
-                  <!-- product -->
                   <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
-                    </div>
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -928,14 +1013,15 @@
                       <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
+                <!-- product -->
                 <div class="col home-catalog__product">
-                  <!-- product -->
                   <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
-                    </div>
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -955,14 +1041,15 @@
                       <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
+                <!-- product -->
                 <div class="col home-catalog__product">
-                  <!-- product -->
                   <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
-                    </div>
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -982,14 +1069,15 @@
                       <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
+                <!-- product -->
                 <div class="col home-catalog__product">
-                  <!-- product -->
                   <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
-                    </div>
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -1009,14 +1097,15 @@
                       <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
+                <!-- product -->
                 <div class="col home-catalog__product">
-                  <!-- product -->
                   <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
-                    </div>
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -1036,14 +1125,15 @@
                       <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
+                <!-- product -->
                 <div class="col home-catalog__product">
-                  <!-- product -->
                   <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
-                    </div>
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -1063,14 +1153,15 @@
                       <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
+                <!-- product -->
                 <div class="col home-catalog__product">
-                  <!-- product -->
                   <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
-                    </div>
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -1090,14 +1181,15 @@
                       <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
+                <!-- product -->
                 <div class="col home-catalog__product">
-                  <!-- product -->
                   <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
-                    </div>
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -1117,14 +1209,15 @@
                       <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
+                <!-- product -->
                 <div class="col home-catalog__product">
-                  <!-- product -->
                   <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
-                    </div>
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -1144,14 +1237,15 @@
                       <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
+                <!-- product -->
                 <div class="col home-catalog__product">
-                  <!-- product -->
                   <div class="product">
-                    <div class="product__top">
-                      <div class="product__view product-view d-none d-lg-flex"></div><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a>
-                    </div>
+                    <div class="product__top"><a class="product__view product-view d-none d-lg-flex" href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch">
+                        <svg class="product-view__icon">
+                          <use href="img/icons.svg#eye"></use>
+                        </svg></a><a class="product__image-wrapper" href="#"><img class="b-lazy product__image" data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product"></a></div>
                     <h5 class="product__title"> <a class="product__link effect effect--orange" href="#"><span class="effect__item">Дверная полка для холодильника Bosch</span></a></h5>
                     <p class="text text--grey product__vendor">Артикул: <span>1234567</span></p>
                     <p class="text text--grey product__manufacturer">
@@ -1168,13 +1262,13 @@
                           <use href="img/icons.svg#ruble"></use>
                         </svg>
                       </p>
-                      <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small" href="#"><span class="btn__text">Купить</span></a></div>
+                      <div class="product__btn-wrapper"><a class="product__btn btn btn--size_small btn--color_blue" href="#"><span class="btn__text">Сообщить</span></a></div>
                     </div>
                   </div>
-                  <!-- product -->
                 </div>
+                <!-- product -->
               </div>
-              <div class="catalog-loadmore mt-30"> 
+              <div class="catalog-loadmore catalog-loadmore--mt_small">
                 <button class="btn-loadmore"><span class="btn-loadmore__text">ПОКАЗАТЬ ЕЩЁ</span>
                   <svg class="btn-loadmore__icon">
                     <use href="img/icons.svg#align-down"></use>

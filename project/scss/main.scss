@@ -1140,6 +1140,17 @@
         background: $grey;
         z-index: 1;
     }
+
+    &--mt_small {
+        margin-top: 30px;
+    }
+
+    @media (max-width: $sm + px) {
+        &--sm_full {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
 }
 
 .btn-loadmore {
@@ -2396,6 +2407,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 1;
     }
 
     &__image-wrapper {
@@ -2459,6 +2471,14 @@
                              "price btn";
         gap: 5px;
         grid-area: bottom;
+
+        @media (max-width: $sm + px) {
+            gap: 0px;
+
+            .product__price--old {
+                margin-bottom: 5px;
+            }
+        }
     }
 
     &__price {
@@ -2507,4 +2527,227 @@
 }
 
 .product-view {
+    &__icon {
+        fill: $grey;
+        transition: fill .2s;
+        width: 30px;
+        height: 30px;
+    }
+
+    &:hover {
+        .product-view__icon {
+            fill: $dark-grey;
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * open
+ * ==================================================================================
+ */
+
+.wrapper-open {
+    display: none;
+}
+
+.btn-open {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    svg {
+        width: 12px;
+        height: 7px;
+        margin-left: 10px;
+        transition: transform .3s ease-in-out;
+    }
+
+    &--active {
+        svg {
+            transform: rotateX(180deg);
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * filter
+ * ==================================================================================
+ */
+
+.filter {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $md + px) {
+        display: none;
+    }
+
+    &__btn-wrapper {
+        margin-top: 15px;
+        position: relative;
+        width: 100%;
+
+        h5 {
+            @media (max-width: $sm + px) {
+                font-size: 1rem;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .btn-open {
+        transition: margin-bottom .3s ease-in-out;
+        
+        &--active {
+            margin-bottom: 20px;
+            
+            @media (max-width: $sm + px) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__btn-wrapper--active {
+        &:after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: $orange;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__wrapper {
+        margin-bottom: -8px;
+    }
+
+    &__input {
+        margin-bottom: 8px;
+    }
+
+    &__clean-wrapper {
+        display: flex;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
+        background: $section-grey;
+        transition: opacity 0s;
+        opacity: 1;
+
+        @media (max-width: $md + px) {
+            bottom: 85px;
+            opacity: 0;
+        }
+    }
+
+    &__clean {
+        width: 100%;
+    }
+
+    &--active {
+        .filter__clean-wrapper {
+            @media (max-width: $md + px) {
+                opacity: 1;
+                transition: opacity .2s .4s;
+            }
+        }
+    }
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    cursor: default;
+
+    @media (max-width: $md + px) {
+        cursor: pointer;
+    }
+
+    &__icons {
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        transition: color .3s ease-in-out;
+        margin-right: 5px;
+        display: none;
+
+        @media (max-width: $md + px) {
+            display: block;
+        }
+    }
+
+    &__icon {
+        transition: transform .3s ease-in-out;
+        width: 30px;
+        height: 30px;
+        display: block;
+
+        &--filter {
+            fill: $orange;
+        }
+
+        &--times {
+            width: 18px;
+            height: 18px;
+            fill: $black;
+            margin: 0 auto;
+        }
+    }
+
+    &--active {
+        .filter-btn__text {
+            @media (max-width: $md + px) {
+                color: $orange;
+            }
+        }
+
+        .filter-btn__icon {
+            &--filter {
+                transform: translateY(-30px);
+            }
+
+            &--times {
+                transform: translateY(-24px);
+            }
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * margin
+ * ==================================================================================
+ */
+
+.mt-30 {
+    margin-top: 30px;
+    
+    @media (max-width: $sm + px) {
+        margin-top: 15px;
+    }
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+
+    @media (max-width: $sm + px) {
+        margin-bottom: 15px;
+    }
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
 }

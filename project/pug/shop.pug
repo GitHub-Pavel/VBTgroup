@@ -8,17 +8,85 @@ block content
     section.site-section.home-catalog
         .container
             h2 Дверные полки для холодильников
-            .catalog-loadmore.mb-30 
+            .catalog-loadmore.catalog-loadmore--sm_full.mb-30
             .row
-                .col.col-12.col-xl-3
-                .col.col-12.col-xl-9.products.products--list
-                    .row
-                        - for(let i=0; i<12; i++)
+                .col.col-4.col-xl-3
+                    button.filter-btn
+                        span.filter-btn__icons
+                            svg.filter-btn__icon.filter-btn__icon--filter
+                                use(href="img/icons.svg#filter")
+                            svg.filter-btn__icon.filter-btn__icon--times
+                                use(href="img/icons.svg#times")
+                        h4.filter-btn__text Фильтр
+            .row
+                .col.col-12.col-xl-3.d-flex.flex-direction-column
+                    .catalog-loadmore.mb-15.mt-30.d-none.d-md-block
+                    form.filter.home-catalog__filter
+                        button.filter__btn-wrapper.filter__btn-wrapper--active.btn-open
+                            h5 Производитель
+                            svg
+                                use(href="img/icons.svg#triangle-down")
+                        .wrapper-open.filter__wrapper
+                            label.check.filter__input
+                                input(type="checkbox" name="manufacturer" value="whirlpool" checked).visually-hidden.check__input
+                                .check__box
+                                    svg.check__checked-icon
+                                        use(href="img/icons.svg#done")
+                                p.check__text.text
+                                    span.text Whirlpool 
+                                    span.text.text--grey_light 12
+                            label.check.filter__input
+                                input(type="checkbox" name="manufacturer" value="whirlpool").visually-hidden.check__input
+                                .check__box
+                                    svg.check__checked-icon
+                                        use(href="img/icons.svg#done")
+                                p.check__text.text
+                                    span.text Whirlpool 
+                                    span.text.text--grey_light 12
+                        button.filter__btn-wrapper.btn-open
+                            h5 Производитель
+                            svg
+                                use(href="img/icons.svg#triangle-down")
+                        .wrapper-open
+                            .filter__wrapper
+                                label.check.filter__input
+                                    input(type="checkbox" name="manufacturer" value="whirlpool").visually-hidden.check__input
+                                    .check__box
+                                        svg.check__checked-icon
+                                            use(href="img/icons.svg#done")
+                                    p.check__text.text
+                                        span.text Whirlpool 
+                                        span.text.text--grey_light 12
+                                label.check.filter__input
+                                    input(type="checkbox" name="manufacturer" value="whirlpool").visually-hidden.check__input
+                                    .check__box
+                                        svg.check__checked-icon
+                                            use(href="img/icons.svg#done")
+                                    p.check__text.text
+                                        span.text Whirlpool 
+                                        span.text.text--grey_light 12
+                        .catalog-loadmore.mb-15.mt-15
+                        label.check.filter__input.mb-15
+                            input(type="checkbox" name="nocategories" value="nocategories").visually-hidden.check__input
+                            .check__box
+                                svg.check__checked-icon
+                                    use(href="img/icons.svg#done")
+                            p.check__text.text
+                                span.text Фильтр без категории 
+                                span.text.text--grey_light 12
+                        .filter__clean-wrapper
+                            a(href="#").filter__clean.btn.btn--size_small.btn--color_white.d-none.d-lg-flex Очистить
+                            a(href="#").filter__clean.btn.btn--size_small.d-flex.d-lg-none Показать 123 товара
+                .col.col-12.col-xl-9
+                    .row.products.products--list
+                        - for(let i=0; i<11; i++)
+                            // product 
                             .col.home-catalog__product
-                                // product 
                                 .product
                                     .product__top
-                                        .product__view.product-view.d-none.d-lg-flex
+                                        a(href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch").product__view.product-view.d-none.d-lg-flex
+                                            svg.product-view__icon
+                                                use(href="img/icons.svg#eye")
                                         a(href="#").product__image-wrapper
                                             img(data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product").b-lazy.product__image
                                     h5.product__title 
@@ -44,8 +112,41 @@ block content
                                         .product__btn-wrapper
                                             a(href="#").product__btn.btn.btn--size_small
                                                 span.btn__text Купить
-                                // product 
-                    .catalog-loadmore.mt-30 
+                            // product 
+                        // product 
+                        .col.home-catalog__product
+                            .product
+                                .product__top
+                                    a(href="#" title="Быстрий просмотр Дверная полка для холодильника Bosch").product__view.product-view.d-none.d-lg-flex
+                                        svg.product-view__icon
+                                            use(href="img/icons.svg#eye")
+                                    a(href="#").product__image-wrapper
+                                        img(data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product").b-lazy.product__image
+                                h5.product__title 
+                                    a(href="#").product__link.effect.effect--orange
+                                        span.effect__item Дверная полка для холодильника Bosch
+                                p.text.text--grey.product__vendor
+                                    | Артикул: 
+                                    span 1234567
+                                p.text.text--grey.product__manufacturer 
+                                    | Производитель: 
+                                    a(href="#").product__link.text.effect.effect--orange 
+                                        span.effect__item BOSCH
+                                p.text.product__description Lorem ipsum dolor sit amet, cum percipit expetenda te, an sed elitr ludus...
+                                .product__bottom
+                                    p.text.text--grey.product__price.product__price--old
+                                        span 15 000
+                                        svg
+                                            use(href="img/icons.svg#ruble")
+                                    p.text.product__price
+                                        span 10 000
+                                        svg
+                                            use(href="img/icons.svg#ruble")
+                                    .product__btn-wrapper
+                                        a(href="#").product__btn.btn.btn--size_small.btn--color_blue
+                                            span.btn__text Сообщить
+                        // product 
+                    .catalog-loadmore.catalog-loadmore--mt_small
                         button.btn-loadmore
                             span.btn-loadmore__text ПОКАЗАТЬ ЕЩЁ
                             svg.btn-loadmore__icon

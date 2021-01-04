@@ -67,6 +67,10 @@ p,
     &--grey {
         color: $grey-text; 
     }
+
+    &--grey_light {
+        color: $grey;
+    }
 }
 
 p {
@@ -157,6 +161,16 @@ p {
 
     &--size_small {
         padding: 0.5em calc(0.5em - 5px);
+
+        &.btn--color_blue {
+            @media (max-width: $sm + px) {
+                padding: 0.5em calc(0.5em - 7px);
+
+                .btn__text {
+                        margin: 0 3px;
+                }
+            }
+        }
     }
 
     &--size_primary {
@@ -197,6 +211,17 @@ p {
         &:hover {
             color: $green;
             background: transparent;
+        }
+    }
+
+    &--color_white {
+        color: $black;
+        background: $white;
+        border-color: $black;
+
+        &:hover {
+            color: $white;
+            background: $black;
         }
     }
 }
@@ -328,20 +353,6 @@ article {
 
 /*
  * ==================================================================================
- * margin
- * ==================================================================================
- */
-
-.mt-30 {
-    margin-top: 30px;
-}
-
-.mb-30 {
-    margin-bottom: 30px;
-}
-
-/*
- * ==================================================================================
  * effects
  * ==================================================================================
  */
@@ -358,6 +369,48 @@ article {
             .effect__item {
                 color: $orange;
                 fill: $orange;
+            }
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * check
+ * ==================================================================================
+ */
+
+.check {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &__box {
+        width: 20px;
+        height: 20px;
+        background: $white;
+        border: 1px solid $grey;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+    }
+
+    &__checked-icon {
+        display: none;
+        width: 18px;
+        height: 18px;
+        fill: $white;
+    }
+
+    &__input:checked {
+        & + .check__box {
+            border-color: $orange;
+            background: $orange;
+
+            & .check__checked-icon {
+                display: block;
             }
         }
     }
