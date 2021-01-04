@@ -87,10 +87,6 @@ $(function () {
 
         if ($(window).width() >= 1200) {
             $('.filter').slideDown();
-        } else {
-            $('.filter-btn').removeClass('filter-btn--active');
-            $('.filter').slideUp();
-            $('.filter').removeClass('filter--active');
         }
     });
 
