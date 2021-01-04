@@ -150,6 +150,12 @@ $(function () {
         $('.mobile-menu__header-categories').css({
             'maxHeight': 'calc(100vh - (' + scrollHeightHeader+'px'+' + 87px))'
         });
+
+        if ($('.menu-sticky').position().top === $(window).scrollTop()) {
+            $('.menu-sticky__menu-top').addClass('menu-sticky__menu-top--active');
+        } else {
+            $('.menu-sticky__menu-top').removeClass('menu-sticky__menu-top--active');
+        }
     });
 
     $('body').on('click', '.btn-up', function (e) {

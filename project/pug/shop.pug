@@ -1,0 +1,55 @@
+extends common/layout-grey
+
+block content
+    include includes/site-banner-sect
+    include includes/breadcrumbs-history
+
+    // home-catalog 
+    section.site-section.home-catalog
+        .container
+            h2 Дверные полки для холодильников
+            .catalog-loadmore.mb-30 
+            .row
+                .col.col-12.col-xl-3
+                .col.col-12.col-xl-9.products.products--list
+                    .row
+                        - for(let i=0; i<12; i++)
+                            .col.home-catalog__product
+                                // product 
+                                .product
+                                    .product__top
+                                        .product__view.product-view.d-none.d-lg-flex
+                                        a(href="#").product__image-wrapper
+                                            img(data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product").b-lazy.product__image
+                                    h5.product__title 
+                                        a(href="#").product__link.effect.effect--orange
+                                            span.effect__item Дверная полка для холодильника Bosch
+                                    p.text.text--grey.product__vendor
+                                        | Артикул: 
+                                        span 1234567
+                                    p.text.text--grey.product__manufacturer 
+                                        | Производитель: 
+                                        a(href="#").product__link.text.effect.effect--orange 
+                                            span.effect__item BOSCH
+                                    p.text.product__description Lorem ipsum dolor sit amet, cum percipit expetenda te, an sed elitr ludus...
+                                    .product__bottom
+                                        p.text.text--grey.product__price.product__price--old
+                                            span 15 000
+                                            svg
+                                                use(href="img/icons.svg#ruble")
+                                        p.text.product__price
+                                            span 10 000
+                                            svg
+                                                use(href="img/icons.svg#ruble")
+                                        .product__btn-wrapper
+                                            a(href="#").product__btn.btn.btn--size_small
+                                                span.btn__text Купить
+                                // product 
+                    .catalog-loadmore.mt-30 
+                        button.btn-loadmore
+                            span.btn-loadmore__text ПОКАЗАТЬ ЕЩЁ
+                            svg.btn-loadmore__icon
+                                use(href="img/icons.svg#align-down")
+    // home-catalog 
+
+    include includes/footer-article
