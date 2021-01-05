@@ -88,6 +88,8 @@ $(function () {
         if ($(window).width() >= 1200) {
             $('.filter').slideDown();
         }
+
+        $.fancybox.close();
     });
 
     $('body').on('click', '.btn-catalog', function (e) {
@@ -307,4 +309,113 @@ $(function () {
     $('body').on('mouseout', '.home-banner, .banner-menu, .site-banner', function (e) {
         $(this).find('.btn').removeClass('btn--hover');
     });
-})
+    
+    $.fancybox.defaults.afterShow = function () { 
+        $('.modal .prodslider-big').slick('setPosition');
+        $('.modal .prodslider-small').slick('setPosition');
+    };
+
+    $('.prodslider-big').slick({
+        lazyLoad: 'ondemand',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        arrows: false,
+        infinite: true,
+        dots: false,
+        fade: true,
+        asNavFor: '.prodslider-small',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    dots: true
+                }
+            }
+        ]
+    });
+    $('.prodslider-small').slick({
+        lazyLoad: 'ondemand',
+        vertical: true,
+        verticalSwiping: true,
+        slidesToShow: 3,
+        dots: false,
+        infinite: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '0px',
+        focusOnSelect: true,
+        asNavFor: '.prodslider-big',
+    });
+
+    // enumeration of all tabs
+    $('.tabs').each(function() {
+        let 
+            tabButtons = $(this).find('.tabs__button'),
+            tabWindows = $(this).find('.tabs__window'),
+            breakpoint = 1200,
+            speed = 400;
+        
+        // Start for desktop and mobile
+        if ($(window).width() > breakpoint) {
+            $(tabButtons[0]).addClass('tabs__button--active');
+            $(tabWindows[0]).addClass('tabs__window--active');
+        } else {
+            tabWindows.css({
+                display: 'none'
+            });
+        }
+
+        // initialization of the pressed button
+        tabButtons.each(function (value) {
+            // nubmer of the pressed button
+            let btnNum = value;
+
+            // click
+            $(this).on('click', function (e) {
+                // prevent default
+                e.preventDefault();
+
+                // mobile or desktop
+                if ($(window).width() > breakpoint) {
+
+                    // desktop
+                    
+                    // from mobile to desktop
+                    tabWindows.css('display', '');
+
+                    tabButtons.removeClass('tabs__button--active');
+                    tabWindows.removeClass('tabs__window--active');
+                    $(tabButtons[btnNum]).addClass('tabs__button--active');
+                    $(tabWindows[btnNum]).addClass('tabs__window--active');
+
+                } else {
+                    
+                    // from desktop to mobile
+                    tabWindows.each(function () {
+                        if ( $(this).hasClass('tabs__window--active') ) {
+                            $(this).css('display', 'block');
+                        } else {
+                            $(this).css('display', 'none');
+                        }
+                    });
+
+                    // mobile
+                    $(tabButtons[btnNum]).toggleClass('tabs__button--active');
+                    $(tabWindows[btnNum]).toggleClass('tabs__window--active');
+
+                    // open and close
+                    $(tabWindows[btnNum]).slideToggle({
+                        duration: speed,
+                        start: function () {
+                            $(this).css({
+                                display: 'block'
+                            })
+                        }
+                    });
+                    
+                }
+            });
+        })
+    });
+});

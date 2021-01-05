@@ -72,6 +72,10 @@ p,
     &--grey_light {
         color: $grey;
     }
+
+    &--blue {
+        color: $blue;
+    }
 }
 
 p {
@@ -269,10 +273,12 @@ h6 {
 h1 {
     font-size: 3rem;
     line-height: 65px;
+    margin-bottom: 30px;
 
     @media (max-width: $sm + px) {
         font-size: 1.875rem;
         line-height: 41px;
+        margin-bottom: 15px;
     }
 }
 
@@ -352,9 +358,20 @@ article {
     font-size: 1rem;
     line-height: 22px;  
     color: $black;
+    resize: vertical;
+    outline: none;
+    transition: border-color .2s;
 
     ::placeholder {
         color: $grey;
+    }
+
+    &:focus {
+        border-color: $orange;
+    }
+
+    &.error {
+        border-color: red;
     }
 }
 
@@ -516,3 +533,57 @@ article {
     }
 }
 
+/*
+ * ==================================================================================
+ * tabs
+ * ==================================================================================
+ */
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__window {
+        display: none;
+        width: 100%;
+
+        &--active {
+            display: block;
+        }
+
+        @media (min-width: $lg + px) {
+            &:nth-child(2) {
+                order: 3;
+            }
+
+            &:nth-child(4) {
+                order: 4;
+            }
+
+            &:nth-child(6) {
+                order: 5;
+            }
+        }
+    }
+
+    &__button {
+        display: block;
+        width: 100%;
+
+        @media (min-width: $lg + px) {
+            width: 33.33%;
+
+            &:nth-child(1) {
+                order: 0;
+            }
+
+            &:nth-child(3) {
+                order: 1;
+            }
+
+            &:nth-child(5) {
+                order: 2;
+            }
+        }
+    }
+}

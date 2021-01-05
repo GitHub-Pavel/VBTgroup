@@ -1,0 +1,116 @@
+extends common/layout-grey
+
+block content
+    include includes/site-banner-sect
+    include includes/breadcrumbs-history
+
+    // product-page
+    section.site-section.product-page
+        .container
+            h1 Дверная полка для холодильника Bosch
+            p.text.mb-30
+                span.text--grey Код товара: 
+                span 12345678
+            .row
+                .col.col-12.col-lg-6.col-xl-7
+                    .product-page__sliders
+                        .row
+                            .col.col-3.d-none.d-md-flex
+                                .prodslider-small
+                                    - for(let i=0; i<6; i++)
+                                        .prodslider-small__item
+                                            img(data-lazy="img/product-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="slider-big").prodslider-small__image
+                            .col.col-12.col-md-9
+                                .prodslider-big
+                                    - for(let i=0; i<6; i++)
+                                        a(data-fancybox="prodslider-big" href="img/product-big.jpg" data-width="500" data-height="500").prodslider-big__item
+                                            img(data-lazy="img/product-big.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="slider-big").prodslider-big__image
+                .col.col-12.col-lg-6.col-xl-5    
+                    .product-page__content
+                        .product-page__wrapepr
+                            h2.product-page__price
+                                span 10 000
+                                svg
+                                    use(href="img/icons.svg#ruble")
+                            p.text.text--grey.product-page__price.product-page__price--old
+                                span 15 000
+                                svg
+                                    use(href="img/icons.svg#ruble")
+                            .product-page__plus-minus
+                                .plus-minus
+                                    button(type="button" data-quantity="minus" data-field="quantity").plus-minus__button.plus-minus__button--inactive.plus-minus__button--minus -
+                                    input(type="text" name="quantity" value="1").plus-minus__field.input-number
+                                    button(type="button" data-quantity="plus" data-field="quantity").plus-minus__button.plus-minus__button--plus +
+                            .product-page__btn-warpper
+                                a(data-fancybox href="#status").product-page__btn.btn.btn--size_primary.btn--color_blue
+                                    span.btn__text Под заказ
+                            p.product-page__annotation.text.text--grey Вы можете оставить заказ на этот товар, и мы привезем его со склада поставщика
+                        .catalog-loadmore.mt-30.mb-30
+                        p.text.text--size_big.product-page__vendor
+                            | Артикул: 
+                            span 1234567
+                        p.text.text--size_big.product-page__manufacturer.mt-15
+                            | Производитель: 
+                            a(href="#").product-page__link.text.text--size_big.effect.effect--orange 
+                                span.effect__item BOSCH
+                        .catalog-loadmore.mt-30
+    // product-page 
+    section.site-section
+        .site-section__content
+            .container
+                .tabs.product-tab
+                    button.tabs__button.product-tab__button
+                        svg.product-tab__button-icon
+                            use(href="img/icons.svg#file")
+                        h4.product-tab__button-text Описание
+                        svg.product-tab__button-times
+                            use(href="img/icons.svg#times")
+                    .tabs__window
+                        .product-tab__wrapper
+                            p.text Lorem ipsum dolor sit amet, cum percipit expetenda te, an sed elitr ludus. An harum splendide eum, cum no inimicus adipiscing. Eripuit efficiendi usu ad, wisi blandit repudiandae vel no, nec ipsum velit fabulas id. Cum cibo nostrum ea. Eius pertinax ad quo, lorem fierent ex has. No magna zril torquatos vis, augue invidunt vix ut, brute alterum mediocrem his ex. Lorem ipsum dolor sit amet, cum percipit expetenda te, an sed elitr ludus. An harum splendide eum, cum no inimicus adipiscing. Eripuit efficiendi usu ad, wisi blandit repudiandae vel no, nec ipsum velit fabulas id. Cum cibo nostrum ea. Eius pertinax ad quo, lorem fierent ex has. No magna zril torquatos vis, augue invidunt vix ut, brute alterum mediocrem his ex.
+                            p Lorem ipsum dolor sit amet, cum percipit expetenda te, an sed elitr ludus. An harum splendide eum, cum no inimicus adipiscing. Eripuit efficiendi usu ad, wisi blandit repudiandae vel no, nec ipsum velit fabulas id. Cum cibo nostrum ea. Eius pertinax ad quo, lorem fierent ex has. No magna zril torquatos vis, augue invidunt vix ut, brute alterum mediocrem his ex.
+                    button.tabs__button.product-tab__button
+                        svg.product-tab__button-icon
+                            use(href="img/icons.svg#box")
+                        h4.product-tab__button-text Доставка
+                        svg.product-tab__button-times
+                            use(href="img/icons.svg#times")
+                    .tabs__window
+                        .product-tab__wrapper
+                            p.text Lorem ipsum dolor sit amet, cum percipit expetenda te, an sed elitr ludus. An harum splendide eum, cum no inimicus adipiscing. Eripuit efficiendi usu ad, wisi blandit repudiandae vel no, nec ipsum velit fabulas id. Cum cibo nostrum ea. Eius pertinax ad quo, lorem fierent ex has. No magna zril torquatos vis, augue invidunt vix ut, brute alterum mediocrem his ex. Lorem ipsum dolor sit amet, cum percipit expetenda te, an sed elitr ludus. An harum splendide eum, cum no inimicus adipiscing. Eripuit efficiendi usu ad, wisi blandit repudiandae vel no, nec ipsum velit fabulas id. Cum cibo nostrum ea. Eius pertinax ad quo, lorem fierent ex has. No magna zril torquatos vis, augue invidunt vix ut, brute alterum mediocrem his ex.
+                    button.tabs__button.product-tab__button
+                        svg.product-tab__button-icon
+                            use(href="img/icons.svg#chat")
+                        h4.product-tab__button-text Отзывы
+                        svg.product-tab__button-times
+                            use(href="img/icons.svg#times")
+                    .tabs__window
+                        .product-tab__wrapper
+                            .comments
+                                .row
+                                    .col.col-12.col-lg-7.col-xl-8
+                                        .comments__wrapper
+                                            - for(let i=0; i<9; i++)
+                                                .comments__item
+                                                    .comment
+                                                        .comment__header
+                                                            .comment-user.comment__user
+                                                                svg.comment-user__icon(width="20" height="20")
+                                                                    use(href="img/icons.svg#user")
+                                                                h5.comment-user__title Igor
+                                                            p.text.text--size_big.text--grey_light 2019-06-24
+                                                        .comment__body
+                                                            p.text Заказ пришел быстро, спасибо.
+                                                    .answer.comments__answer
+                                                        .answer__header
+                                                            .answer-user.answer__user
+                                                                img(width="20" height="20" src="img/admin.jpg" alt="менеджер").answer-user__icon
+                                                                h5.answer-user__title Менеджер
+                                                        .answer__body
+                                                            p.text Спасибо большое и Вам ! Рады помочь. Будут вопросы пишите нам или звоните. 
+                                    .col.col-12.col-lg-5.col-xl-4
+                                        .comments__form#comment--form
+                                            input(type="text" name="name" placeholder="Имя или логин" required).input.comments__input
+                                            input(type="text" name="email" placeholder="Email для ответа администрации" required).input.comments__input
+                                            textarea(name="message" rows="6" placeholder="Ваш комментарий").input.comments__input
+                                            button(type="submit").comments__btn.btn.btn--size_primary.btn--color_green написать отзыв
