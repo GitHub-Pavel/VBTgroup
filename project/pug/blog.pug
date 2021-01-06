@@ -1,0 +1,25 @@
+extends common/layout-grey
+
+block content
+    include includes/site-banner-sect
+    include includes/breadcrumbs-history
+
+    section.site-section.home-catalog
+        .site-section__content
+            .container
+                h1.text--center ИНСТРУКЦИИ
+                .catalog-loadmore.d-block.d-md-none
+                .row
+                    - for(let i=0; i<9; i++)
+                        .col.col-12.col-md-6.col-xl-4
+                            .home-catalog__blog-item
+                                a(href="article.html").blog-item
+                                    .blog-item__image-wrapper
+                                        img(width="380" height="280" data-src="img/blog.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="blog").blog-item__image.b-lazy
+                                    h4.blog-item__title Какой таймер оттайки холодильника лучше выбрать?
+                                    p.text.blog-item__description Любой холодильник с системой No Frost и отсутствием цифрового модуля управления имеет таймер оттайки. На данный момент их существует больше 10 разновидностей и у каждого производителя он свой, но так как в России холодильник Indesit / Ariston / Stino...
+            .catalog-loadmore.home-catalog__catalog-loadmore
+                button.btn-loadmore
+                    span.btn-loadmore__text ПОКАЗАТЬ ЕЩЁ
+                    svg.btn-loadmore__icon
+                        use(href="img/icons.svg#align-down")

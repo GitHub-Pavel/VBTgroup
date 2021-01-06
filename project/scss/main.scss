@@ -1099,6 +1099,14 @@
         }
     }
 
+    &__blog-item {
+        margin-top: 30px;
+
+        @media (max-width: $sm + px) {
+            margin-top: 20px;
+        }
+    }
+
     &__product {
         margin-top: 30px;
         width: 33.33%;
@@ -1271,12 +1279,12 @@
 
         .slick-dots {
             display: flex;
-            background: #525151;
             padding: 0;
             margin: 0;
             list-style: none;
             height: 5px;
-            border-radius: 50px;
+            border-radius: 25%;
+            background: $grey;
             margin-top: 12px;
 
             li {
@@ -1875,6 +1883,8 @@
 }
 
 .status {
+    background: $section-grey;
+
 		&__form {
             display: flex;
             flex-direction: column;
@@ -3162,6 +3172,9 @@
         @media (max-width: $sm + px) {
             font-size: 2.25rem;
             line-height: 49px;
+        }
+
+        @media (max-width: $md + px) {
             margin-top: 30px;
         }
 
@@ -3659,6 +3672,14 @@
 .similar-slider {
     overflow: hidden;
 
+    .slick-slide {
+        display: flex;
+
+        & > div {
+            display: flex;
+        }
+    }
+
     &__navigation {
         display: flex;
         align-items: center;
@@ -3668,6 +3689,7 @@
 
     &__item {
         margin-top: 30px;
+        display: flex !important;
 
         @media (max-width: $sm + px) {
             margin-top: 20px;
@@ -3675,6 +3697,7 @@
 
         .col {
             padding-right: 17px;
+            display: flex;
 
             @media (max-width: $sm + px) {
                 padding-right: 9.5px;
@@ -3767,5 +3790,97 @@
         &__btn-wrapper {
             margin: 0;
         }
+    }
+}
+
+/*
+ * ==================================================================================
+ * blog-item
+ * ==================================================================================
+ */
+
+.blog-item {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background: $white;
+    border: 1px solid $grey;
+    border-radius: 3px;
+
+    &__image-wrapper {
+        margin: -20px;
+        margin-bottom: 0;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: color .2s;
+    }
+
+    &:hover {
+        .blog-item__title {
+            color: $orange;
+        }
+    }
+
+    @media (max-width: $sm + px) {
+        padding: 15px;
+
+        &__image-wrapper {
+            margin: -15px;
+            margin-bottom: 0;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__title {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+    }
+}
+
+/*
+ * ==================================================================================
+ * article
+ * ==================================================================================
+ */
+
+.article {
+    &__image {
+        float: left;
+        display: inline;
+        padding-right: 30px;
+        padding-bottom: 15px;
+    }
+
+    &__text {
+        display: inline;
+    }
+
+    @media (max-width: $md + px) {
+        &__image {
+            display: block;
+            padding-right: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        &__text {
+            display: block;
+        }
+    }
+
+    @media (max-width: $sm + px) {
+        padding-top: 0;
     }
 }
