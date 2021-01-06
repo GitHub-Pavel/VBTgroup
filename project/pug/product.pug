@@ -114,3 +114,31 @@ block content
                                             input(type="text" name="email" placeholder="Email для ответа администрации" required).input.comments__input
                                             textarea(name="message" rows="6" placeholder="Ваш комментарий").input.comments__input
                                             button(type="submit").comments__btn.btn.btn--size_primary.btn--color_green написать отзыв
+    
+    section.site-section
+        .container
+            h3 ПОХОЖИЕ ТОВАРЫ
+            .catalog-loadmore.d-none.d-md-block
+            .similar-slider
+                .similar-slider__navigation
+                .row.similar-slider__slider
+                    - for(let i=0; i<8; i++)
+                            .similar-slider__item
+                                .col
+                                    include includes/product-slider
+                .similar-slider__dots.d-flex.d-md-none
+
+    section.site-section
+        .site-section__content
+            .container
+                h3 ИНСТРУКЦИЯ
+                .catalog-loadmore.d-none.d-md-block
+                .blog-banner
+                    h2.blog-banner__title Какой таймер оттайки холодильника лучше выбрать?
+                    p.text.blog-banner__description Любой холодильник с системой No Frost и отсутствием цифрового модуля управления имеет таймер оттайки. На данный момент их существует больше 10 разновидностей и у каждого производителя он свой, но так как в России холодильник Indesit / Ariston / Stino...
+                    .blog-banner__btn-wrapper
+                        a(href="#").btn.btn--color_yellow.btn--size_primary
+                            span.btn__text ЧИТАТЬ
+                            svg.btn__icon
+                                use(href="img/icons.svg#arrow-right")
+                    img(width="400" height="300" data-src="img/blog-banner.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="blog-banner").b-lazy.blog-banner__image

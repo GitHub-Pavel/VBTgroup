@@ -1140,6 +1140,7 @@
     background: inherit;
     display: flex;
     justify-content: center;
+    min-height: 1px;
 
     &:after {
         content: '';
@@ -1880,6 +1881,10 @@
             width: 100%;
             max-width: 300px;
             margin: 0 auto;
+
+            @media (max-width: $sm + px) {
+                max-width: none;
+            }
         }
 
 		&__input {
@@ -2441,6 +2446,44 @@
                              "top bottom";
         grid-template-columns: 90px auto;
         padding: 15px 10px;
+    }
+
+    &--slider {
+        @media (max-width: $sm + px) {
+            grid-template-areas: "top"
+                                 "title"
+                                 "bottom";
+            grid-template-columns: 1fr;
+            padding: 10px;
+
+            .product__image-wrapper {
+                max-height: 90px;
+            }
+
+            .product__image {
+                max-width: 90px;
+            }
+
+            .product__price {
+                font-size: 1.25rem;
+                line-height: 27px;
+
+                svg {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                &--old {
+                    font-size: .875rem;
+                    line-height: 19px;
+
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
     }
 
     &__discount {
@@ -3075,6 +3118,10 @@
     flex-wrap: wrap;
     justify-content: center;
 
+    @media (max-width: $sm + px) {
+        padding-top: 0;
+    }
+
     &__sliders {
         flex: 1 1 500px;
         display: flex;
@@ -3461,6 +3508,11 @@
  */
 
 .comments {
+    & > .row {
+        @media (max-width: $md + px) {
+            flex-direction: column-reverse;
+        }
+    }
 
     &__form {
         border-radius: 3px;
@@ -3469,12 +3521,20 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media (max-width: $md + px) {
+            margin-bottom: 25px;
+        }
     }
 
     &__input {
         margin-bottom: 15px;
         width: 100%;
         box-sizing: border-box;
+    }
+
+    &__btn {
+        margin-top: 20px;
     }
 
     &__wrapper {
@@ -3587,5 +3647,125 @@
 
     &__title {
         margin-right: 30px;
+    }
+}
+
+/*
+ * ==================================================================================
+ * similar-slider
+ * ==================================================================================
+ */
+
+.similar-slider {
+    overflow: hidden;
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0 -20px;
+    }
+
+    &__item {
+        margin-top: 30px;
+
+        @media (max-width: $sm + px) {
+            margin-top: 20px;
+        }
+
+        .col {
+            padding-right: 17px;
+
+            @media (max-width: $sm + px) {
+                padding-right: 9.5px;
+            }
+        }
+    }
+
+    &__dots {
+        margin-top: 30px;
+        padding-bottom: 30px;
+        justify-content: center;
+
+        .slick-active + li {
+            button {
+                background: $orange;
+            }
+        }
+    }
+
+    &__align {
+        padding: 0 20px;
+
+        svg {
+            fill: $grey;
+            height: 30px;
+            width: 15px;
+            transition: fill .2s;
+        }
+
+        &:hover {
+            svg {
+                fill: $dark-grey;
+            }
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * blog-banner
+ * ==================================================================================
+ */
+
+.blog-banner {
+    margin-top: 30px;
+    padding: 20px 20px 35px;
+    background: $white;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    display: grid;
+    grid-template-areas: "title image"
+                         "description image"
+                         "btn image";
+
+    &__title {
+        grid-area: title;
+    }
+
+    &__description {
+        grid-area: description;
+        margin-top: 5px;
+    }
+
+    &__btn-wrapper {
+        grid-area: btn;
+        margin-top: 35px;
+    }
+
+    &__image {
+        grid-area: image;
+    }
+
+    @media (max-width: $md + px) {
+        grid-template-areas: "title"
+                             "image"
+                             "description"
+                             "btn";
+        padding: 20px;
+        gap: 15px;
+        margin-top: 20px;
+
+        &__title {
+            margin: 0;
+        }
+
+        &__description {
+            margin: 0;
+        }
+
+        &__btn-wrapper {
+            margin: 0;
+        }
     }
 }

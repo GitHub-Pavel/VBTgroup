@@ -1,0 +1,38 @@
+// product 
+.product
+    .product__top
+        a(data-touch="false" data-fancybox href="#quick-view" title="Быстрий просмотр Дверная полка для холодильника Bosch").product__view.product-view.d-none.d-xl-flex
+            svg.product-view__icon
+                use(href="img/icons.svg#eye")
+        a(href="product.html").product__image-wrapper
+            img(data-src="img/card-product.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="product").b-lazy.product__image
+    h5.product__title 
+        a(href="product.html").product__link.effect.effect--orange
+            span.effect__item Дверная полка для холодильника Bosch
+    p.text.text--grey.product__vendor
+        | Артикул: 
+        span 1234567
+    p.text.text--grey.product__manufacturer 
+        | Производитель: 
+        a(href="#").product__link.text.effect.effect--orange 
+            span.effect__item BOSCH
+    p.text.product__description Lorem ipsum dolor sit amet, cum percipit expetenda te, an sed elitr ludus...
+    p.text.product__description.product__description--long Lorem ipsum dolor sit amet, cum percipit expetenda te, an sed elitr ludus. An harum splendide eum, cum no inimicus adipiscing. Eripuit efficiendi usu ad, wisi blandit repudiand...
+    .product__bottom
+        p.text.text--grey.product__price.product__price--old
+            span 15 000
+            svg
+                use(href="img/icons.svg#ruble")
+        p.text.product__price
+            span 10 000
+            svg
+                use(href="img/icons.svg#ruble")
+        .product__plus-minus
+            .plus-minus
+                button(type="button" data-quantity="minus" data-field="quantity").plus-minus__button.plus-minus__button--inactive.plus-minus__button--minus -
+                input(type="text" name="quantity" value="1").plus-minus__field.input-number
+                button(type="button" data-quantity="plus" data-field="quantity").plus-minus__button.plus-minus__button--plus +
+        .product__btn-wrapper
+            a(href="#").product__btn.btn.btn--size_small
+                span.btn__text Купить
+// product 

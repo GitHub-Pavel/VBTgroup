@@ -147,10 +147,18 @@ p {
         color: $orange;
         background: transparent;
 
+        .btn__icon {
+            fill: $orange;
+        }
+
         &:hover,
         &.btn--hover {
             color: $white;
             background: $orange;
+
+            .btn__icon {
+                fill: $white;
+            }
         }
     }
 
@@ -160,10 +168,14 @@ p {
             background: #db4600;
             border-color: #db4600;
 
-            path {
+            svg {
                 fill: $white;
             }
         }
+    }
+
+    &--square {
+        padding: 5px 0;
     }
 
     &--size_small {
@@ -209,6 +221,10 @@ p {
         &.btn--hover {
             color: $yellow;
             background: transparent;
+
+            .btn__icon {
+                fill: $yellow;
+            }
         }
     }
 
@@ -525,12 +541,6 @@ article {
         border-left: 1px solid $grey;
         box-sizing: border-box;
     }
-
-    &__button--minus {
-    }
-
-    &__button--plus {
-    }
 }
 
 /*
@@ -584,6 +594,42 @@ article {
             &:nth-child(5) {
                 order: 2;
             }
+        }
+    }
+}
+
+/*
+ * ==================================================================================
+ * slick-dots
+ * ==================================================================================
+ */
+
+.slick-dots {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0 -5px;
+
+    button {
+        font-size: 0;
+        height: 6px;
+        width: 6px;
+        background: $grey;
+        margin: 0 5px;
+        border-radius: 50%;
+    }
+
+    li {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .slick-active {
+        button {
+            background: $orange;
         }
     }
 }
