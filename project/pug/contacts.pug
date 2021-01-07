@@ -1,0 +1,52 @@
+extends common/layout-grey
+
+block content
+    include includes/site-banner-sect
+    include includes/breadcrumbs
+
+    section.site-section.contacts
+        .site-section__content
+            .container
+                h1 НАШИ КОНТАКТЫ
+                .contacts__information
+                    .contacts-information
+                        table.contacts-information__table.text--size_big
+                            tr
+                                th Адрес центрального офиса:
+                                td Волжский, Оломоуцкая 37, оф.27 
+                            tr
+                                th Режим работы:
+                                td будни 9:00 - 19:00, выходные 9:00 - 17:00
+                            tr
+                                th Телефон:
+                                td +7 (937) 533-89-77
+                        .contacts-information__box.contacts-box
+                            p.contacts-box__item.text.text--size_big
+                                span.text--weight_bold ИП  
+                                | Жарков Сергей Викторович
+                            p.contacts-box__item.text.text--size_big
+                                span.text--weight_bold ИНН  
+                                | 343524714883
+                            p.contacts-box__item.text.text--size_big
+                                span.text--weight_bold ОГРНИП  
+                                | 320344300043778
+                .contacts-wrapper
+                    h3.contacts-wrapper__title Написать нам
+                    form.contacts-wrapper__form.contacts-form
+                        input(type="text" name="name" placeholder="Имя" required).contacts-form__input.input
+                        input(type="text" name="email" placeholder="Email" required).contacts-form__input.input
+                        textarea(name="message" rows="6" placeholder="Сообщение" required).contacts-form__textarea.input
+                        .contacts-form__wrapper
+                            p.contacts-form__text.text.text--size_small.text--style_italic
+                                | Я ознакомлен с условиями оферты и даю 
+                                a(href="#" target="_blank").text--orange.text--size_small свое согласие на обработку персональных данных 
+                            button(type="submit").contacts-form__btn.btn.btn--size_primary отправить
+    
+    section.site-section
+        script(
+            type="text/javascript" 
+            charset="utf-8" 
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adbaf2b0c0629dc48df13beb6703b7e71a3fd316acb62a45fa1faee28351d1ead&amp;width=100%25&amp;height=385&amp;lang=ru_RU&amp;scroll=false"
+            async 
+        )
+                    

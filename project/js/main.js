@@ -145,6 +145,8 @@ $(function () {
         });
     });
 
+    $('.bucket-box__bar-line').css('width', $('.bucket-box__bar-line').data('width') + '%' );
+
     $(window).resize(function () {
         $('.similar-slider .slick-slide').css('minHeight', '');
 

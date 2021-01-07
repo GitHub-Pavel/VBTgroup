@@ -1,0 +1,161 @@
+extends common/layout-grey
+
+block content
+    include includes/site-banner-sect-mobile
+    include includes/breadcrumbs
+
+    section.site-section.bucket
+        .site-section__content
+            .container
+                h1.text--center КОРЗИНА
+                .bucket__catalog-loadmore.catalog-loadmore.mb-30
+                .bucket-box.bucket-box--big
+                    .bucket-box__title
+                        h2.text--orange -5%
+                        h4 Оптовая цена от 10 т.р.
+                    .bucket-box__bar
+                        .bucket-box__bar-line(data-width="10")
+                .bucket__row
+                    .bucket-basket.bucket__basket
+                        .basket-item.bucket-basket__item
+                            .basket-item__image-wraper
+                                img(width="120" height="120" data-src="img/product-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="basket-item").b-lazy.basket-item__image
+                            p.text.text--size_big.basket-item__title Дверная полка для холодильника Bosch
+                            p.text.text--size_big.text--grey.basket-item__price.basket-item__price--old
+                                | 15 000
+                                svg.basket-item__price-icon--old(width="19" height="19")
+                                    use(href="img/icons.svg#ruble")
+                            h5.basket-item__price
+                                | 20 000
+                                svg.basket-item__price-icon(width="22" height="22")
+                                    use(href="img/icons.svg#ruble")
+                            .basket-item__plus-minus
+                                .plus-minus
+                                    button(type="button" data-quantity="minus" data-field="quantity").plus-minus__button.plus-minus__button--inactive.plus-minus__button--minus -
+                                    input(type="text" name="quantity" value="1").plus-minus__field.input-number
+                                    button(type="button" data-quantity="plus" data-field="quantity").plus-minus__button.plus-minus__button--plus +
+                            .basket-item__description
+                                p.text.text--orange.basket-item__description-orange Товар под заказ
+                            a(href="#").basket-item__delete.text.text--grey 
+                                span.d-none.d-md-block Удалить
+                                svg.basket-item__delete-icon.d-block.d-md-none(width="25" height="25")
+                                    use(href="img/icons.svg#trash")
+                        .basket-item.bucket-basket__item
+                            .basket-item__image-wraper
+                                img(width="120" height="120" data-src="img/product-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="basket-item").b-lazy.basket-item__image
+                            p.text.text--size_big.basket-item__title Дверная полка для холодильника Bosch
+                            p.text.text--size_big.text--grey.basket-item__price.basket-item__price--old
+                                | 15 000
+                                svg.basket-item__price-icon--old(width="19" height="19")
+                                    use(href="img/icons.svg#ruble")
+                            h5.basket-item__price
+                                | 20 000
+                                svg.basket-item__price-icon(width="22" height="22")
+                                    use(href="img/icons.svg#ruble")
+                            .basket-item__plus-minus
+                                .plus-minus
+                                    button(type="button" data-quantity="minus" data-field="quantity").plus-minus__button.plus-minus__button--inactive.plus-minus__button--minus -
+                                    input(type="text" name="quantity" value="1").plus-minus__field.input-number
+                                    button(type="button" data-quantity="plus" data-field="quantity").plus-minus__button.plus-minus__button--plus +
+                            .basket-item__description
+                                p.text.text--grey_light.basket-item__description-grey
+                                    | 2 Х 10 000
+                                    svg(width="19" height="19")
+                                        use(href="img/icons.svg#ruble")
+                            a(href="#").basket-item__delete.text.text--grey 
+                                span.d-none.d-md-block Удалить
+                                svg.basket-item__delete-icon.d-block.d-md-none(width="25" height="25")
+                                    use(href="img/icons.svg#trash")
+                    .bucket__reg
+                        h3 Оформление заказа
+                        form.bucket-form.bucket__form
+                            label.bucket-form__label
+                                p.text.text--size_big.bucket-form__label-text ФИО
+                                input(type="text" name="name" placeholder="Иванов Сергей Иванович" required).input.bucket-form__input
+                            label.bucket-form__label
+                                p.text.text--size_big.bucket-form__label-text Телефон
+                                input(type="tel" name="tel" placeholder="+79958741444" required).input.bucket-form__input
+                            label.bucket-form__label
+                                p.text.text--size_big.bucket-form__label-text Email
+                                input(type="email" name="email" placeholder="ivanov@mail.ru").input.bucket-form__input
+                            label.bucket-form__label
+                                p.text.text--size_big.bucket-form__label-text Адрес
+                                input(type="text" name="address" placeholder="г. Ярославль ул. Щапова д.12").input.bucket-form__input
+                            .bucket-form__label
+                                p.text.text--size_big.bucket-form__label-text Способ доставки
+                                .bucket-form__radio-wrapper
+                                    label.radio.bucket-form__radio
+                                        input(type="radio" name="delivery" value="Самовывоз" checked).visually-hidden.radio__input
+                                        .radio__box
+                                        p.radio__text.text Самовывоз
+                                    label.radio.bucket-form__radio
+                                        input(type="radio" name="delivery" value="Почта России").visually-hidden.radio__input
+                                        .radio__box
+                                        p.radio__text.text Почта России
+                                    label.radio.bucket-form__radio
+                                        input(type="radio" name="delivery" value="Транспортная компания ПЭК").visually-hidden.radio__input
+                                        .radio__box
+                                        p.radio__text.text Транспортная компания ПЭК
+                                    label.radio.bucket-form__radio
+                                        input(type="radio" name="delivery" value="Курьерская служба СДЭК").visually-hidden.radio__input
+                                        .radio__box
+                                        p.radio__text.text Курьерская служба СДЭК
+                            label.bucket-form__label
+                                p.text.text--size_big.bucket-form__label-text Комментарий к заказу
+                                textarea(name="message" rows="6" placeholder="Комментарий к заказу").input.bucket-form__input
+                            .bucket-form__btn-wrapper
+                                p.text.text--dark-grey.bucket-form__description
+                                    | Нажимая кнопку "оформить заказ" Вы соглашаетесь с условиями 
+                                    a(href="#" target="_blank").text--orange доставки и оплаты
+                                    |  и даёте своё согласие на обработку персональных данных
+                                button(type="submit").bucket-form__btn.btn.btn--size_primary.btn--color_green
+                                    span.btn__text ОФОРМИТЬ ЗАКАЗ
+                    .bucket__price
+                        .bucket-box
+                            .bucket-box__wrapper-price
+                                p.text.text--grey.bucket-box__price.bucket-box__price--old
+                                    | 45 000
+                                    svg.bucket-box__icon-price--old(width="19" height="19")
+                                        use(href="img/icons.svg#ruble")
+                                h5.bucket-box__price
+                                    | 30 000
+                                    svg.bucket-box__icon-price(width="22" height="22")
+                                        use(href="img/icons.svg#ruble")
+                                p.text.text--grey.bucket-box__baket В корзине 3 товара
+                        a(href="#").bucket__price-link.text--blue Вернуться к покупкам
+
+                    .bucket__delivery
+                        .bucket-delivery
+                            .bucket-delivery__item
+                                .bucket-delivery__title 
+                                    h4 Почта России
+                                    p.text.orange-box от 200 руб.
+                                p.text.bucket-delivery__description Стоимость доставки рассчитывается автоматически по весу, товар и доставка оплачивается перед отправкой
+                                p.text
+                                    span.text--weight_bold Плюсы 
+                                    span есть в каждом городе, дешевле всех остальных, при весе до 2-5 кг.
+                                p.text
+                                    span.text--weight_bold Минусы 
+                                    span достаточно долго, тяжелые посылки выхотят дороже чем в СДЭК и ПЭК, больше 20 кг очень сложно отправить
+                            .bucket-delivery__item
+                                .bucket-delivery__title 
+                                    h4 ПЭК
+                                    p.text.orange-box от 300 руб.
+                                p.text.bucket-delivery__description Доставка оплачивается при получении, товар оплачивается перед отправкой
+                                p.text
+                                    span.text--weight_bold Плюсы 
+                                    span возможна доставка до двери, доставка быстрее почты
+                                p.text
+                                    span.text--weight_bold Минусы 
+                                    span тяжелые посылки выхотят дороже чем в ПЭК, есть не в каждом городе
+                            .bucket-delivery__item
+                                .bucket-delivery__title 
+                                    h4 СДЭК
+                                    p.text.orange-box от 400 руб.
+                                p.text.bucket-delivery__description Доставка оплачивается при получении, товар оплачивается перед отправкой
+                                p.text
+                                    span.text--weight_bold Плюсы 
+                                    span любой вес, доставка быстрее почты
+                                p.text
+                                    span.text--weight_bold Минусы 
+                                    span есть не в каждом городе

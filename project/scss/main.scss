@@ -1127,7 +1127,6 @@
     }
 
     @media (max-width: $sm + px) {
-        padding-top: 0;
 
         &__row {
             margin-top: -15px;
@@ -2235,8 +2234,6 @@
     }
 
     @media (max-width: $sm + px) {
-        padding-bottom: 30px;
-
         &__container {
             background: transparent;
             padding: 0;
@@ -2939,6 +2936,12 @@
     margin-bottom: 15px;
 }
 
+.pt-sm-0 {
+    @media (max-width: $sm + px) {
+        padding-top: 0;
+    }
+}
+
 /*
  * ==================================================================================
  * sort
@@ -3127,10 +3130,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-    @media (max-width: $sm + px) {
-        padding-top: 0;
-    }
 
     &__sliders {
         flex: 1 1 500px;
@@ -3879,8 +3878,585 @@
             display: block;
         }
     }
+}
+
+/*
+ * ==================================================================================
+ * contacts
+ * ==================================================================================
+ */
+
+.contacts {
+
+    &__information {
+        @media (max-width: $sm + px) {
+            margin: 0 -15px;
+            margin-top: 30px;
+        }
+    }
+}
+
+.contacts-information {
+    padding: 30px 0;
+    border-bottom: 1px solid $grey;
+    border-top: 1px solid $grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    @media (max-width: $sm + px) {
+        padding: 20px 0;
+    }
+
+    &__table {
+        padding: 10px 0;
+
+        th {
+            text-align: left;
+        }
+
+        th, td {
+            padding: 10px 0;
+        }
+
+        th {
+            padding-right: 50px;
+
+            @media (max-width: $sm + px) {
+                padding-right: 15px;
+            }
+        }
+
+        @media (max-width: $sm + px) {
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: 0;
+        }
+    }
+
+    &__box {
+
+        @media (max-width: $sm + px) {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+}
+
+.contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    &__title {
+        margin-top: 90px;
+
+        @media (max-width: $sm + px) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.contacts-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 855px;
+    margin: 0 -17.5px;
+    overflow: hidden;
 
     @media (max-width: $sm + px) {
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    &__input {
+        flex: 1 1 350px;
+        margin: 0 17.5px;
+        margin-bottom: 20px;
+
+        @media (max-width: $sm + px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        margin: 0 17.5px;
+        margin-bottom: 20px;
+
+        @media (max-width: $sm + px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__wrapper {
+        margin: 0 17.5px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        @media (max-width: $sm + px) {
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__btn {
+        margin-top: 20px;
+        @media (max-width: $sm + px) {
+            margin-top: 15px;
+        }
+    }
+
+    &__text {
+        flex: 1 1 600px;
+        margin-right: 5px;
+
+        @media (max-width: $sm + px) {
+            flex: auto;
+            margin-right: 0;
+        }
+    }
+}
+
+.contacts-box {
+    padding: 10px 30px;
+    background: $white;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    
+    &__item {
+        padding: 10px 0;
+    }
+
+    @media (max-width: $sm + px) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+
+/*
+ * ==================================================================================
+ * bucket
+ * ==================================================================================
+ */
+
+.bucket {
+    &__catalog-loadmore {
+        @media (max-width: $sm + px) {
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+    }
+
+    &__row {
+        display: grid;
+        gap: 30px;
+        grid-template-areas: "basket price"
+                             "basket delivery"
+                             "reg delivery";
+        grid-template-columns: auto 380px;
+        margin-top: 60px;
+
+        @media (max-width: $lg + px) {
+            grid-template-areas: "basket"
+                                 "price"
+                                 "reg"
+                                 "delivery";
+            grid-template-columns: auto;
+        }
+
+        @media (max-width: $sm + px) {
+            margin-top: 30px;
+        }
+    }
+
+    &__basket {
+        grid-area: basket;
+    }
+
+    &__price {
+        grid-area: price;
+
+        &-link {
+            margin-top: 30px;
+            display: block;
+            text-align: right;
+        }
+    }
+
+    &__reg {
+        grid-area: reg;
+        padding-top: 30px;
+
+        @media (max-width: $lg + px) {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__delivery {
+        grid-area: delivery;
+    }
+
+    &__form {
+
+        @media (max-width: $sm + px) {
+            margin-top: 15px;
+        }
+    }
+}
+
+.basket-item {
+    display: grid;
+    grid-template-areas: "image title price-old delete"
+                         "image title price delete"
+                         "image title description delete"
+                         "image title plus-minus delete";
+    grid-template-columns: 120px 3fr 1fr 100px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 1px solid $grey;
+
+    @media (max-width: $lg + px) {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    @media (max-width: $sm + px) {
+        grid-template-areas: "image title title delete"
+                             "image price price-old delete"
+                             "image description description delete"
+                             "image plus-minus plus-minus delete";
+        grid-template-columns: 105px 90px auto 40px;
+    }
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    &:first-child {
         padding-top: 0;
+    }
+
+    &__description {
+        grid-area: description;
+        text-align: right;
+
+        @media (max-width: $sm + px) {
+            text-align: left;
+        }
+
+        &-orange {
+            margin-bottom: 10px;
+        }
+
+        &-grey {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            @media (max-width: $sm + px) {
+                justify-content: flex-start;
+                margin-bottom: 10px;
+            }
+
+            svg {
+                fill: $grey;
+            }
+        }
+    }
+
+    &__image-wraper {
+        grid-area: image;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: $sm + px) {
+            padding-right: 15px;
+        }
+    }
+
+    &__title {
+        grid-area: title;
+        display: flex;
+        align-items: center;
+        max-width: 320px;
+        margin-left: 15px;
+
+        @media (max-width: $sm + px) {
+            margin-left: 0;
+        }
+    }
+
+    &__price {
+        grid-area: price;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media (max-width: $sm + px) {
+            justify-content: flex-start;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        &--old {
+            grid-area: price-old;
+            text-decoration-line: line-through;
+        }
+    }
+
+    &__delete {
+        grid-area: delete;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__price-icon {
+
+        &--old {
+            fill: $grey-text;
+        }
+    }
+
+    &__plus-minus {
+        grid-area: plus-minus;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media (max-width: $sm + px) {
+            justify-content: flex-start;
+        }
+    }
+}
+
+.bucket-box {
+    background: $white;
+    padding: 20px;
+    border: 1px solid $orange;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &--big {
+        padding: 30px;
+
+        @media (max-width: $sm + px) {
+            padding: 20px;
+        }
+    }
+
+    &__wrapper-price {
+        width: 100%;
+        display: grid;
+        grid-template-areas: "baket price-old"
+                             "baket price";
+        gap: 3px;
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        grid-area: price;
+    }
+
+    &__price--old {
+        grid-area: price-old;
+    }
+
+    &__icon-price--old {
+        fill: $grey-text;
+    }
+
+    &__baket {
+        grid-area: baket;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        * {
+            margin: 0;
+        }
+
+        h2 {
+            margin-right: 30px;
+
+            @media (max-width: $sm + px) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__bar {
+        height: 20px;
+        width: 100%;
+        max-width: 600px;
+        border-radius: 100px;
+        margin-top: 20px;
+        background: $grey-light;
+
+        @media (max-width: $sm + px) {
+            height: 10px;
+            margin-top: 15px;
+        }
+
+        &-line {
+            height: 100%;
+            border-radius: 100px;
+            background: $orange;
+        }
+    }
+}
+
+.bucket-delivery {
+    border-radius: 3px;
+    border: 1px solid $grey;
+    overflow: hidden;
+    background: $white;
+
+    &__item {
+        margin: -1px;
+        border: 1px solid $grey;
+        background: $white;
+        padding: 15px 10px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__description {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 10px;
+        background: $section-grey;
+    }
+}
+
+.orange-box {
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: $orange;
+    color: $white;
+    display: inline;
+}
+
+.bucket-form {
+    background: $white;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+
+    @media (max-width: $sm + px) {
+        padding: 10px;
+    }
+
+    &__label {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 30px;
+
+        @media (max-width: $sm + px) {
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        &-text {
+            margin-top: 8px;
+            margin-bottom: 5px;
+            width: 270px;
+            max-width: 100%;
+
+            @media (max-width: $sm + px) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__input {
+        flex: 1 1 300px;
+
+        @media (max-width: $sm + px) {
+            flex: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    &__radio {
+        margin-top: 10px;
+
+        @media (max-width: $sm + px) {
+            margin-top: 5px;
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            @media (max-width: $lg + px) {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    &__btn-wrapper {
+        margin: -15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: $sm + px) {
+            flex-direction: column;
+        }
+    }
+
+    &__description {
+        margin: 15px;
+        flex: 1 1 450px;
+        font-size: .812rem;
+        line-height: 18px;
+
+        @media (max-width: $sm + px) {
+            flex: auto;
+        }
+        
+        a {
+            font-size: inherit;
+            line-height: inherit;
+            white-space: nowrap;
+        }
+    }
+
+    &__btn {
+        margin: 15px;
     }
 }

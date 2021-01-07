@@ -40,6 +40,11 @@ p,
     font-size: 1rem;
     line-height: 22px;
 
+    &--size_small {
+        font-size: .875rem;
+        line-height: 19px;
+    }
+
     &--size_big {
         font-size: 1.125rem;
         line-height: 25px;
@@ -71,6 +76,10 @@ p,
 
     &--grey_light {
         color: $grey;
+    }
+
+    &--dark-grey {
+        color: $dark-grey;
     }
 
     &--blue {
@@ -121,6 +130,7 @@ p {
 
     &__text {
         margin: 0 5px;
+        white-space: nowrap;
     }
 
     &__icon {
@@ -634,5 +644,50 @@ article {
         button {
             background: $orange;
         }
+    }
+}
+
+/*
+ * ==================================================================================
+ * radio
+ * ==================================================================================
+ */
+
+.radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &__box {
+        width: 15px;
+        height: 15px;
+        background: $white;
+        border: 1px solid $grey;
+        border-radius: 50%;
+        position: relative;
+
+        &:after {
+            content: '';
+            display: none;
+            width: 9px;
+            height: 9px;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            border-radius: 50%;
+            background: $blue;
+        }
+    }
+
+    &__input:checked + .radio__box {
+        border-color: $blue;
+
+        &:after {
+            display: block;
+        }
+    }
+
+    &__text {
+        margin-left: 20px;
     }
 }
