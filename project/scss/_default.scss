@@ -85,6 +85,10 @@ p,
     &--blue {
         color: $blue;
     }
+
+    &--red {
+        color: $red;
+    }
 }
 
 p {
@@ -398,10 +402,10 @@ article {
     &:focus {
         border-color: $orange;
     }
+}
 
-    &.error {
-        border-color: red;
-    }
+.error {
+    border-color: $red;
 }
 
 /*

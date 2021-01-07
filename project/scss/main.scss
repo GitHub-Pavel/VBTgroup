@@ -4459,4 +4459,66 @@
     &__btn {
         margin: 15px;
     }
+
+    &__table {
+        margin-bottom: 30px;
+        border: 1px solid $grey;
+        border-radius: 3px;
+        border-collapse: collapse;
+        width: 100%;
+
+        tr {
+            background: rgba(229, 229, 229, 0.27);
+            border-bottom: 1px solid $grey;
+
+            @media (max-width: $sm + px) {
+                display: flex;
+                flex-direction: column;
+                border: none;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:nth-child(odd) {
+                background: $grey-light;
+            }
+        }
+
+        td {
+            padding: 10px 20px;
+
+            .text--red {
+                margin-right: 20px;
+
+                @media (max-width: $sm + px) {
+                    margin-right: 0;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+
+            @media (max-width: $sm + px) {
+                padding: 5px;
+            }
+        }
+
+        th {
+            font-weight: $normal;
+            text-align: left;
+            padding: 10px 15px;
+            border-right: 1px solid $grey;
+
+            @media (max-width: $sm + px) {
+                border-right: none;
+                padding: 5px;
+                border-bottom: 1px solid $grey;
+            }
+        }
+
+        @media (max-width: $sm + px) {
+            margin-bottom: 20px;
+        }
+    }
 }
