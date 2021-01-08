@@ -1,0 +1,132 @@
+extends common/layout-grey
+
+block content
+    include includes/site-banner-sect-mobile
+    include includes/breadcrumbs
+
+    section.site-section.order
+        .site-section__content
+            .container
+                h1 Заказ № 123456 от 
+                    span.text--nowrap 2020-12-21
+                .catalog-loadmore.catalog-loadmore--mobile_full.order__catalog-loadmore
+                .order__row
+                    .order__top
+                        .order__section
+                            h4 Статус заказа
+                            .order-bar.mt-30
+                                p.text.text--white Отменен
+                                .order-bar__line
+                        .order__section
+                            h4 Данные получателя
+                            table.mt-30.mt-sm-30.order__status
+                                tr
+                                    th ФИО
+                                    td Иванов Сергей Иванович
+                                tr
+                                    th Телефон
+                                    td +79958741444
+                                tr
+                                    th Email
+                                    td ivanov@mail.ru
+                                tr
+                                    th Адрес
+                                    td г. Ярославль ул. Щапова д.12
+                                tr
+                                    th Трек номер
+                                    td 1234567890
+                                tr
+                                    th Способ доставки
+                                    td Самовывоз
+                                tr
+                                    th Расчетный вес товара
+                                    td 100 гр.
+                                tr
+                                    th Комментарий к заказу
+                                    td Абонент недоступен 24.11
+                    .order__bottom
+                        .order__section
+                            h4 Товарный лист
+                            .order__items.mt-30.mt-sm-30
+                                .order-item
+                                    .order-item__img-wrapper
+                                        img(data-src="img/product-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="order-item").b-lazy.order-item__img
+                                    .order-item__title
+                                        p.text.text--size_big Дверная полка для холодильника Bosch
+                                    p.text.text--grey.order-item__price.order-item__price--old
+                                        span 15 000
+                                        svg.order-item__price-icon--old(width="19" height="19")
+                                            use(href="img/icons.svg#ruble")
+                                    h5.order-item__price
+                                        span 20 000
+                                        svg.order-item__price-icon(width="22" height="22")
+                                            use(href="img/icons.svg#ruble")
+                                    p.text.text--grey_light.order-item__price.order-item__price--count
+                                        span 2 Х 10 000
+                                        svg.order-item__price-icon--count(width="19" height="19")
+                                            use(href="img/icons.svg#ruble")
+                                .order-item
+                                    .order-item__img-wrapper
+                                        img(data-src="img/product-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="order-item").b-lazy.order-item__img
+                                    .order-item__title
+                                        p.text.text--size_big Дверная полка для холодильника Bosch
+                                    .order-item__count
+                                        p.text.text--size_big 1 шт.
+                                    p.text.text--grey.order-item__price.order-item__price--old
+                                        span 15 000
+                                        svg.order-item__price-icon--old(width="19" height="19")
+                                            use(href="img/icons.svg#ruble")
+                                    h5.order-item__price
+                                        span 10 000
+                                        svg.order-item__price-icon(width="22" height="22")
+                                            use(href="img/icons.svg#ruble")
+                                .order__total
+                                    h4.text--orange К оплате:
+                                    h4.text--orange
+                                        | 35 000
+                                        svg.order__total-icon(width="26" height="26")
+                                            use(href="img/icons.svg#ruble")
+                        .order__section.pb-0
+                            h4 История заказа
+                            ul.order__history.mt-30.mt-sm-30
+                                li
+                                    p.text.text--size_big 2020-11-12
+                                    p.text.text--size_big 14:35
+                                    p.text.text--size_big.text--weight_bold Заказ оформлен
+                                li
+                                    p.text.text--size_big 2020-11-12
+                                    p.text.text--size_big 16:35
+                                    p.text.text--size_big.text--weight_bold Заказ отменен
+                    .order__right
+                        .order__section
+                            table.order-table
+                                tr
+                                    th Номер заказа
+                                    th Дата
+                                    th Статус заказа
+                                tr.order-table__link.order-table__link--active
+                                    td
+                                        a(href="order.html").text.text--weight_bold.order-table__text №654321
+                                    td
+                                        a(href="order.html").text.order-table__text от 2020-11-12
+                                    td
+                                        a(href="order.html").text.order-table__text
+                                            .order-table__btn Отменен
+                                tr.order-table__link
+                                    td
+                                        a(href="order-done.html").text.text--weight_bold.order-table__text №123456
+                                    td
+                                        a(href="order-done.html").text.order-table__text от 2020-11-12
+                                    td
+                                        a(href="order-done.html").text.order-table__text
+                                            span.order-table__btn.order-table__btn--green Выполнен
+                                tr.order-table__link
+                                    td
+                                        a(href="order-for.html").text.text--weight_bold.order-table__text №123456
+                                    td
+                                        a(href="order-for.html").text.order-table__text от 2020-11-12
+                                    td
+                                        a(href="order-for.html").text.order-table__text
+                                            span.order-table__btn.order-table__btn--empty Оформлен
+            
+            

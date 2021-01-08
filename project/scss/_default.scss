@@ -89,6 +89,14 @@ p,
     &--red {
         color: $red;
     }
+
+    &--white {
+        color: $white;
+    }
+
+    &--nowrap {
+        white-space: nowrap;
+    }
 }
 
 p {
