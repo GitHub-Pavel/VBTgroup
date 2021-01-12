@@ -213,7 +213,7 @@ $(function () {
         }
 
         $('.modal-catalog').css('height', $('body').height() - $('.header').height() + 'px');
-        $('.modal-catalog').css('top', $('.header').height() + 3 + 'px');
+        $('.modal-catalog').css('top', $('.header').height() + 'px');
     }); // resize
 
     let scrollHeightHeader = 0;
