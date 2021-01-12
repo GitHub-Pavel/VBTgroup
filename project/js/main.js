@@ -8,9 +8,40 @@ $(function () {
 
 
     // fix slider type product for fancybox
-    $.fancybox.defaults.afterShow = function () {
-        $('.modal .prodslider-big').slick('setPosition');
-        $('.modal .prodslider-small').slick('setPosition');
+    $.fancybox.defaults.afterLoad = function () {
+        // slider type product
+        $('.modal .prodslider-big').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1,
+            arrows: false,
+            infinite: true,
+            dots: false,
+            fade: true,
+            asNavFor: '.prodslider-small',
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        dots: true
+                    }
+                }
+            ]
+        });
+        $('.modal .prodslider-small').slick({
+            lazyLoad: 'ondemand',
+            vertical: true,
+            verticalSwiping: true,
+            slidesToShow: 3,
+            dots: false,
+            infinite: true,
+            arrows: false,
+            centerMode: true,
+            centerPadding: '0px',
+            focusOnSelect: true,
+            asNavFor: '.prodslider-big',
+        });
     };
 
     // slider type product

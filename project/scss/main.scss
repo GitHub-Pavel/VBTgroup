@@ -126,7 +126,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        color: $black;
+        color: $dark;
         text-decoration: none;
         position: relative;
         transition: color 0.2s;
@@ -251,7 +251,7 @@
     font-weight: $bold;
     color: $white;
     background: $orange;
-    padding: 17px 51px;
+    padding: 17px 39px 17px 51px;
     transition: background 0.2s;
 
     &__icon {
@@ -266,9 +266,8 @@
     }
 
     &__icon--triangle {
-        width: 12px;
-        height: 6px;
-        transform-origin: bottom;
+        width: 20px;
+        height: 20px;
         transition: transform 0.2s;
     }
 
@@ -278,7 +277,7 @@
 
     &--active {
         .btn-catalog__icon--triangle {
-            transform: rotateX(180deg) translateY(6px);
+            transform: rotateX(180deg);
         }
     }
 }
@@ -1827,6 +1826,12 @@
  * ==================================================================================
  */
 
+.fancybox-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
 .modal {
     display: none;
     cursor: default !important;
@@ -3377,6 +3382,8 @@
 
 .quick-view {
     max-width: 1200px;
+    margin: auto;
+    display: block;
 
     .product-page {
         &__vendor,
@@ -3434,6 +3441,10 @@
     &__sliders {
         @include _col(10);
         max-width: 658px;
+
+        &--only {
+            max-width: 850px;
+        }
 
         .prodslider-small .slick-list {
             min-height: 500px;

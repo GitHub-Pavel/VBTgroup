@@ -1,0 +1,20 @@
+.modal.quick-view#quick-view
+    .modal__header.quick-view__header
+        h2.modal__title.quick-view__title Дверная полка для холодильника Bosch
+        button.modal__close
+            svg
+                use(href="img/icons.svg#times")
+    .modal__body
+        .product-page.quick-view__product
+            .product-page__sliders.quick-view__sliders.quick-view__sliders--only
+                .row
+                    .col.col-3.d-none.d-md-flex
+                        .prodslider-small
+                            - for(let i=0; i<6; i++)
+                                .prodslider-small__item
+                                    img(data-lazy="img/product-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="slider-big").prodslider-small__image
+                    .col.col-12.col-md-9
+                        .prodslider-big
+                            - for(let i=0; i<6; i++)
+                                a(href="img/product-big.jpg" data-fancybox="product" data-width="1600" data-height="1600").prodslider-big__item
+                                    img(data-lazy="img/product-big.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="slider-big").prodslider-big__image
