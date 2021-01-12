@@ -8,7 +8,6 @@ a,
 .link {
     color: $black;
     font-size: 1rem;
-    line-height: 22px;
     text-decoration: underline;
 
     &:hover {
@@ -26,6 +25,12 @@ a,
     &--color_orange {
         color: $orange;
     }
+
+    &--inherit {
+        color: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+    }
 }
 
 /*
@@ -42,12 +47,10 @@ p,
 
     &--size_small {
         font-size: .875rem;
-        line-height: 19px;
     }
 
     &--size_big {
         font-size: 1.125rem;
-        line-height: 25px;
     }
 
     &--weight_bold {
@@ -133,8 +136,8 @@ p {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border-color 0.3s ease-in-out,
-        box-shadow 0.3s ease-in-out;
+    transition: color 0.2s, background 0.2s, border-color 0.2s,
+        box-shadow 0.2s;
 
     @media (max-width: $sm + px) {
         font-size: 1rem;
@@ -150,13 +153,18 @@ p {
         height: 20px;
         margin: 0 5px;
         fill: $white;
-        transition: fill 0.3s ease-in-out;
+        transition: fill 0.2s;
     }
 
     &:hover,
     &.btn--hover {
-        color: $orange;
-        background: transparent;
+        color: $white;
+        background: $orange-dark;
+        border-color: $orange-dark;
+
+        svg {
+            fill: $white;
+        }
     }
 
     &--active {
@@ -187,8 +195,8 @@ p {
     &--effect_darkness {
         &:hover {
             color: $white;
-            background: #db4600;
-            border-color: #db4600;
+            background: $orange-dark;
+            border-color: $orange-dark;
 
             svg {
                 fill: $white;
@@ -229,8 +237,8 @@ p {
 
         &:hover,
         &.btn--hover {
-            color: $blue;
-            background: transparent;
+            background: #050c96;
+            border-color: #050c96;
         }
     }
 
@@ -241,11 +249,12 @@ p {
 
         &:hover,
         &.btn--hover {
-            color: $yellow;
-            background: transparent;
+            color: $white;
+            background: #c09a00;
+            border-color: #c09a00;
 
             .btn__icon {
-                fill: $yellow;
+                fill: $white;
             }
         }
     }
@@ -257,8 +266,8 @@ p {
 
         &:hover,
         &.btn--hover {
-            color: $green;
-            background: transparent;
+            background: #13691d;
+            border-color: #13691d;
         }
     }
 
@@ -271,6 +280,7 @@ p {
         &.btn--hover {
             color: $white;
             background: $black;
+            border-color: $black;
         }
     }
 }
@@ -306,61 +316,53 @@ h5,
 h6 {
     margin: 0;
     font-weight: $bold;
+    color: $dark;
 }
 
 h1 {
     font-size: 2.25rem;
-    line-height: 41px;
     margin: 0 auto;
     margin-bottom: 30px;
     max-width: calc(100vw - 30px);
 
     @media (max-width: $sm + px) {
         font-size: 1.5rem;
-        line-height: 33px;
         margin-bottom: 15px;
     }
 }
 
 h2 {
     font-size: 2.25rem;
-    line-height: 41px;
     margin: 0 auto;
     margin-bottom: 30px;
     max-width: calc(100vw - 30px);
 
     @media (max-width: $sm + px) {
         font-size: 1.5rem;
-        line-height: 33px;
         margin-bottom: 15px;
     }
 }
 
 h3 {
     font-size: 1.875rem;
-    line-height: 41px;
     margin-bottom: 30px;
 
     @media (max-width: $sm + px) {
         font-size: 1.125rem;
-        line-height: 25px;
         margin-bottom: 10px;
     }
 }
 
 h4 {
     font-size: 1.5rem;
-    line-height: 33px;
 
     @media (max-width: $sm + px) {
         font-size: 1.125rem;
-        line-height: 25px;
     }
 }
 
 h5 {
     font-size: 1.125rem;
-    line-height: 25px;
 }
 
 /*
@@ -396,8 +398,7 @@ article {
     border: 1px solid $grey;
     border-radius: 3px;
     background: $white;
-    font-size: 1rem;
-    line-height: 22px;  
+    font-size: 1rem;  
     color: $black;
     resize: vertical;
     outline: none;
@@ -497,7 +498,6 @@ article {
         border: 1px solid $grey;
         border-radius: 3px;
         font-size: 1rem;
-        line-height: 22px;
 
         @media (max-width: $sm + px) {
             padding: 8px 32px 8px 10px;

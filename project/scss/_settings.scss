@@ -16,8 +16,26 @@ html {
 
 body {
     color: $black;
-    font-family: "OpenSans";
+    font-family: "OpenSans", sans-serif;
     font-size: 1rem;
+    font-weight: $normal;
+
+    &.active {
+        overflow: hidden;
+    }
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background: $section-grey;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba($orange, 0.7);
+
+        &:hover {
+            background: $orange;
+        }
+    }
 }
 
 /*
@@ -39,7 +57,6 @@ svg {
 }
 
 .wrapper {
-    max-width: $maxWidth + px;
     margin: 0 auto;
 
     &--grey {

@@ -34,6 +34,10 @@
             z-index: 10000;
         }
     }
+
+    .menu-top {
+        margin-top: 4px;
+    }
 }
 
 .logo {
@@ -62,6 +66,7 @@
     &__btn {
         padding: 0.625em 0.812em;
         border-radius: 0;
+        border-radius: 0px 3px 3px 0px;
     }
 }
 
@@ -84,7 +89,6 @@
         text-decoration: none;
         padding: 8px 12px 12px 24px;
         font-size: 1rem;
-        line-height: 22px;
         transition: background 0.2s;
 
         &:first-child {
@@ -126,10 +130,15 @@
         text-decoration: none;
         position: relative;
         transition: color 0.2s;
+        min-width: 55px;
         @include _col(15);
 
         &:hover {
             color: $orange;
+
+            .menu-top__icon {
+                fill: $orange;
+            }
         }
     }
 
@@ -137,6 +146,7 @@
         width: 1.875em;
         height: 1.875em;
         margin-bottom: 5px;
+        transition: fill 0.2s;
     }
 
     &--yellow {
@@ -149,6 +159,7 @@
         .menu-top__link {
             padding-top: 15px;
             padding-bottom: 17px;
+            min-width: auto;
 
             &:hover {
                 .menu-top__icon {
@@ -213,7 +224,7 @@
 .link-bucket {
     position: absolute;
     top: 12px;
-    right: 40px;
+    right: 39px;
     transform: translate(50%,-50%);
 
     &__quantity {
@@ -228,10 +239,6 @@
         font-weight: $bold;
         font-size: 0.875rem;
         box-sizing: border-box;
-    }
-
-    &__text {
-        line-height: 14px;
     }
 }
 
@@ -291,11 +298,12 @@
         font-size: 1.125rem;
         font-weight: $bold;
         text-decoration: none;
-        padding: 21px 18px;
+        padding: 22px 18px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         margin-right: 2px;
+        text-transform: uppercase;
         position: relative;
         transition: background 0.3s, color .3s;
 
@@ -373,7 +381,6 @@
             padding: 11px 0px;
             margin-right: 0;
             font-size: 1.5rem;
-            line-height: 33px;
 
             &:after {
                 display: none;
@@ -579,7 +586,6 @@
         &.active {
             & > a {
                 background: $grey;
-                cursor: default;
             }
             
             svg {
@@ -752,13 +758,13 @@
         text-decoration: none;
         max-width: 212px;
         flex: 1 1;
-        line-height: 22px;
         font-weight: $bold;
+        transition: color .2s;
     }
 
     &:hover {
         .list-icon__text {
-            text-decoration: underline;
+            color: $orange;
         }
     }
 }
@@ -796,27 +802,23 @@
     &__logo-decsription {
         max-width: 267px;
         margin-top: 20px;
+        color: $white;
     }
 
     &__col--menu {
-        padding-left: 40px;
-        padding-right: 40px;
-        max-width: 247px;
+        padding-left: 30px;
+        max-width: 260px;
         position: relative;
+        margin-left: 40px;
 
-        &:after,
         &:before {
             content: "";
             display: block;
             width: 2px;
-            height: 150px;
+            height: 98%;
             background: $yellow;
             position: absolute;
             top: 0;
-        }
-
-        &:after {
-            right: 0;
         }
 
         &:before {
@@ -825,9 +827,8 @@
 
         @media (max-width: $md + px) {
             padding-left: 0;
-            padding-right: 0;
+            margin-left: 0;
 
-            &:after,
             &:before {
                 display: none;
             }
@@ -842,7 +843,31 @@
 
     &__col--contacts {
         flex: 1 1;
-        max-width: 267px;
+        max-width: 285px;
+        padding-left: 30px;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 98%;
+            background: $yellow;
+            position: absolute;
+            top: 0;
+        }
+
+        &:before {
+            left: 0;
+        }
+
+        @media (max-width: $md + px) {
+            padding-left: 0;
+
+            &:before {
+                display: none;
+            }
+        }
     }
 
     &__bottom {
@@ -876,6 +901,16 @@
     &__list-icon {
         margin-top: 15px;
     }
+
+    &__contact-btn {
+        width: 100%;
+        max-width: 194px;
+
+        @media (max-width: $sm + px) {
+            max-width: auto;
+            width: auto;
+        }
+    }
 }
 
 .menu-bottom {
@@ -887,6 +922,12 @@
         color: $white;
         padding: 4px 0;
         display: block;
+        text-decoration: none;
+        transition: color .2s;
+
+        &:hover {
+            color: $orange;
+        }
     }
 }
 
@@ -894,6 +935,7 @@
     padding: 5px;
     position: fixed;
     bottom: 30px;
+    right: -20px;
     z-index: 100;
     transform: translateX(-100%);
     opacity: 0;
@@ -915,10 +957,11 @@
     }
 
     &:hover {
-        background: transparent;
+        background: $orange-dark;
+        border-color: $orange-dark;
 
         .btn-up__icon {
-            fill: $orange;
+            fill: $white;
         }
     }
 
@@ -997,6 +1040,7 @@
             font-size: inherit;
             font-weight: inherit;
             text-decoration: none;
+            color: inherit;
             transition: color .3s ease-in-out;
 
             &:hover {
@@ -1192,7 +1236,6 @@
     &__text {
         margin: 0 4px;
         font-size: 1.125rem;
-        line-height: 25px;
         font-weight: $bold;
         text-decoration: none;
         transition: color .2s;
@@ -1338,8 +1381,7 @@
         align-items: center;
         justify-content: center;
 
-        p {
-            line-height: 22px; 
+        p { 
             color: $white;
         }
     }
@@ -1484,12 +1526,10 @@
 
         .home-banner__text-orange {
             margin-left: 5px;
-            font-size: 1.875rem; 
-            line-height: 41px;
+            font-size: 1.875rem;
 
             @media (max-width: 340px) {
                 font-size: 1.5rem;
-                line-height: 120%;
             }
         }
     }
@@ -1508,7 +1548,6 @@
 
     &__text {
         font-size: 0.75rem;
-        line-height: 16px;
         font-weight: $normal;
         margin-bottom: 10px;
     }
@@ -1639,7 +1678,6 @@
 
                 .home-banner__title {
                     font-size: 1.5rem;
-                    line-height: 33px;
                     margin-bottom: 10px;
                 }
             }
@@ -1666,7 +1704,6 @@
                     margin-top: 0;
                     margin-right: 8px;
                     font-size: 1rem;
-                    line-height: 22px;
                 }
 
                 .home-banner__btn {
@@ -1698,6 +1735,7 @@
 .home-slider {
     height: 100%;
     border-radius: 3px;
+    overflow: hidden;
 
     .slick-list {
         height: 100%;
@@ -1706,13 +1744,13 @@
     .slick-track {
         height: 100%;
     }
-
+  
     .slick-slide {
         height: 100%;
 
         & > div {
             height: 100%;
-        }
+        }  
     }
 
     &__image {
@@ -1722,6 +1760,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 3px;
     }
 
     &__item {
@@ -1761,13 +1800,11 @@
 
     &__title {
         font-size: 3rem;
-        line-height: 65px;
         color: $white;
         margin-bottom: 0;
 
         @media (max-width: $sm + px) {
             font-size: 1.875rem;
-            line-height: 41px;
         }
     }
 
@@ -2053,7 +2090,7 @@
 
         li {
             a :not(.banner-menu__btn) {
-                border-bottom: none;
+                border-bottom: none; 
 
                 &:after {
                     content: '';
@@ -2092,6 +2129,10 @@
         max-width: none;
         
         .search-form__input {
+            border-radius: 0;
+        }
+        
+        .search-form__btn {
             border-radius: 0;
         }
 
@@ -2137,7 +2178,6 @@
 
     &__text {
         margin-top: 5px;
-        line-height: 16px;
         font-size: 0.75rem;
 
         transition: color .2s ease-in-out;
@@ -2183,7 +2223,7 @@
 
     &__container {
         background: $yellow;
-        padding: 20px 0;
+        padding: 17px 0;
     }
 
     &__list {
@@ -2203,7 +2243,6 @@
     &__link {
         font-weight: $bold;
         font-size: 1rem;
-        line-height: 22px;
         color: $black;
         text-decoration: none;
         transition: color .2s;
@@ -2333,7 +2372,6 @@
     &__text {
         grid-area: text;
         font-size: .75rem;
-        line-height: 16px;
     }
 
     &:hover {
@@ -2376,7 +2414,6 @@
         
         &__tilte {
             font-size: 1.5rem;
-            line-height: 33px;
         }
     }
 }
@@ -2395,7 +2432,9 @@
     padding: 20px;
     background: $white;
     border: 1px solid $grey;
+    border-radius: 3px;
     text-decoration: none;
+    transition: border-color .2s;
 
     &__image {
         grid-area: image;
@@ -2424,6 +2463,9 @@
     }
 
     &:hover {
+        border-color: $orange;
+
+
         .category-item__title {
             color: $orange;
         }
@@ -2452,6 +2494,7 @@
                          "manufacturer"
                          "description"
                          "bottom";
+    transition: border-color .2s;
 
     @media (max-width: $sm + px) {
         grid-template-areas: "top title"
@@ -2460,6 +2503,10 @@
                              "top bottom";
         grid-template-columns: 90px auto;
         padding: 15px 10px;
+    }
+
+    &:hover {
+        border-color: $orange;
     }
 
     &--slider {
@@ -2480,7 +2527,6 @@
 
             .product__price {
                 font-size: 1.25rem;
-                line-height: 27px;
 
                 svg {
                     width: 24px;
@@ -2489,7 +2535,6 @@
 
                 &--old {
                     font-size: .875rem;
-                    line-height: 19px;
 
                     svg {
                         width: 16px;
@@ -2536,12 +2581,6 @@
         justify-content: center;
         max-height: 200px;
         overflow: hidden;
-
-        &:hover {
-            .product__image {
-                transform: scale(1.1);
-            }
-        }
     }
 
     &__image {
@@ -2562,6 +2601,7 @@
         color: inherit;
         font-size: inherit;
         line-height: inherit;
+        color: inherit;
     }
 
     &__vendor {
@@ -2611,7 +2651,6 @@
         align-items: center;
         flex-wrap: wrap;
         font-size: 1.75rem;
-        line-height: 38px;
         grid-area: price;
 
         span {
@@ -2626,7 +2665,6 @@
 
     &__price--old {
         font-size: 1rem;
-        line-height: 22px;
         grid-area: price-old;
 
         span {
@@ -2783,7 +2821,6 @@
         h5 {
             @media (max-width: $sm + px) {
                 font-size: 1rem;
-                line-height: 22px;
             }
         }
     }
@@ -3184,7 +3221,6 @@
         
         @media (max-width: $sm + px) {
             font-size: 2.25rem;
-            line-height: 49px;
         }
 
         @media (max-width: $md + px) {
@@ -3202,7 +3238,6 @@
         span {
             text-decoration-line: line-through;
             font-size: 1.5rem;
-            line-height: 33px;
         }
 
         svg {
@@ -3232,7 +3267,6 @@
 
     &__annotation {
         font-size: .875rem;
-        line-height: 19px;
         grid-column: 2/3;
         margin-top: 10px;
 
@@ -3262,7 +3296,7 @@
     margin: -15px 0;
 
     .slick-list {
-        min-height: 422px;
+        min-height: 424px;
 
         @media (max-width: $lg + px) {
             min-height: auto; 
@@ -3281,6 +3315,11 @@
         margin: 15px 0;
         transition: border-color .2s;
         width: calc(100% - 2px) !important;
+
+        &:hover {
+            cursor: pointer;
+            border-color: $orange;
+        }
     }
 
     .slick-current .prodslider-small__item {
@@ -3337,7 +3376,7 @@
  */
 
 .quick-view {
-    max-width: 1100px;
+    max-width: 1200px;
 
     .product-page {
         &__vendor,
@@ -3381,7 +3420,7 @@
 
     &__vendor {
         grid-area: vendor;
-        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     .modal__close {
@@ -3394,7 +3433,11 @@
 
     &__sliders {
         @include _col(10);
-        max-width: 558px;
+        max-width: 658px;
+
+        .prodslider-small .slick-list {
+            min-height: 500px;
+        }
     }
 
     &__content {
@@ -3684,6 +3727,18 @@
 
 .similar-slider {
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .catalog-loadmore {
+        width: 100%;
+    }
+
+    .row {
+        width: calc(100% + 30px);
+    }
 
     .slick-slide {
         display: flex;
@@ -3698,10 +3753,11 @@
         align-items: center;
         justify-content: flex-end;
         margin: 0 -20px;
+        margin-bottom: 15px;
     }
 
     &__item {
-        margin-top: 30px;
+        margin-top: 20px;
         display: flex !important;
 
         @media (max-width: $sm + px) {
@@ -3722,6 +3778,7 @@
         margin-top: 30px;
         padding-bottom: 30px;
         justify-content: center;
+        width: 100%;
 
         .slick-active + li {
             button {
@@ -3756,7 +3813,7 @@
 
 .blog-banner {
     margin-top: 30px;
-    padding: 20px 20px 35px;
+    padding: 20px;
     background: $white;
     border: 1px solid $grey;
     border-radius: 3px;
@@ -3781,6 +3838,11 @@
 
     &__image {
         grid-area: image;
+        margin-left: 10px;
+
+        @media (max-width: $sm + px) {
+            margin-left: 0;
+        }
     }
 
     @media (max-width: $md + px) {
@@ -3820,6 +3882,7 @@
     background: $white;
     border: 1px solid $grey;
     border-radius: 3px;
+    transition: border-color .2s;
 
     &__image-wrapper {
         margin: -20px;
@@ -3837,6 +3900,8 @@
     }
 
     &:hover {
+        border-color: $orange;
+
         .blog-item__title {
             color: $orange;
         }
@@ -4457,7 +4522,6 @@
         margin: 15px;
         flex: 1 1 450px;
         font-size: .812rem;
-        line-height: 18px;
 
         @media (max-width: $sm + px) {
             flex: auto;
@@ -4467,6 +4531,7 @@
             font-size: inherit;
             line-height: inherit;
             white-space: nowrap;
+            color: inherit;
         }
     }
 
@@ -4584,7 +4649,6 @@
 
                     @media (max-width: $sm + px) {
                         font-size: 1rem;
-                        line-height: 22px;
                     }
                 }
             }
@@ -4721,7 +4785,6 @@
     p {
         position: relative;
         z-index: 2;
-        line-height: 20px;
     }
 
     &__line {
@@ -4856,7 +4919,6 @@
     th, td, a ,p {
         @media (max-width: $sm + px) {
             font-size: .875rem;
-            line-height: 19px;
         }
     }
 
@@ -4946,3 +5008,24 @@
     }
 }
 
+/*
+ * ==================================================================================
+ * modal-catalog
+ * ==================================================================================
+ */
+
+.modal-catalog {
+    background: rgba($black, .5);
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-in-out;
+
+    &--active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

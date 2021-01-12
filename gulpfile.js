@@ -222,41 +222,36 @@ export const fonts_style = () => {
                         let style = 'normal',
                             weight = '400',
                             name = fontname[0];
+                        
+                        if (name.includes('Black') || name.includes('black')) {
+                            weight = '900';
+                        } else if (name.includes('ExtraBold') || name.includes('extrabold')) {
+                            weight = '800';
+                        } else if (name.includes('SemiBold') || name.includes('semibold')) {
+                            weight = '600';
+                        } else if (name.includes('Bold') || name.includes('bold')) {
+                            weight = '700';
+                        } else if (name.includes('Medium') || name.includes('medium')) {
+                            weight = '500';
+                        } else if (name.includes('-Italic') || name.includes('-italic') || name.includes('Regular') || name.includes('regular')) {
+                            weight = '400';
+                        } else if (name.includes('ExtraLight') || name.includes('extralight')) {
+                            weight = '200';
+                        } else if (name.includes('Light') || name.includes('light')) {
+                            weight = '300';
+                        } else if (name.includes('Thin') || name.includes('thin')) {
+                            weight = '100';
+                        }
 
                         if (name.includes('Italic') || name.includes('italic')) {
                             style = 'italic';
-                        } else if (name.includes('Black') || name.includes('black')) {
-                            weight = '900';
-                            name = items[i].split('-')
-                        } else if (name.includes('ExtraBold') || name.includes('extrabold')) {
-                            weight = '800';
-                            name = items[i].split('-')
-                        } else if (name.includes('Bold') || name.includes('bold')) {
-                            weight = '700';
-                            name = items[i].split('-')
-                        } else if (name.includes('SemiBold') || name.includes('semibold')) {
-                            weight = '600';
-                            name = items[i].split('-')
-                        } else if (name.includes('Medium') || name.includes('medium')) {
-                            weight = '500';
-                            name = items[i].split('-')
-                        } else if (name.includes('-Italic') || name.includes('-italic') || name.includes('Regular') || name.includes('regular')) {
-                            weight = '400';
-                            name = items[i].split('-')
-                        } else if (name.includes('Light') || name.includes('light')) {
-                            weight = '300';
-                            name = items[i].split('-')
-                        } else if (name.includes('ExtraLight') || name.includes('extralight')) {
-                            weight = '200';
-                            name = items[i].split('-')
-                        } else if (name.includes('Thin') || name.includes('thin')) {
-                            weight = '100';
-                            name = items[i].split('-')
                         }
+                        
+                        
 
                         fontname = fontname[0];
                         if (c_fontname != fontname) {
-                            fs.appendFile(projectPath + '/scss/_fonts.scss', '@include font("' + name[0] + '", "' + fontname + '", "' + weight + '", "' + style + '");\r\n', cb);
+                            fs.appendFile(projectPath + '/scss/_fonts.scss', '@include font("' + name + '", "' + name + '", "' + weight + '", "' + style + '");\r\n', cb);
                         }
                         c_fontname = fontname;
                     }
