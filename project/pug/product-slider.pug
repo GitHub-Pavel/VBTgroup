@@ -16,5 +16,5 @@
                     .col.col-12.col-md-9
                         .prodslider-big
                             - for(let i=0; i<6; i++)
-                                a(href="img/product-big.jpg" data-fancybox="product" data-width="1600" data-height="1600").prodslider-big__item
+                                a(href="img/product-big.jpg" data-fancybox=`${i}` data-width="1600" data-height="1600").prodslider-big__item
                                     img(data-lazy="img/product-big.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="slider-big").prodslider-big__image
