@@ -3754,6 +3754,10 @@
 
     .row {
         width: calc(100% + 30px);
+
+        @media (max-width: $sm + px) {
+            width: calc(100% + 15px);
+        }
     }
 
     .slick-slide {
