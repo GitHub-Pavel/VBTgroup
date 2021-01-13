@@ -8,41 +8,60 @@ $(function () {
 
 
     // fix slider type product for fancybox
+    let slideInit = false;
+
     $.fancybox.defaults.afterLoad = function () {
-        // slider type product
-        $('.modal .prodslider-big').slick({
-            lazyLoad: 'ondemand',
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            initialSlide: 1,
-            arrows: false,
-            infinite: true,
-            dots: false,
-            fade: true,
-            asNavFor: '.prodslider-small',
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        dots: true
+        if (slideInit == false) {
+            // slider type product
+            $('.modal .prodslider-big').slick({
+                lazyLoad: 'ondemand',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 1,
+                arrows: false,
+                infinite: true,
+                dots: false,
+                fade: true,
+                asNavFor: '.prodslider-small',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            dots: true
+                        }
                     }
-                }
-            ]
-        });
-        $('.modal .prodslider-small').slick({
-            lazyLoad: 'ondemand',
-            vertical: true,
-            verticalSwiping: true,
-            slidesToShow: 3,
-            dots: false,
-            infinite: true,
-            arrows: false,
-            centerMode: true,
-            centerPadding: '0px',
-            focusOnSelect: true,
-            asNavFor: '.prodslider-big',
+                ]
+            });
+            $('.modal .prodslider-small').slick({
+                lazyLoad: 'ondemand',
+                vertical: true,
+                verticalSwiping: true,
+                slidesToShow: 3,
+                dots: false,
+                infinite: true,
+                arrows: false,
+                centerMode: true,
+                centerPadding: '0px',
+                focusOnSelect: true,
+                asNavFor: '.prodslider-big',
+            });
+        }
+
+        $('.fancybox-image').parents('.fancybox-inner').prev().css({
+            'background': '#fff',
+            'opacity': '1'
         });
     };
+
+    $.fancybox.defaults.afterClose = function () {
+        if ($('.fancybox-active').find('.modal').hasClass('quick-view')) {
+            slideInit = false;
+        }
+    };
+
+    $(document).on('init', '.modal .prodslider-big', function () {
+        slideInit = true;
+    });
 
     // slider type product
     $('.prodslider-big').slick({
