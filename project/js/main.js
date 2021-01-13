@@ -54,7 +54,7 @@ $(function () {
     };
 
     $.fancybox.defaults.afterClose = function () {
-        if ($('.fancybox-active').find('.modal').hasClass('quick-view')) {
+        if ($('.fancybox-active').find('.modal').hasClass('quick-view') || !$('body').hasClass('.fancybox-active')) {
             slideInit = false;
         }
     };
