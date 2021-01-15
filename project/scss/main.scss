@@ -2503,6 +2503,15 @@
         font-size: 1.75rem;
         grid-area: price;
 
+        @media (max-width: $less + px) {
+            font-size: 1.25rem;
+            
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
         span {
             white-space: nowrap;
         }
@@ -2525,6 +2534,15 @@
             fill: $grey-text;
             width: 19px;
             height: 19px;
+        }
+
+        @media (max-width: $less + px) {
+            font-size: 1rem;
+            
+            svg {
+                width: 19px;
+                height: 19px;
+            }
         }
     }
 
