@@ -221,29 +221,29 @@ export const fonts_style = () => {
 
                         let style = 'normal',
                             weight = '400',
-                            name = fontname[0];
+                            name = fontname[0].split('-')[0];
                         
-                        if (name.includes('Black') || name.includes('black')) {
+                        if (fontname[0].includes('Black') || fontname[0].includes('black')) {
                             weight = '900';
-                        } else if (name.includes('ExtraBold') || name.includes('extrabold')) {
+                        } else if (fontname[0].includes('ExtraBold') || fontname[0].includes('extrabold')) {
                             weight = '800';
-                        } else if (name.includes('SemiBold') || name.includes('semibold')) {
+                        } else if (fontname[0].includes('SemiBold') || fontname[0].includes('semibold')) {
                             weight = '600';
-                        } else if (name.includes('Bold') || name.includes('bold')) {
+                        } else if (fontname[0].includes('Bold') || fontname[0].includes('bold')) {
                             weight = '700';
-                        } else if (name.includes('Medium') || name.includes('medium')) {
+                        } else if (fontname[0].includes('Medium') || fontname[0].includes('medium')) {
                             weight = '500';
-                        } else if (name.includes('-Italic') || name.includes('-italic') || name.includes('Regular') || name.includes('regular')) {
+                        } else if (fontname[0].includes('-Italic') || fontname[0].includes('-italic') || fontname[0].includes('Regular') || fontname[0].includes('regular')) {
                             weight = '400';
-                        } else if (name.includes('ExtraLight') || name.includes('extralight')) {
+                        } else if (fontname[0].includes('ExtraLight') || fontname[0].includes('extralight')) {
                             weight = '200';
-                        } else if (name.includes('Light') || name.includes('light')) {
+                        } else if (fontname[0].includes('Light') || fontname[0].includes('light')) {
                             weight = '300';
-                        } else if (name.includes('Thin') || name.includes('thin')) {
+                        } else if (fontname[0].includes('Thin') || fontname[0].includes('thin')) {
                             weight = '100';
                         }
 
-                        if (name.includes('Italic') || name.includes('italic')) {
+                        if (fontname[0].includes('Italic') || fontname[0].includes('italic')) {
                             style = 'italic';
                         }
                         
@@ -251,7 +251,7 @@ export const fonts_style = () => {
 
                         fontname = fontname[0];
                         if (c_fontname != fontname) {
-                            fs.appendFile(projectPath + '/scss/_fonts.scss', '@include font("' + name + '", "' + name + '", "' + weight + '", "' + style + '");\r\n', cb);
+                            fs.appendFile(projectPath + '/scss/_fonts.scss', '@include font("' + name + '", "' + fontname + '", "' + weight + '", "' + style + '");\r\n', cb);
                         }
                         c_fontname = fontname;
                     }
