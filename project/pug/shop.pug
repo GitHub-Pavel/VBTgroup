@@ -9,7 +9,7 @@ block content
         .container
             h2 Дверные полки для холодильников
             .catalog-loadmore.catalog-loadmore--sm_full.mb-30
-            .row.align-items-center
+            .row.home-catalog__row-shop
                 .col.col-6.col-md-4.col-xl-3
                     button.filter-btn
                         span.filter-btn__icons
@@ -18,7 +18,7 @@ block content
                             svg.filter-btn__icon.filter-btn__icon--times
                                 use(href="img/icons.svg#times")
                         h4.filter-btn__text Фильтр
-                .col.col-6.col-md-4.d-flex.justify-content-end.justify-content-md-center.justify-content-xl-start
+                .col.col-6.col-md-4.home-catalog__sort
                     .sort
                         p.text.sort__text.d-none.d-xl-block Сортировка:
                         label.select.sort__box
@@ -151,7 +151,7 @@ block content
                                             input(type="text" name="quantity" value="1").plus-minus__field.input-number
                                             button(type="button" data-quantity="plus" data-field="quantity").plus-minus__button.plus-minus__button--plus +
                                     .product__btn-wrapper
-                                        a(data-fancybox href="#status").product__btn.btn.btn--size_small.btn--color_blue
+                                        a(data-fancybox href="#status" data-touch="false").product__btn.btn.btn--size_small.btn--color_blue
                                             span.btn__text Под заказ
                         // product 
                     .catalog-loadmore.catalog-loadmore--mt_small

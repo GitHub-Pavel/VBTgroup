@@ -149,37 +149,49 @@ block content
                         a(href="#").bucket__price-link.text--blue Вернуться к покупкам
 
                     .bucket__delivery
-                        .bucket-delivery
+                        .bucket-delivery.accordion
                             .bucket-delivery__item
-                                .bucket-delivery__title 
-                                    h4 Почта России
-                                    p.text.orange-box от 200 руб.
-                                p.text.bucket-delivery__description Стоимость доставки рассчитывается автоматически по весу, товар и доставка оплачивается перед отправкой
-                                p.text
-                                    span.text--weight_bold Плюсы 
-                                    span есть в каждом городе, дешевле всех остальных, при весе до 2-5 кг.
-                                p.text
-                                    span.text--weight_bold Минусы 
-                                    span достаточно долго, тяжелые посылки выхотят дороже чем в СДЭК и ПЭК, больше 20 кг очень сложно отправить
+                                .bucket-delivery__btn.accordion__btn
+                                    svg.bucket-delivery__icon.d-inline-block.d-md-none
+                                        use(href="img/icons.svg#times")
+                                    .bucket-delivery__title 
+                                        h4 Почта России
+                                        p.text.orange-box от 200 руб.
+                                .bucket-delivery__wrapper.accordion__wrapper
+                                    p.text.bucket-delivery__description Стоимость доставки рассчитывается автоматически по весу, товар и доставка оплачивается перед отправкой
+                                    p.text
+                                        span.text--weight_bold Плюсы 
+                                        span есть в каждом городе, дешевле всех остальных, при весе до 2-5 кг.
+                                    p.text
+                                        span.text--weight_bold Минусы 
+                                        span достаточно долго, тяжелые посылки выхотят дороже чем в СДЭК и ПЭК, больше 20 кг очень сложно отправить
                             .bucket-delivery__item
-                                .bucket-delivery__title 
-                                    h4 ПЭК
-                                    p.text.orange-box от 300 руб.
-                                p.text.bucket-delivery__description Доставка оплачивается при получении, товар оплачивается перед отправкой
-                                p.text
-                                    span.text--weight_bold Плюсы 
-                                    span возможна доставка до двери, доставка быстрее почты
-                                p.text
-                                    span.text--weight_bold Минусы 
-                                    span тяжелые посылки выхотят дороже чем в ПЭК, есть не в каждом городе
+                                .bucket-delivery__btn.accordion__btn
+                                    svg.bucket-delivery__icon.d-inline-block.d-md-none
+                                        use(href="img/icons.svg#times")
+                                    .bucket-delivery__title 
+                                        h4 ПЭК
+                                        p.text.orange-box от 300 руб.
+                                .bucket-delivery__wrapper.accordion__wrapper
+                                    p.text.bucket-delivery__description Доставка оплачивается при получении, товар оплачивается перед отправкой
+                                    p.text
+                                        span.text--weight_bold Плюсы 
+                                        span возможна доставка до двери, доставка быстрее почты
+                                    p.text
+                                        span.text--weight_bold Минусы 
+                                        span тяжелые посылки выхотят дороже чем в ПЭК, есть не в каждом городе
                             .bucket-delivery__item
-                                .bucket-delivery__title 
-                                    h4 СДЭК
-                                    p.text.orange-box от 400 руб.
-                                p.text.bucket-delivery__description Доставка оплачивается при получении, товар оплачивается перед отправкой
-                                p.text
-                                    span.text--weight_bold Плюсы 
-                                    span любой вес, доставка быстрее почты
-                                p.text
-                                    span.text--weight_bold Минусы 
-                                    span есть не в каждом городе
+                                .bucket-delivery__btn.accordion__btn
+                                    svg.bucket-delivery__icon.d-inline-block.d-md-none
+                                        use(href="img/icons.svg#times")
+                                    .bucket-delivery__title 
+                                        h4 СДЭК
+                                        p.text.orange-box от 400 руб.
+                                .bucket-delivery__wrapper.accordion__wrapper
+                                    p.text.bucket-delivery__description Доставка оплачивается при получении, товар оплачивается перед отправкой
+                                    p.text
+                                        span.text--weight_bold Плюсы 
+                                        span любой вес, доставка быстрее почты
+                                    p.text
+                                        span.text--weight_bold Минусы 
+                                        span есть не в каждом городе

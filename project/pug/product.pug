@@ -12,7 +12,7 @@ block content
                 span.text--grey Код товара: 
                 span 12345678
             .row
-                .col.col-12.col-lg-6.col-xl-7
+                .col.col-12.col-md-7.col-lg-6.col-xl-7
                     .product-page__sliders
                         .row
                             .col.col-3.d-none.d-md-flex
@@ -25,7 +25,7 @@ block content
                                     - for(let i=0; i<6; i++)
                                         a(href="#" data-fancybox data-type="ajax" data-src="product-slider.html" data-touch="false").prodslider-big__item
                                             img(data-lazy="img/product-big.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="slider-big").prodslider-big__image
-                .col.col-12.col-lg-6.col-xl-5    
+                .col.col-12.col-md-5.col-lg-6.col-xl-5    
                     .product-page__content
                         .product-page__wrapepr
                             h2.product-page__price
@@ -42,7 +42,7 @@ block content
                                     input(type="text" name="quantity" value="1").plus-minus__field.input-number
                                     button(type="button" data-quantity="plus" data-field="quantity").plus-minus__button.plus-minus__button--plus +
                             .product-page__btn-warpper
-                                a(data-fancybox href="#status").product-page__btn.btn.btn--size_primary.btn--color_blue
+                                a(data-fancybox href="#status" data-touch="false").product-page__btn.btn.btn--size_primary.btn--color_blue
                                     span.btn__text Под заказ
                             p.product-page__annotation.text.text--grey Вы можете оставить заказ на этот товар, и мы привезем его со склада поставщика
                         .catalog-loadmore.mt-30.mb-30

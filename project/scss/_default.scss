@@ -53,6 +53,10 @@ p,
         font-size: 1.125rem;
     }
 
+    &--weight_light {
+        font-weight: $light;
+    }
+
     &--weight_bold {
         font-weight: $bold;
     }

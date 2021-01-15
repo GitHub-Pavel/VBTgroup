@@ -1,5 +1,15 @@
 /*
  * ==================================================================================
+ * root
+ * ==================================================================================
+ */
+
+:root {
+  --animate-duration: 500ms;
+}
+
+/*
+ * ==================================================================================
  * html
  * ==================================================================================
  */
@@ -22,6 +32,11 @@ body {
 
     &.active {
         overflow: hidden;
+        padding-right: 10px;
+
+        @media (max-width: $lg + px) {
+            padding-right: 0;
+        }
     }
 
     &::-webkit-scrollbar {
@@ -58,6 +73,7 @@ svg {
 
 .wrapper {
     margin: 0 auto;
+    min-width: 320px;
 
     &--grey {
         background: $section-grey;
@@ -94,6 +110,10 @@ button {
         align-items: center;
         margin: 0;
         max-width: $widthContainer + 15 + px !important;
+
+        @media (max-width: $lg + px) {
+            padding-left: 0;
+        }
     }
 
     &--without_right {
@@ -102,6 +122,10 @@ button {
         align-items: center;
         margin: 0;
         max-width: $widthContainer + 15 + px !important;
+
+        @media (max-width: $lg + px) {
+            padding-right: 0;
+        }
     }
 }
 
