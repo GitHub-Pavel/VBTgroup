@@ -679,7 +679,7 @@ $(function () {
 
         if (!$('.fancybox-slide').hasClass('fancybox-slide--image')) {
             $('.fancybox-is-open .modal').each(function(index) {
-                if (index == $('.fancybox-is-open .modal').length - 1) {
+                if (index === $('.fancybox-is-open .modal').length - 1) {
                     console.log('!')
                     $(this).removeClass('animate__animated animate__fadeInDown');
                     $(this).addClass('animate__animated animate__fadeOutUp');
@@ -692,7 +692,7 @@ $(function () {
         e.preventDefault();
 
         $('.fancybox-is-open .modal').each(function(index) {
-            if (index == $('.fancybox-is-open .modal').length - 1) {
+            if (index === $('.fancybox-is-open .modal').length - 1) {
                 $(this).removeClass('animate__animated animate__fadeInDown');
                 $(this).addClass('animate__animated animate__fadeOutUp');
             }
