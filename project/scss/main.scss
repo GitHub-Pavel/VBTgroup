@@ -5035,7 +5035,7 @@
     transition: opacity .3s ease-in-out;
 
     @media (max-width: $lg + px) {
-        display: none;
+        height: 0 !important;
     }
 
     &--active {
