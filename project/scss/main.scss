@@ -923,7 +923,6 @@
 .home-catalog {
 
     &__sort {
-        width: 100%;
         display: flex;
 
         @media (max-width: $lg + px) {
@@ -937,6 +936,7 @@
         @media (max-width: $less + px) {
             margin-bottom: 15px;
             justify-content: flex-start;
+            width: 100%;
         }
     }
 
