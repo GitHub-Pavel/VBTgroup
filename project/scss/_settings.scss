@@ -5,7 +5,7 @@
  */
 
 :root {
-  --animate-duration: 500ms;
+    --animate-duration: 500ms;
 }
 
 /*
@@ -29,6 +29,7 @@ body {
     font-family: "OpenSans", sans-serif;
     font-size: 1rem;
     font-weight: $normal;
+    overflow-anchor: none;
 
     &.active {
         overflow: hidden;
