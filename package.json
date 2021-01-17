@@ -40,5 +40,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pavel",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitHub-Pavel/VBTgroup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GitHub-Pavel/VBTgroup/issues"
+  },
+  "homepage": "https://github.com/GitHub-Pavel/VBTgroup#readme"
 }

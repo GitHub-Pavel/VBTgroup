@@ -46,11 +46,17 @@ p,
     line-height: 22px;
 
     &--size_small {
-        font-size: .875rem;
+        font-size: 0.875rem;
     }
 
     &--size_big {
         font-size: 1.125rem;
+        line-height: 25px;
+
+        @media (max-width: $sm + px) {
+            font-size: 1rem;
+            line-height: 22px;
+        }
     }
 
     &--weight_light {
@@ -65,7 +71,7 @@ p,
         font-style: italic;
     }
 
-    &--center { 
+    &--center {
         text-align: center;
     }
 
@@ -78,7 +84,7 @@ p,
     }
 
     &--grey {
-        color: $grey-text; 
+        color: $grey-text;
     }
 
     &--grey_light {
@@ -140,8 +146,7 @@ p {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    transition: color 0.2s, background 0.2s, border-color 0.2s,
-        box-shadow 0.2s;
+    transition: color 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s;
 
     @media (max-width: $sm + px) {
         font-size: 1rem;
@@ -220,7 +225,7 @@ p {
                 padding: 0.5em calc(0.5em - 7px);
 
                 .btn__text {
-                        margin: 0 3px;
+                    margin: 0 3px;
                 }
             }
         }
@@ -402,11 +407,11 @@ article {
     border: 1px solid $grey;
     border-radius: 3px;
     background: $white;
-    font-size: 1rem;  
+    font-size: 1rem;
     color: $black;
     resize: vertical;
     outline: none;
-    transition: border-color .2s;
+    transition: border-color 0.2s;
 
     ::placeholder {
         color: $grey;
@@ -431,7 +436,7 @@ article {
     text-decoration: none;
 
     &__item {
-        transition: color .2s, fill .2s;
+        transition: color 0.2s, fill 0.2s;
     }
 
     &--orange {
@@ -520,7 +525,7 @@ article {
     }
 
     &:after {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         top: 10px;
@@ -683,7 +688,7 @@ article {
         position: relative;
 
         &:after {
-            content: '';
+            content: "";
             display: none;
             width: 9px;
             height: 9px;

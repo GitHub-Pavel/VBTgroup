@@ -1748,7 +1748,7 @@
         max-width: 345px;
 
         &__header {
-            padding: 24px 15px;
+            padding: 15px;
         }
 
         &__close {
@@ -1813,6 +1813,10 @@
     &__btn {
         margin-bottom: 30px;
         width: 100%;
+
+        @media (max-width: $sm + px) {
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -1821,6 +1825,12 @@
     border: 1px solid $grey;
     border-radius: 3px;
     padding: 15px;
+
+    p {
+        @media (max-width: $sm + px) {
+            text-align: center;
+        }
+    }
 }
 
 
