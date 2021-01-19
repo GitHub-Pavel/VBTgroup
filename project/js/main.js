@@ -212,7 +212,7 @@ $(function () {
 
     $('.bucket-box__bar-line').css('width', $('.bucket-box__bar-line').data('width') + '%' );
 
-    $('.modal-catalog').css('height', $('body').height() - $('.header').height() + 'px');
+    $('.modal-catalog').css('height', $('body').height() - $('.header').height() - 5 + 'px');
     $('.modal-catalog').css('top', $('.header').height() + 3 + 'px');
 
     // mobile accordion start
@@ -402,7 +402,7 @@ $(function () {
     
     bucket();
     function bucket() {
-        if ($(window).width() > 1200 && $('div').is('.bucket')) {
+        if ($(window).width() > 1200 && $('section').hasClass('bucket')) {
             let difPosBuck = Math.floor( $('.bucket-delivery').offset().top - $('.bucket__price').offset().top );
             if (difPosBuck < 167) {
                 let difPos = 167 - difPosBuck;
