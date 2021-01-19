@@ -921,12 +921,17 @@
 }
 
 .home-catalog {
+    &__filter-btn {
+        @media (min-width: $sm +px) {
+            width: 170px;
+        }
+    }
 
     &__sort {
         display: flex;
 
-        @media (max-width: $lg + px) {
-            justify-content: center;
+        @media (min-width: $sm +px) {
+            flex: 1 1;
         }
 
         @media (max-width: $sm + px) {
@@ -1766,6 +1771,10 @@
 
 .notifications {
     background: $section-grey;
+
+    &__policy {
+        font-size: 0.9rem;
+    }
 
     &__form {
         width: 100%;
@@ -3232,6 +3241,15 @@
         outline: none;
     }
 
+    &__plus {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        fill: $grey;
+        z-index: 1;
+        transition: fill .3s;
+    }
+
     &__item {
         position: relative;
         padding-bottom: 102.4%;
@@ -3250,6 +3268,12 @@
 
         @media (max-width: $sm + px) {
             padding-bottom: 100%;
+        }
+
+        &:hover {
+            .prodslider-big__plus {
+                fill: $dark-grey;
+            }
         }
     }
 
@@ -3332,8 +3356,14 @@
         max-width: 658px;
 
         &--only {
-            max-width: 850px;
+            max-width: 950px;
             width: 100%;
+
+            @media (min-width: $lg + px) {
+                .prodslider-big__item {
+                    padding-bottom: 101.4%;
+                }
+            }
 
             @media (max-width: $lg + px) {
                 max-width: 700px;
@@ -3803,9 +3833,10 @@
     border: 1px solid $grey;
     border-radius: 3px;
     transition: border-color .2s;
+    overflow: hidden;
 
     &__image-wrapper {
-        margin: -20px;
+        margin: -21px;
         margin-bottom: 0;
     }
 
@@ -3946,6 +3977,7 @@
 .contacts-wrapper {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     
     &__title {
         margin-top: 90px;
@@ -3964,10 +3996,10 @@
     max-width: 855px;
     margin: 0 -17.5px;
     overflow: hidden;
-
+    
     @media (max-width: $sm + px) {
-        margin: 0;
         margin-top: 10px;
+        margin: 0;
     }
 
     &__input {
@@ -4088,6 +4120,11 @@
             margin-top: 30px;
             display: block;
             text-align: right;
+        }
+
+        @media (min-width: $lg + px) {
+            position: sticky;
+            top: 95px;
         }
     }
 
@@ -4359,6 +4396,11 @@
         float: left;
         transform: rotate(45deg);
         transition: transform .3s ease-in-out;
+    }
+
+    @media (min-width: $lg + px) {
+        position: sticky;
+        top: 262px;
     }
 
     @media (max-width: $sm + px) {
@@ -5133,13 +5175,12 @@
     }
 
     &__logo {
-        flex: 1 1 280px;
+        flex: 1 1 290px;
         margin-top: 30px;
 
         @media (max-width: $sm + px) {
             margin-top: 0;
-            flex: auto;
-            width: 100%;
+            margin-bottom: 15px;
         }
     }
 
@@ -5206,7 +5247,7 @@
 
         @media (max-width: $md + px) {
             padding-left: 20px;
-            min-width: 262px;
+            min-width: 267px;
 
             &:before {
                 left: 0;
@@ -5215,6 +5256,9 @@
 
         @media (max-width: $sm + px) {
             padding-left: 7.5px;
+            margin-top: 0;
+            max-width: 248px;
+            min-width: 248px;
 
             &:before {
                 display: none;

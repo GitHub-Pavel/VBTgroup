@@ -194,7 +194,7 @@ export const fonts = () => {
     gulp.src(path.src.fonts.ttf)
         .pipe(ttf2woff2())
         .pipe(gulp.dest(path.build.fonts.default))
-    return gulp.src(path.src.fonts.ttf)
+    return gulp.src(path.src.fonts.ttf, { allowEmpty: true })
         .pipe(ttf2woff())
         .pipe(gulp.dest(path.build.fonts.default))
         .pipe(reload({ stream: true }));
@@ -286,7 +286,7 @@ export const _watch = () => {
     watch(path.watch.img, gulp.series(img));
     watch(path.watch.svg, gulp.series(sprite));
     watch(path.watch.fonts.ttf, gulp.series(fonts));
-    watch(path.watch.fonts.woff, gulp.series(fonts_style));
+    // watch(path.watch.fonts.woff, gulp.series(fonts_style));
     watch(path.watch.fonts.plugins, gulp.series(plugins_fonts));
 }
 

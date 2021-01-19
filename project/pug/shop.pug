@@ -10,7 +10,7 @@ block content
             h2 Дверные полки для холодильников
             .catalog-loadmore.catalog-loadmore--sm_full.mb-30
             .row.home-catalog__row-shop
-                .col.col-6.col-md-4.col-xl-3
+                .col.col-6.col-xl-3.home-catalog__filter-btn
                     button.filter-btn
                         span.filter-btn__icons
                             svg.filter-btn__icon.filter-btn__icon--filter
@@ -18,7 +18,7 @@ block content
                             svg.filter-btn__icon.filter-btn__icon--times
                                 use(href="img/icons.svg#times")
                         h4.filter-btn__text Фильтр
-                .col.col-6.col-md-4.home-catalog__sort
+                .col.col-6.home-catalog__sort
                     .sort
                         p.text.sort__text.d-none.d-xl-block Сортировка:
                         label.select.sort__box
@@ -29,7 +29,7 @@ block content
                                 option(value="a-z") по назвванию (а-я)
                             svg.select__icon
                                 use(href="img/icons.svg#triangle-down")
-                .col.col-6.col-md-4.col-xl-5.d-none.d-md-flex.justify-content-end
+                .col.col-6.col-md-4.col-xl-5.d-none.d-md-flex.justify-content-end.home-catalog__sort-view
                     .sort-view
                         label.sort-view__radio
                             input(type="radio" name="sort-view" value="default" checked).sort-view__input.visually-hidden

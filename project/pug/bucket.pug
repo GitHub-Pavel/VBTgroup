@@ -38,10 +38,11 @@ block content
                                     button(type="button" data-quantity="plus" data-field="quantity").plus-minus__button.plus-minus__button--plus +
                             .basket-item__description
                                 p.text.text--orange.basket-item__description-orange Товар под заказ
-                            a(href="#").basket-item__delete.text.text--grey 
-                                span.d-none.d-md-block Удалить
-                                svg.basket-item__delete-icon.d-block.d-md-none(width="25" height="25")
-                                    use(href="img/icons.svg#trash")
+                            .basket-item__delete
+                                a(href="#").text.text--grey 
+                                    span.d-none.d-md-block Удалить
+                                    svg.basket-item__delete-icon.d-block.d-md-none(width="25" height="25")
+                                        use(href="img/icons.svg#trash")
                         .basket-item.bucket-basket__item
                             .basket-item__image-wraper
                                 img(width="120" height="120" data-src="img/product-thumb.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="basket-item").b-lazy.basket-item__image
@@ -66,10 +67,11 @@ block content
                                     | 2 Х 10 000
                                     svg(width="19" height="19")
                                         use(href="img/icons.svg#ruble")
-                            a(href="#").basket-item__delete.text.text--grey 
-                                span.d-none.d-md-block Удалить
-                                svg.basket-item__delete-icon.d-block.d-md-none(width="25" height="25")
-                                    use(href="img/icons.svg#trash")
+                            .basket-item__delete
+                                a(href="#").text.text--grey 
+                                    span.d-none.d-md-block Удалить
+                                    svg.basket-item__delete-icon.d-block.d-md-none(width="25" height="25")
+                                        use(href="img/icons.svg#trash")
                     .bucket__reg
                         h3 Оформление заказа
                         form.bucket-form.bucket__form
@@ -146,7 +148,8 @@ block content
                                     svg.bucket-box__icon-price(width="22" height="22")
                                         use(href="img/icons.svg#ruble")
                                 p.text.text--grey.bucket-box__baket В корзине 3 товара
-                        a(href="#").bucket__price-link.text--blue Вернуться к покупкам
+                        .bucket__price-link
+                            a(href="#").text--blue Вернуться к покупкам
 
                     .bucket__delivery
                         .bucket-delivery.accordion

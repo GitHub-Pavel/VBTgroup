@@ -24,6 +24,8 @@ block content
                                 .prodslider-big
                                     - for(let i=0; i<6; i++)
                                         a(href="#" data-fancybox data-type="ajax" data-src="product-slider.html" data-touch="false").prodslider-big__item
+                                            svg(width="30" height="30").prodslider-big__plus
+                                                use(href="img/icons.svg#plus")
                                             img(data-lazy="img/product-big.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="slider-big").prodslider-big__image
                 .col.col-12.col-md-5.col-lg-6.col-xl-5    
                     .product-page__content
