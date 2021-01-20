@@ -5114,11 +5114,6 @@
     &--active {
         opacity: 1;
         pointer-events: auto;
-        width: calc(100% - 10px);
-
-        @media (max-width: $lg + px) {
-            width: 100%;
-        }
     }
 }
 

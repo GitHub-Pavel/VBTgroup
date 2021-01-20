@@ -35,13 +35,16 @@ body {
     font-size: 1rem;
     font-weight: $normal;
     overflow-anchor: none;
+    position: relative;
 
     &.active {
         overflow: hidden;
-        padding-right: 10px;
+        margin-right: 10px;
+        -moz-margin-end: 8px;
 
         @media (max-width: $lg + px) {
-            padding-right: 0;
+            margin-right: 0;
+            -moz-margin-end: 0;
         }
     }
 
