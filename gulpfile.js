@@ -274,8 +274,8 @@ export const build = gulp.series(
         img,
         sprite,
         fonts
-    ),
-    fonts_style
+    )//,
+    // fonts_style
 )
 
 // watch for files project
