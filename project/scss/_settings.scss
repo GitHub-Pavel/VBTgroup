@@ -24,6 +24,11 @@ html {
  * ==================================================================================
  */
 
+* {
+    scrollbar-color: $orange $section-grey;
+    scrollbar-width: thin;
+}
+
 body {
     color: $black;
     font-family: "OpenSans", sans-serif;
